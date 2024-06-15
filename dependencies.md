@@ -7,4 +7,6 @@
     npm i framer-motion
     npm install react-intersection-observer
     npx shadcn-ui@latest add dialog
+    npm install ldrs
+    npm install styled-components
 ```
