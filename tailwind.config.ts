@@ -31,6 +31,8 @@ const config: Config = {
         'primary':"#1daf91",
         'primary-hover': "#158c76",
         'primary-active':"#157060",
+        'text-dark': "#353c44",
+        'text-light': "#f4f6f7",
         'shark': {
           '50': '#f4f6f7',
           '100': '#e2e8eb',

@@ -1,12 +1,13 @@
 "use client";
 
-import { MdArrowRightAlt } from "react-icons/md";
 import ScrollToTopButton from "../action/scroll-to-top";
 import { FaGithub, FaLinkedin, FaInstagram,FaFacebookF } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { useSectionInView } from "@/lib/hooks";
 
 import { motion } from "framer-motion";
+import { DownloadCV } from "../action/download-cv";
+import { Button } from "../ui/button";
 
 
 export default function HeroSection() {
@@ -46,13 +47,10 @@ export default function HeroSection() {
                   </h2>
                   <p className='text-shark-500 dark:text-shark-50 font-light text-wrap w-2/4 mt-2 mb-6'> Vítej na mém portfoliu! Pocházím z Prahy📍 a jsem absolventem střední školy. Jsem full-stack softwarový vývojář, který se zajímá o tvorbu moderních a responzivních webů, co nejefektivnejších a nejrychlejší back-end. </p>
                   <div className='flex flex-row gap-x-4 items-center mx-auto'>
-                    <button onClick={() => scrollToSection('about')} className='bg-bermuda-500 text-shark-100 px-4 py-2 rounded-md hover:bg-bermuda-600 active:bg-bermuda-700 active:scale-90 duration-200'> 
+                    <Button onClick={() => scrollToSection('about')} className='bg-bermuda-500 text-shark-100 px-4 py-2 rounded-md hover:bg-bermuda-600 active:bg-bermuda-700 active:scale-90 duration-200'> 
                         Pokračovat 
-                    </button>
-                    <button className='px-4 py-2 flex flex-row items-center group'>
-                      <span>Stáhnout CV</span>
-                      <MdArrowRightAlt className='ml-2 w-6 h-7 text-shark-600 dark:text-shark-100 transform group-hover:translate-x-1 transition-transform duration-200' />
-                    </button>                  
+                    </Button>
+                    <DownloadCV/>                
                   </div>
 
                   <div className="mt-8 flex flex-row items-center gap-x-4">
