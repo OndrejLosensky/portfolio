@@ -60,7 +60,7 @@ export default function AboutSection() {
   const { ref } = useSectionInView("O mně");
 
   return (
-    <div ref={ref} id="about" className="h-screen z-10 mb-64 relative w-3/4 mx-auto flex flex-col space-y-4">
+    <div ref={ref} id="about" className="h-screen z-10 mb-64 relative w-full mx-auto flex flex-col space-y-4">
       <SectionTitle heading="O mě" subHeading="Kdo jsem?" />
       <div className="bg-[#3c8d77] absolute top-[-2rem] -z-20 left-[12rem] -rotate-45 opacity-30 h-[53.25rem] w-[11.25rem] rounded-full blur-[5rem] dark:bg-[#82e8cfee]"></div>
 

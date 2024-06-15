@@ -19,3 +19,8 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #127d68; /* color of the scrollbar on hover */
 }
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

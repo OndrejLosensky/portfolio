@@ -22,7 +22,7 @@ export default function HeroSection() {
   };
 
   return (
-    <div ref={ref} id="home" className='w-[80%] h-screen max-w-screen overflow-x-hidden flex flex-col justify-center items-center text-center mx-auto'>
+    <div ref={ref} id="home" className='w-full h-screen max-w-screen overflow-x-hidden flex flex-col justify-center items-center text-center mx-auto'>
         <div className="bg-[#8af8eb] absolute top-[-12rem] -z-10 right-[8rem] h-[31.25rem] w-[61.25rem] rounded-full blur-[12rem] ] dark:bg-[#56b595]"></div>
               
         <motion.div 
