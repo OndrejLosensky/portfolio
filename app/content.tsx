@@ -11,9 +11,9 @@ export default function Content() {
       <HeroSection/>
       <AboutSection/>
       <span className="relative text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-bermuda-300  to-bermuda-500 text-center drop-shadow-glow">
-                  Jednoduchý přehled
+                  Přehled
                 </span>
-      <p className="text-center text-xl font-light text-text-dark dark:text-text-light"> Podívejte se </p>
+      <p className="text-center text-xl pt-1 font-light text-text-dark dark:text-text-light"> Najděte rychle vše co potřebujete </p>
       <BentoGrid/>
       <ProjectsSection/>
       <ExperienceSection/>
