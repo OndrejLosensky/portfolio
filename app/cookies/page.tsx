@@ -12,9 +12,9 @@ export default function CookiesPage() {
         Please read this cookie policy (“cookie policy”, "policy") carefully before using [website] website
         (“website”, "service") operated by [name] ("us", 'we", "our").
         What are cookies?
-        Cookies are simple text files that are stored on your computer or mobile device by a website’s
+        Cookies are simple text files that are stored on your computer or mobile device by a websites
         server. Each cookie is unique to your web browser. It will contain some anonymous information
-        such as a unique identifier, website’s domain name, and some digits and numbers.
+        such as a unique identifier, websites domain name, and some digits and numbers.
         What types of cookies do we use?
         Necessary cookies
         Necessary cookies allow us to offer you the best possible experience when accessing and
@@ -38,7 +38,7 @@ export default function CookiesPage() {
         Contacting us
         If you have any questions about this policy or our use of cookies, please contact us.
       </p>
-      
+
       <Link href="/">
         <Button className='mx-auto mt-12 flex flex-row gap-x-4'> 
             <IoMdHome className='w-6 h-auto'/> 
