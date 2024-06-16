@@ -10,4 +10,8 @@
     npm install ldrs
     npm install styled-components
     npm install react-loader-spinner --save
+    npm i @formspree/react
+    npm install lucide-react 
+    npx shadcn-ui@latest add sheet  
+    npm install react-use
 ```

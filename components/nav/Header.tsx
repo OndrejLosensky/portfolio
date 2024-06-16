@@ -26,11 +26,11 @@ export default function Header() {
             <span className="font-bold text-bermuda-400">Losenský</span>Ondřej
           </Link>
           <HeaderLinks />
-          <div className='flex flex-row items-center justify-center gap-x-4'>
+          <div className='hidden xl:flex flex-row items-center justify-center gap-x-4'>
             <select className="px-2 py-1 bg-transparent">
               <option value="cz"> 🇨🇿 Čeština</option>
-              <option value="en"> 🇬🇧 English</option>
-              <option value="de"> 🇩🇪 German</option>
+              <option value="en" disabled> 🇬🇧 English</option>
+              <option value="de" disabled> 🇩🇪 German</option>
             </select>
             <span className="opacity-30">|</span>
             <ThemeSwitch />

@@ -9,6 +9,8 @@ import { motion } from "framer-motion";
 import { DownloadCV } from "../action/download-cv";
 import { Button } from "../ui/button";
 
+import '../../styles/arrow.css';
+
 
 export default function HeroSection() {
   const { ref } = useSectionInView("Úvod");
@@ -22,7 +24,7 @@ export default function HeroSection() {
   };
 
   return (
-    <div ref={ref} id="home" className='w-full h-screen max-w-screen overflow-x-hidden flex flex-col justify-center items-center text-center mx-auto'>
+    <div ref={ref} id="home" className='w-full max-h-screen h-screen max-w-screen flex flex-col justify-center items-center text-center mx-auto'>
         <div className="bg-[#8af8eb] absolute top-[-12rem] -z-10 right-[8rem] h-[31.25rem] w-[61.25rem] rounded-full blur-[12rem] ] dark:bg-[#56b595]"></div>
               
         <motion.div 
@@ -32,15 +34,15 @@ export default function HeroSection() {
               type: "tween",
               duration: 0.2,
             }}  
-            className="flex flex-col items-center h-2/3 justify-between mt-72"
+            className="flex flex-col items-center h-2/3 justify-between"
             >
-              <p className="absolute top-36 flex scale-90 opacity-80 flex-row items-center">
+              <p className=" flex scale-90 opacity-80 flex-row items-center">
                 <kbd className="px-[8px] py-[2px] scale-75 dark:bg-shark-700 bg-shark-300 text-shark-600 dark:text-shark-100 rounded-md">CTRL</kbd>
                 <span className="dark:text-shark-100 text-shark-600"> + </span>
                 <kbd className="px-[8px] py-[2px] scale-75 mr-2 dark:bg-shark-700 bg-shark-300 text-shark-600 dark:text-shark-100 rounded-md">H</kbd>
-                <span className="font-light dark:text-shark-100 text-shark-600">to toggle theme  </span>
+                <span className="font-light dark:text-shark-100 text-shark-600"> pro zapnutí světlého režimu  </span>
               </p> 
-              <div className='w-full items-center justify-center mb-48 flex flex-col'>
+              <div className='w-full items-center justify-center mb-24 flex flex-col'>
                   <h1 className='text-xl mb-2 font-sora font-light'> Ahoj👋, jmenuji se </h1>
                   <h2 className="text-5xl flex flex-col mb-1 font-bold text-center bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50">
                     <span>Ondřej Losenský</span>
@@ -82,6 +84,11 @@ export default function HeroSection() {
 
         </motion.div>
         
+        <div className="arrow-container mt-12">
+              <a href="#bento" className='arrow'>
+                
+              </a>
+            </div>  
     </div>
   )
 }

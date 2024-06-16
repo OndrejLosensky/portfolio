@@ -5,6 +5,7 @@ import Header from "@/components/nav/Header";
 import Footer from "@/components/nav/footer";
 import Content from "./content";
 import CircularLoader from "@/components/action/loader";
+import CookiesForm from './cookies/CookiesForm';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -13,7 +14,7 @@ export default function Home() {
     // Simulate loading time or perform actual data fetching
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 120000); // 2 seconds for demonstration purposes
+    }, 1200); // 2 seconds for demonstration purposes
 
     return () => clearTimeout(timer);
   }, []);
@@ -29,6 +30,7 @@ export default function Home() {
           <Header />
           <Content />
           <Footer />
+          <CookiesForm/>
         </div>
       )}
     </main>

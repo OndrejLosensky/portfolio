@@ -4,7 +4,7 @@ import { FaGithub, FaDev, FaLinkedin} from "react-icons/fa";
 export default function Footer() {
   const currentYear = GetCurrentYear();
   return (
-    <div className='max-w-screen w-3/4 mx-auto border-t dark:border-shark-800 bg-transparent h-14 gap-x-3 pb-1 rounded-t-3xl flex flex-row items-center justify-between px-6 border-shark-300/80 '>
+    <div className='max-w-screen w-full mx-auto border-t dark:border-shark-800 bg-transparent h-14 gap-x-3 pb-1 rounded-t-3xl flex flex-row items-center justify-between px-6 border-shark-300/80 '>
           <div className="flex flex-row items-center gap-x-2">
             <Image src="/logo.svg" height={30} width={30} alt="Logo"/>
             <span className="text-sm pt-1"> © {currentYear} <strong>Losenský </strong></span>

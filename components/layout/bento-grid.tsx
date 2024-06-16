@@ -3,7 +3,7 @@ import React from 'react';
 
 const BentoGrid: React.FC = () => {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center px-5 py-8 ">
+    <div id='bento' className="flex h-full w-full flex-col items-center justify-center px-5 py-8 ">
       <div className="flex flex-col h-full w-full gap-4">
         {/* Projects section */}
         <section className='flex flex-row gap-x-4'>
