@@ -33,10 +33,6 @@ export default function HeaderLinks() {
   const isMobile = useMedia("(max-width: 1280px)", false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const onClick = () => {
-   
-  }
-
   if (isMobile) {
     return (
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -44,7 +40,7 @@ export default function HeaderLinks() {
                 <Button
                     size="default"
                     variant="outline"
-                    className='font-normal my-2 rounded-md bg-main/10 dark:bg-main/50 dark:text-text-light hover:bg-main/20 hover:text-main border-none focus-visible:ring-offset-0 focus-visivle:ring-transparent outline-none text-main focus:bg-main/30 transition'
+                    className='font-normal rounded-md bg-main/10 dark:bg-main/50 dark:text-text-light hover:bg-main/20 hover:text-main border-none focus-visible:ring-offset-0 focus-visivle:ring-transparent outline-none text-main focus:bg-main/30 transition'
                     >
                         <Menu className='size-4'/>   
                 </Button>
@@ -111,7 +107,7 @@ export default function HeaderLinks() {
   return (
     <header className="z-[999] relative">
       <nav className={`flex fixed left-1/2 -translate-x-1/2 top-[0rem] sm:h-[initial]`}>
-        <ul className="hidden xl:flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+        <ul className="hidden xl:flex w-[22rem] flex-wrap items-center justify-center gap-y-2 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
           {links.map((link) => (
             <motion.li
               className="h-3/4 flex items-center justify-center relative"

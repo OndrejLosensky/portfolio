@@ -10,11 +10,12 @@ export default function Content() {
     <main className="flex flex-col mx-auto">
       <HeroSection/>
       <AboutSection/>
-      {/*
       <BentoGrid/>
       <ProjectsSection/>
       <ExperienceSection/>
       <ContactSection/>
+      {/*
+
        */}
     </main>
   );

@@ -29,18 +29,4 @@ export const projectsData = [
       tags: ["Python", "Lavarell", "MongoDB", "Sqlite", "CSV"],
       imageUrl: logo,
     },
-    {
-      title: "Projekt 5",
-      description:
-        "Při tvorbě této aplikace jsem se naučil základy jazyku Python a práce s velkými daty.",
-      tags: ["Python", "Lavarell", "MongoDB", "Sqlite", "CSV"],
-      imageUrl: logo,
-    },
-    {
-      title: "Projekt 6",
-      description:
-        "Při tvorbě této aplikace jsem se naučil základy jazyku Python a práce s velkými daty.",
-      tags: ["Python", "Lavarell", "MongoDB", "Sqlite", "CSV"],
-      imageUrl: logo,
-    },
   ] as const;

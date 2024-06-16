@@ -26,7 +26,7 @@ html {
     transform: translateX(-50%) rotate(45deg);
     animation: arrowPulse 1.5s infinite;
   }
-  
+
   .arrow::after {
     top: 12px; 
     animation-delay: 0.2s; 
