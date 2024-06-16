@@ -10,7 +10,6 @@ export default function Content() {
     <main className="flex flex-col mx-auto">
       <HeroSection/>
       <AboutSection/>
-      {/* 
       <span className="relative text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-bermuda-300  to-bermuda-500 text-center drop-shadow-glow">
                   Přehled
                 </span>
@@ -19,7 +18,6 @@ export default function Content() {
       <ProjectsSection/>
       <ExperienceSection/>
       <ContactSection/>
-       */}
     </main>
   );
 }
