@@ -10,10 +10,10 @@ export default function Content() {
     <main className="flex flex-col mx-auto">
       <HeroSection/>
       <AboutSection/>
-      <span className="relative text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-bermuda-400  to-bermuda-600 text-center drop-shadow-glow">
-                  Simple overview
+      <span className="relative text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-bermuda-300  to-bermuda-500 text-center drop-shadow-glow">
+                  Jednoduchý přehled
                 </span>
-      <p className="text-center text-xl font-light text-text-dark dark:text-text-light"> See some options  </p>
+      <p className="text-center text-xl font-light text-text-dark dark:text-text-light"> Podívejte se </p>
       <BentoGrid/>
       <ProjectsSection/>
       <ExperienceSection/>

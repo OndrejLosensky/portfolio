@@ -1,5 +1,4 @@
-"use client";  // Mark this file as a client component
-
+"use client";
 import { useState, useEffect } from 'react';
 import Header from "@/components/nav/Header";
 import Footer from "@/components/nav/footer";
@@ -11,10 +10,9 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time or perform actual data fetching
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1200); // 2 seconds for demonstration purposes
+    }, 1200); 
 
     return () => clearTimeout(timer);
   }, []);
