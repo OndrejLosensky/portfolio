@@ -19,14 +19,14 @@ export const DownloadCV = () => {
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
-                <DialogTitle className="font-bold text-2xl">Please select the language of the CV</DialogTitle>
-                <DialogDescription className="pt-4">
-                    After clicking on download it will automatically start downloading chosen version. If the download doesnt start, please try again
-                    <div className="flex flex-row mx-auto items-center justify-center mt-4 gap-x-4">
-                        <Button> 🇨🇿 CZ </Button>
-                        <Button> 🇬🇧 EN </Button>
-                    </div>
-                </DialogDescription>
+                    <DialogTitle className="font-bold text-2xl">Please select the language of the CV</DialogTitle>
+                    <DialogDescription className="pt-4">
+                        After clicking on download it will automatically start downloading chosen version. If the download doesnt start, please try again
+                        <div className="flex flex-row mx-auto items-center justify-center mt-4 gap-x-4">
+                            <Button> 🇨🇿 Česky</Button>
+                            <Button> 🇬🇧 English </Button>
+                        </div>
+                    </DialogDescription>
                 </DialogHeader>
             </DialogContent>
         </Dialog>
