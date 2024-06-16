@@ -1,11 +1,21 @@
+"use client"
+
 import React from 'react';
+import { TailSpin } from 'react-loader-spinner';
 
 const CircularLoader: React.FC = () => {
-  return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="loader ease-linear spin rounded-full border-8 border-t-8 border-gray-600 h-32 w-32"></div>
-    </div>
-  );
+    return(
+        <TailSpin
+            visible={true}
+            height="80"
+            width="80"
+            color="#4fa94d"
+            ariaLabel="tail-spin-loading"
+            radius="1"
+            wrapperStyle={{}}
+            wrapperClass=""
+        />
+    )
 };
 
 export default CircularLoader;

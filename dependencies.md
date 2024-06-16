@@ -9,4 +9,5 @@
     npx shadcn-ui@latest add dialog
     npm install ldrs
     npm install styled-components
+    npm install react-loader-spinner --save
 ```
