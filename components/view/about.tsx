@@ -60,9 +60,8 @@ export default function AboutSection() {
   const { ref } = useSectionInView("O mně");
 
   return (
-    <div ref={ref} id="about" className="h-screen z-10 mb-64 relative w-full mx-auto flex flex-col space-y-4">
+    <div ref={ref} id="about" className="h-screen max-w-screen z-10 mb-64 relative w-full mx-auto flex flex-col space-y-4">
       <SectionTitle heading="O mě" subHeading="Kdo jsem?" />
-      <div className="bg-[#3c8d77] absolute top-[-2rem] -z-20 left-[12rem] -rotate-45 opacity-30 h-[53.25rem] w-[11.25rem] rounded-full blur-[5rem] dark:bg-[#82e8cfee]"></div>
 
       <div className="w-2/3">
         <h2 className="text-4xl font-sora font-bold"> Ondřej Losenský </h2>
@@ -86,7 +85,7 @@ export default function AboutSection() {
         </p>
 
       </div>
-
+      {/* 
       <h2 className="pt-10 text-xl"> Můj skillset: </h2>
       <ul className="grid grid-cols-4 gap-4">
         {skills.map((skill, index) => (
@@ -120,6 +119,7 @@ export default function AboutSection() {
           </li>
         ))}
       </ul>
+      */}
     </div>
   )
 }

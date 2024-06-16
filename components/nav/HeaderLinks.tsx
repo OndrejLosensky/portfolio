@@ -44,23 +44,23 @@ export default function HeaderLinks() {
                 <Button
                     size="default"
                     variant="outline"
-                    className='font-normal my-2 rounded-md bg-main/10 hover:bg-main/20 hover:text-main border-none focus-visible:ring-offset-0 focus-visivle:ring-transparent outline-none text-main focus:bg-main/30 transition'
+                    className='font-normal my-2 rounded-md bg-main/10 dark:bg-main/50 dark:text-text-light hover:bg-main/20 hover:text-main border-none focus-visible:ring-offset-0 focus-visivle:ring-transparent outline-none text-main focus:bg-main/30 transition'
                     >
                         <Menu className='size-4'/>   
                 </Button>
             </SheetTrigger>
-            <SheetContent side="right" className='px-2 bg-white'>
-              <nav className={`flex fixed left-1/2 -translate-x-1/2 top-[0rem] sm:h-[initial]`}>
-                <ul className="flex w-[22rem] flex-col items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+            <SheetContent side="right" className='px-2 bg-white dark:bg-main/80'>
+              <nav className={``}>
+                <ul className="">
                   {links.map((link) => (
                     <motion.li
                       className="h-3/4 flex items-center justify-center"
                       key={link.hash}
-                      ref={(el) => { sectionRefs.current[link.name] = el; }} // Assign ref to each link
+                      ref={(el) => { sectionRefs.current[link.name] = el; }} 
                     >
                       <Link
                         className={clsx(
-                          "flex w-full items-center justify-start px-3 py-3 hover:text-shark-950 text-shark-600 transition dark:text-shark-50 dark:hover:text-shark-100 font-medium",
+                          "flex items-center px-3 py-3 hover:text-shark-950 text-shark-600 transition dark:text-shark-50 dark:hover:text-shark-100 font-medium",
                           {
                             "text-red-500": activeSection === link.name,
                           }
@@ -81,7 +81,7 @@ export default function HeaderLinks() {
                         {link.name}
                         {link.name === activeSection && (
                           <motion.span
-                            className="bg-bermuda-400 rounded-lg absolute inset-0 -z-10 dark:bg-bermuda-400"
+                            className="bg-bermuda-400 rounded-lg -z-10 dark:bg-bermuda-400"
                             layoutId="activeSection"
                             transition={{
                               type: "spring",
@@ -94,15 +94,14 @@ export default function HeaderLinks() {
                     </motion.li>
                   ))}
                 </ul>
-                <div className='hidden desktop::flex flex-row items-center justify-center gap-x-4'>
-              <select className="px-2 py-1 bg-transparent">
-                <option value="cz"> 🇨🇿 Čeština</option>
-                <option value="en" disabled> 🇬🇧 English</option>
-                <option value="de" disabled> 🇩🇪 German</option>
-              </select>
-              <span className="opacity-30">|</span>
-              <ThemeSwitch />
-            </div>
+                <div className='flex flex-col space-y-4 items-center justify-center gap-x-4'>
+                  <select className="px-2 py-2 bg-transparent border-t border-t-text-dark dark:border-t-text-light mt-2">
+                    <option value="cz"> 🇨🇿 Čeština</option>
+                    <option value="en" disabled> 🇬🇧 English</option>
+                    <option value="de" disabled> 🇩🇪 German</option>
+                  </select>
+                  <ThemeSwitch />
+                </div>
               </nav>
             </SheetContent>
         </Sheet>
