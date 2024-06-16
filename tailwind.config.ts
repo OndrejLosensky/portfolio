@@ -16,6 +16,16 @@ const config: Config = {
         inter: ['Inter', 'sans-serif'],
         sora: ['Sora', 'sans-serif'],
       },
+      dropShadow: {
+        glow: [
+          "0 0px 4px rgba(64,210, 235, 0.25)",
+          "0 0px 4px rgba(64, 235,183, 0.25)"
+        ],
+        glow2:
+        [
+          "0px 0px 8px rgba(220,50, 222, 0.38)",
+        ]
+      },
       colors: {
         'main': "#1a1e23",
         'primary':"#1daf91",

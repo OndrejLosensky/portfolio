@@ -1,10 +1,26 @@
 import Image from 'next/image';
-import React from 'react';
+import React, {useState} from 'react';
 
 import { Button } from '../ui/button';
 
+import { FaCopy } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa6";
+
 
 const BentoGrid: React.FC = () => {
+  const [copied, setCopied] = useState(false);
+
+  const copyToClipboard = () => {
+    const email = "losenskyondrej@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      setCopied(true);
+      setTimeout(() => {
+        setCopied(false);
+      }, 3000); // 5 seconds delay
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+    });
+  };
   return (
     <div id='bento' className="flex h-full w-full flex-col items-center justify-center my-16 ">
       <div className="flex flex-col h-full w-full gap-4">
@@ -50,7 +66,13 @@ const BentoGrid: React.FC = () => {
             <div className='bg-gradient-to-br from-purple-500 to-violet-700 h-full flex items-center justify-center p-4 rounded-xl shadow-lg'>
               <div className='flex flex-col items-center'>
                 <h3 className="text-text-light text-lg font-semibold">Start a project together?</h3>
-                <Button variant="secondary" className="mt-2 mx-auto dark:bg-main bg-main dark:hover:bg-main/80 hover:bg-main/80 text-white px-4 py-2 rounded-md shadow-md">Message me for more</Button>
+                <Button
+                  variant="secondary"
+                  className={`mt-2 mx-auto w-64 rounded-md shadow-md gap-x-4 border border-text-light/60 dark:border-text-light/60 px-4 py-2 ${copied ? 'text-green-500 dark:text-green-500 ' : 'dark:bg-main bg-main dark:hover:bg-main/95 hover:bg-main/95 text-white'}`}
+                  onClick={copyToClipboard}
+                >
+                  {copied ? <FaCheck /> : <FaCopy />} {copied ? 'Copied!' : 'Copy my e-mail address'}
+                </Button>        
               </div>
             </div>
           </div>

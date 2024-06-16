@@ -33,7 +33,7 @@ export default function Header() {
               <option value="de" disabled> 🇩🇪 German</option>
             </select>
             <span className="opacity-30">|</span>
-            <ThemeSwitch />
+            <ThemeSwitch light="" dark="" />
           </div>
         </nav>
       </motion.header>      

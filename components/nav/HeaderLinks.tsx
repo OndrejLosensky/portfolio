@@ -45,7 +45,7 @@ export default function HeaderLinks() {
                         <Menu className='size-4'/>   
                 </Button>
             </SheetTrigger>
-            <SheetContent side="right" className='px-2 bg-white dark:bg-main/80'>
+            <SheetContent side="right" className='px-2 bg-white dark:bg-main'>
               <nav className={``}>
                 <ul className="">
                   {links.map((link) => (
@@ -90,13 +90,14 @@ export default function HeaderLinks() {
                     </motion.li>
                   ))}
                 </ul>
-                <div className='flex flex-col space-y-4 items-center justify-center gap-x-4'>
-                  <select className="px-2 py-2 bg-transparent border-t border-t-text-dark dark:border-t-text-light mt-2">
+                <div className='flex flex-row items-center justify-center mx-16 py-2 border-t border-text-dark dark:border-text-light mt-4 gap-x-4'>
+                  <select className="-ml-4 px-2 py-2 bg-transparent">
                     <option value="cz"> 🇨🇿 Čeština</option>
                     <option value="en" disabled> 🇬🇧 English</option>
                     <option value="de" disabled> 🇩🇪 German</option>
                   </select>
-                  <ThemeSwitch />
+                  <span className="opacity-30">|</span>
+                  <ThemeSwitch light="Light" dark="Dark" />
                 </div>
               </nav>
             </SheetContent>
