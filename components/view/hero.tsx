@@ -24,8 +24,8 @@ export default function HeroSection() {
   };
 
   return (
-    <div ref={ref} id="home" className='w-full max-h-screen h-screen max-w-screen flex flex-col justify-center space-y-12 items-center text-center mx-auto'>
-        <div className="bg-[#8af8eb] absolute top-[-12rem] -z-10 right-[8rem] h-[31.25rem] w-[61.25rem] rounded-full blur-[12rem] ] dark:bg-[#56b595]"></div>
+    <div ref={ref} id="home" className='w-[100%] max-h-screen h-screen flex flex-col justify-center items-center text-center mx-auto'>
+        <div className="bg-[#8af8eb] absolute top-[0rem] md:top-[-12rem] -z-10  right-[0rem] md:right-[8rem] h-[20rem] md:h-[31.25rem] w-[20rem] md:w-[61.25rem] rounded-full blur-[12rem] dark:bg-[#56b595]"></div>
               
         <motion.div 
             initial={{ opacity: 1, scale: 0 }}
@@ -47,7 +47,7 @@ export default function HeroSection() {
                   <h2 className="md:text-4xl lg:text-5xl text-3xl flex flex-col mb-1 font-bold text-center bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50">
                     <span>Ondřej Losenský</span>
                   </h2>
-                  <p className='text-shark-500 dark:text-shark-50 font-light text-wrap w-3/4 lg:w-1/2 text-sm md:text-lg mt-2 mb-6'> Vítej na mém portfoliu! Pocházím z Prahy📍 a jsem absolventem střední školy. Jsem full-stack softwarový vývojář, který se zajímá o tvorbu moderních a responzivních webů, co nejefektivnejších a nejrychlejší back-end. </p>
+                  <p className='text-shark-500 dark:text-shark-50 font-light text-wrap w-3/4 lg:w-1/2 text-xs md:text-lg mt-2 mb-6'> Vítej na mém portfoliu! Pocházím z Prahy📍 a jsem absolventem střední školy. Jsem full-stack softwarový vývojář, který se zajímá o tvorbu moderních a responzivních webů, co nejefektivnejších a nejrychlejší back-end. </p>
                   <div className='flex flex-row gap-x-4 items-center mx-auto'>
                     <Button onClick={() => scrollToSection('about')} className='dark:bg-bermuda-500 dark:hover:bg-bermuda-600 bg-bermuda-500 text-shark-100 px-4 py-2 rounded-md hover:bg-bermuda-600 active:bg-bermuda-700 active:scale-90 duration-200'> 
                         Pokračovat 
