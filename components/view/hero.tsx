@@ -10,6 +10,7 @@ import { DownloadCV } from "../action/download-cv";
 import { Button } from "../ui/button";
 
 import '../../styles/arrow.css';
+import Image from "next/image";
 
 
 export default function HeroSection() {
@@ -43,7 +44,7 @@ export default function HeroSection() {
                 <span className="font-light dark:text-shark-100 text-shark-600"> pro zapnutí světlého režimu  </span>
               </p> 
               <div className='w-full items-center justify-center  flex flex-col'>
-                  <h1 className='text-md lg:text-xl mb-2 font-sora font-light'> Ahoj👋, jmenuji se </h1>
+                  <h1 className='text-md lg:text-xl mb-2 font-sora font-light flex flex-row'> Ahoj <Image src="/additional-icons/wave.svg" width={24} height={24} className="mx-1" alt="Wave emoji" />, jmenuji se </h1>
                   <h2 className="md:text-4xl lg:text-5xl text-3xl flex flex-col mb-1 font-bold text-center bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50">
                     <span>Ondřej Losenský</span>
                   </h2>

@@ -28,7 +28,7 @@ export default function Header() {
           <HeaderLinks />
           <div className='hidden xl:flex flex-row items-center justify-center gap-x-4'>
             <select className="px-2 py-1 bg-transparent">
-              <option value="cz"> 🇨🇿 Čeština</option>
+              <option value="cz"> 🇨<Image src="/icons/ai.svg" width={48} height={48} alt="Czech flag icon" /> Čeština</option>
               <option value="en" disabled> 🇬🇧 English</option>
               <option value="de" disabled> 🇩🇪 German</option>
             </select>
