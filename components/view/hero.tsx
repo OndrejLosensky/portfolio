@@ -12,8 +12,13 @@ import { Button } from "../ui/button";
 import '../../styles/arrow.css';
 import Image from "next/image";
 
+import { socialLinks, SocialLink } from '../../lib/socials';
 
 export default function HeroSection() {
+  const handleClick = (url: string) => {
+    window.open(url, '_blank');
+  };
+
   const { ref } = useSectionInView("Úvod");
 
   const scrollToSection = (id: string) => {
@@ -48,7 +53,7 @@ export default function HeroSection() {
                   <h2 className="md:text-4xl lg:text-5xl text-3xl flex flex-col mb-1 font-bold text-center bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50">
                     <span>Ondřej Losenský</span>
                   </h2>
-                  <p className='text-shark-500 dark:text-shark-50 font-light text-wrap w-3/4 lg:w-1/2 text-xs md:text-lg mt-2 mb-6'> Vítej na mém portfoliu! Pocházím z Prahy📍 a jsem absolventem střední školy. Jsem full-stack softwarový vývojář, který se zajímá o tvorbu moderních a responzivních webů, co nejefektivnejších a nejrychlejší back-end. </p>
+                  <p className='text-shark-500 dark:text-shark-50 font-light text-wrap w-3/4 lg:w-1/2 text-xs md:text-lg mt-2 mb-6'> Vítej na mém portfoliu! Pocházím z Prahy a jsem absolventem střední školy. Jsem full-stack softwarový vývojář, který se zajímá o tvorbu moderních a responzivních webů, co nejefektivnejších a nejrychlejší back-end. </p>
                   <div className='flex flex-row gap-x-4 items-center mx-auto'>
                     <Button onClick={() => scrollToSection('about')} className='dark:bg-bermuda-500 dark:hover:bg-bermuda-600 bg-bermuda-500 text-shark-100 px-4 py-2 rounded-md hover:bg-bermuda-600 active:bg-bermuda-700 active:scale-90 duration-200'> 
                         Pokračovat 
@@ -57,30 +62,22 @@ export default function HeroSection() {
                   </div>
 
                   <div className="mt-8 flex flex-row items-center gap-x-4">
-                    <button className="group relative">
-                      <FaGithub className="text-xl group-hover:text-malibu-500 transition duration-300" />
-                      <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">GitHub</span>
+                  {socialLinks.map((link: SocialLink) => (
+                    <button
+                      key={link.name}
+                      className="group relative"
+                      onClick={() => handleClick(link.url)}
+                    >
+                      <link.icon className="text-xl group-hover:text-malibu-500 transition duration-300" />
+                      <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">
+                        {link.name}
+                      </span>
                     </button>
-                    <button className="group relative">
-                      <FaLinkedin className="text-xl group-hover:text-malibu-500 transition duration-300" />
-                      <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">LinkedIn</span>
-                    </button>
-                    <button className="group relative">
-                      <FaFacebookF className="text-xl group-hover:text-malibu-500 transition duration-300" />
-                      <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">Facebook</span>
-                    </button>
-                    <button className="group relative">
-                      <FaInstagram className="text-xl group-hover:text-malibu-500 transition duration-300" />
-                      <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">Instagram</span>
-                    </button>
-                    <button className="group relative">
-                      <MdOutlineMailOutline className="text-xl group-hover:text-malibu-500 transition duration-300" />
-                      <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">Email</span>
-                    </button>
+                  ))}
                   </div>
+
               </div>
 
-            
           <ScrollToTopButton/>
 
         </motion.div>

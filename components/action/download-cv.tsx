@@ -9,6 +9,7 @@ import {
 
 import { MdArrowRightAlt } from "react-icons/md";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 export const DownloadCV = () => {
     return (
@@ -23,8 +24,9 @@ export const DownloadCV = () => {
                     <DialogDescription className="pt-4">
                         After clicking on download it will automatically start downloading chosen version. If the download doesnt start, please try again
                         <div className="flex flex-row mx-auto items-center justify-center mt-4 gap-x-4">
-                            <Button> 🇨🇿 Česky</Button>
-                            <Button> 🇬🇧 English </Button>
+                            <Button> <Image src="/additional-icons/cz.svg" width={20} height={20} alt="Czech icon" className="mr-2"/> Česky</Button>
+                            <Button> <Image src="/additional-icons/en.svg" width={20} height={20} alt="Britain icon" className="mr-2"/> English </Button>
+                            <Button disabled> <Image src="/additional-icons/de.svg" width={20} height={20} alt="Germany icon" className="mr-2"/> German </Button>
                         </div>
                     </DialogDescription>
                 </DialogHeader>

@@ -92,9 +92,10 @@ export default function AboutSection() {
 
         </div>     
       </section>
-      {/* */}
-      <h2 className="pt-10 text-xl"> Můj skillset: </h2>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+
+      <h2 className="pt-24 text-xl"> Technologie s kterými jsem se alespoň setkal nebo je používám často</h2>
+      <ul className="flex gap-4">
         {skills.map((skill, index) => (
           <motion.li
             initial="initial"
@@ -102,27 +103,23 @@ export default function AboutSection() {
             viewport={{
               once: true,
             }}
-            custom={index} key={index} className="bg-black/10 hover:bg-black/20 dark:bg-white/10 p-4 rounded dark:hover:bg-white/20 transition-colors duration-300">
-            <div className="flex justify-between mb-2 items-center">
-              <div className="flex items-center gap-2">
-                <Image src={skill.icon} alt="Icon" height={24} width={24}/>
-                <span>{skill.name}</span>
-              </div>
-              <span className="text-gray-400">{skill.level}</span>
-            </div>
-            <div className="w-full bg-shark-200 rounded-full h-2.5 dark:bg-shark-700">
-              <div className="bg-gradient-to-bl from-malibu-400 to-bermuda-500 h-2.5 rounded-full" style={{ width: skill.level }}></div>
-            </div>
+            custom={index} key={index} className="bg-black/10 group relative hover:scale-105 hover:bg-black/20 dark:bg-white/10 p-4 rounded dark:hover:bg-white/20 transition-colors duration-300">
+                <Image src={skill.icon} alt="Icon" height={32} width={32}/>
+                <span className="absolute -bottom-8  left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">
+                  {skill.name}
+                </span>
           </motion.li>
         ))}
       </ul>
 
-      <h2 className="pt-12 text-xl">Nástroj, které používám: </h2>
-      <ul className="grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
+      <h2 className="pt-12 text-xl">Nástroj, které používám nejčastěji </h2>
+      <ul className="flex gap-4">
         {tools.map((tool, index) => (
-          <li key={index} className="bg-black/10 hover:bg-black/20 dark:bg-white/10 p-4 rounded dark:hover:bg-white/20 transition-colors duration-300 flex items-center justify-center gap-2">
-            <Image src={tool.icon} alt="Icon" height={24} width={24}/>
-            <span>{tool.name}</span>
+          <li key={index} className="bg-black/10 group relative hover:scale-105 hover:bg-black/20 dark:bg-white/10 p-4 rounded dark:hover:bg-white/20 transition-colors duration-300 flex items-center justify-center gap-2">
+            <Image src={tool.icon} alt="Icon" height={32} width={32}/>
+            <span className="absolute -bottom-8  left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">
+                {tool.name}
+            </span>
           </li>
         ))}
       </ul>

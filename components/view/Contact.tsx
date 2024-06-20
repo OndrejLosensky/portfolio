@@ -124,11 +124,6 @@ export default function ContactSection() {
             <RiTailwindCssFill  className="w-10 h-10"/>
             <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">TailwindCSS</span>
           </div>
-
-          <div className="group relative">
-            <Image src="/emailjs.png" width={40} height={40} alt="icon"/>
-            <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">EmailJS</span>
-          </div>
       </div>
     </div>
   );

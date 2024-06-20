@@ -10,11 +10,6 @@ export default function Footer() {
             <span className="text-sm pt-1"> © {currentYear} <strong>Losenský </strong></span>
           </div>
           <div className="flex flex-row justify-between gap-x-4 md:pb-0 pb-8">
-            <div className="flex flex-row items-center gap-x-4">
-                <FaGithub className="w-5 h-5 hover:scale-110 cursor-pointer duration-200"/>
-                <FaLinkedin className="w-5 h-5 hover:scale-110 cursor-pointer duration-200"/>
-                <FaDev className="w-5 h-5 hover:scale-110 cursor-pointer duration-200"/>
-            </div>
             <p className="text-sm font-thin pt-1"> Všechna práva vyhrazena.  </p>
           </div>
     </div>

@@ -6,6 +6,8 @@ import { Button } from '../ui/button';
 import { FaCopy } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa6";
 import { IoIosGlobe } from "react-icons/io";
+import TechstackSlider from '../action/carousel/techstack-carousel';
+import { cardDetails } from '../action/carousel/carousel.config';
 
 
 const BentoGrid: React.FC = () => {
@@ -22,6 +24,8 @@ const BentoGrid: React.FC = () => {
       console.error('Failed to copy: ', err);
     });
   };
+
+  
   return (
     <div id='bento' className="flex h-full w-full flex-col items-center justify-center my-16 ">
       <div className="flex flex-col h-full w-full gap-4">
@@ -46,25 +50,19 @@ const BentoGrid: React.FC = () => {
                 <Button className="mt-2 text-text-dark dark:text-text-light duration-300 px-4 py-2 rounded-md shadow-md">Podívat se</Button>
               </div>
             </div>
-            <div className='dark:bg-gray-900 bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex flex-row items-center justify-center p-4 rounded-lg shadow-lg'>
+            <div className='dark:bg-gray-900 bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex flex-row items-center justify-center p-4 rounded-lg shadow-lg overflow-hidden'>
               <div className='w-[30%] h-full flex flex-col justify-center text-left items-center'>
                 <div className='-ml-8'>
                   <p className='font-extralight lowercase text-text-dark/60 dark:text-text-light/60'> Nejvíce používám</p>
                   <h3 className="text-text-dark dark:text-text-light font-bold text-lg">Technologie</h3>
                 </div>
               </div>
-              <div className='w-[70%]  mx-auto grid grid-cols-3 text-sm'>
-                    <p className='bg-gray-100 dark:bg-gray-800 border border-text-dark dark:text-text-light rounded-md m-4 text-center py-2 px-4 shadow-lg'> Next.js </p>
-                    <p className='bg-gray-100 dark:bg-gray-800 border border-text-dark dark:text-text-light rounded-md m-4 text-center py-2 px-4 shadow-lg'> TypeScript</p>
-                    <p className='bg-gray-100 dark:bg-gray-800 border border-text-dark dark:text-text-light rounded-md m-4 text-center py-2 px-4 shadow-lg'> Prisma</p>
-                    <p className='bg-gray-100 dark:bg-gray-800 border border-text-dark dark:text-text-light rounded-md m-4 text-center py-2 px-4 shadow-lg'> TailwindCSS </p>
-                    <p className='bg-gray-100 dark:bg-gray-800 border border-text-dark dark:text-text-light rounded-md m-4 text-center py-2 px-4 shadow-lg'> Firebase</p>
-                    <p className='bg-gray-100 dark:bg-gray-800 border border-text-dark dark:text-text-light rounded-md m-4 text-center py-2 px-4 shadow-lg'> SQLite</p>
-                    <p className='bg-gray-100 dark:bg-gray-800 border border-text-dark dark:text-text-light rounded-md m-4 text-center py-2 px-4 shadow-lg'> JavaScript </p>
-                    <p className='bg-gray-100 dark:bg-gray-800 border border-text-dark dark:text-text-light rounded-md m-4 text-center py-2 px-4 shadow-lg'> Github </p>
-                    <p className='bg-gray-100 dark:bg-gray-800 border border-text-dark dark:text-text-light rounded-md m-4 text-center py-2 px-4 shadow-lg'> Figma </p>
+              <div className='w-[70%] h-full mx-auto overflow-hidden relative'>
+                  <div className='absolute inset-0 bg-gradient-to-l w-full z-20 from-gray-900 via-transparent to-gray-900 opacity-100 rounded-lg'></div>
+                  <TechstackSlider cardDetails={cardDetails} />
               </div>
             </div>
+
           </div>
         </section>
         {/* End of Projects section */}

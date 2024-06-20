@@ -10,6 +10,7 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 import { useTheme } from "@/context/theme-provider"; 
+import CustomDropdown from "../action/custom-dropdown";
 
 export default function Header() {
   const { theme } = useTheme(); 
@@ -26,15 +27,7 @@ export default function Header() {
             <span className="font-bold text-bermuda-400">Losenský</span>Ondřej
           </Link>
           <HeaderLinks />
-          <div className='hidden xl:flex flex-row items-center justify-center gap-x-4'>
-            <select className="px-2 py-1 bg-transparent">
-              <option value="cz"> 🇨<Image src="/icons/ai.svg" width={48} height={48} alt="Czech flag icon" /> Čeština</option>
-              <option value="en" disabled> 🇬🇧 English</option>
-              <option value="de" disabled> 🇩🇪 German</option>
-            </select>
-            <span className="opacity-30">|</span>
-            <ThemeSwitch light="" dark="" />
-          </div>
+          <CustomDropdown/>
         </nav>
       </motion.header>      
     </div>
