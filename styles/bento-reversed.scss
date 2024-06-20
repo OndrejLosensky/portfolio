@@ -1,0 +1,53 @@
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    border-color: #4b5563;
+    width: 150%;
+  }
+  
+  .carousel-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    /*
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 8px rgba(222, 222, 222, 0.362),
+        2px 4px 8px rgba(152, 133, 133, 0.392),
+        2px 4px 8px rgba(139, 154, 139, 0.303);
+    }*/
+    border-radius: 20%; 
+  }
+  
+  .carousel-card > img {
+    height: 80px;
+    width: 400px;
+    border-radius: 10%;
+  }
+  
+  .carousel-track {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    gap: 32px;
+    width: 200%;
+    height: 100%;
+    animation: slide 8s linear infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: -100%;
+    }
+  }
