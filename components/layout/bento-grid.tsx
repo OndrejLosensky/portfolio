@@ -38,7 +38,7 @@ const BentoGrid: React.FC = () => {
           <div className="flex flex-col h-full w-full gap-4">
             {/* Projects section */}
             <section className='flex flex-col lg:flex-row gap-x-4'>
-              <div className='group relative w-full lg:w-1/2 h-[600px] flex flex-col items-start justify-end rounded-lg shadow-lg border dark:border-text-light/15 border-text-dark/30 dark:bg-gray-900 bg-gray-200'>
+              <div className='group relative w-full lg:w-1/2 h-[450px] md:h-[600px] flex flex-col items-start justify-end rounded-lg shadow-lg border dark:border-text-light/15 border-text-dark/30 dark:bg-gray-900 bg-gray-200'>
                 <Image src="/image5.jpeg" alt='Macbook image' width={600} height={400} className='absolute w-full h-full rounded-lg opacity-75'/>
                 <div className='absolute inset-0 bg-gradient-to-b from-transparent to-main opacity-100 rounded-lg'></div>
                 <div className='relative z-10 flex flex-col p-6'>
@@ -56,16 +56,16 @@ const BentoGrid: React.FC = () => {
               </div>
               <div className='grid grid-rows-2 w-full mt-4 lg:mt-0 lg:w-1/2 gap-y-4'>
                 <div className='dark:bg-gray-900 group relative bg-gray-200 border w-full overflow-hidden dark:border-text-light/15 border-text-dark/30 h-full flex items-center justify-center p-4 rounded-lg shadow-lg'>
-                  <div className='flex flex-col items-center z-10 w-1/3'>
-                    <h3 className="text-text-dark dark:text-text-light text-lg font-semibold">Nejnovější projekt</h3>
+                  <div className='flex flex-col z-10 w-1/2 lg:w-1/3'>
+                    <h3 className="text-text-dark dark:text-text-light text-sm lg:text-lg font-semibold ml-12">Nejnovější projekt</h3>
                     <Link href="/kralovska-levandule">
-                      <Button className="mt-2 text-text-dark dark:text-text-light bg-primary dark:bg-primary hover:bg-primary-hover dark:hover:bg-primary-hover duration-200 px-4 py-2 rounded-md shadow-md active:bg-primary-active active:scale-90">
+                      <Button className="mt-2 scale-75 lg:scale-100 text-text-dark dark:text-text-light bg-primary dark:bg-primary hover:bg-primary-hover dark:hover:bg-primary-hover duration-200 -ml-3 lg:ml-12 px-4 py-2 rounded-md shadow-md active:bg-primary-active active:scale-[0.65] lg:active:scale-75">
                         Podívat se
                       </Button>
                     </Link>
                   </div>
-                  <div className='w-2/3'>
-                    <Image src="/mockups/KL.svg" width={500} height={400} alt='Project image' className='group-hover:-rotate-3 group-hover:scale-[1.04] duration-300 absolute -bottom-12 -right-20'/>
+                  <div className='w-1/2 lg:w-2/3'>
+                    <Image src="/mockups/KL.svg" width={500} height={400} alt='Project image' className='xl:w-96 xl:h-72 h-48 w-72 group-hover:-rotate-3 group-hover:scale-[1.04] duration-300 absolute -bottom-16 -right-20'/>
                   </div>
                   <div className='absolute inset-0 bg-gradient-to-br dark:from-transparent from-transparent to-gray-100 dark:to-gray-900 opacity-55 rounded-lg'></div>
                 </div>
@@ -86,17 +86,17 @@ const BentoGrid: React.FC = () => {
             {/* End of Projects section */}
             {/* Tasks section */}
             <section className='flex flex-col lg:flex-row gap-x-4'>
-              <div className='grid grid-rows-2 w-full lg:w-1/2 gap-4'>
+              <div className='grid grid-rows-2 w-full lg:w-1/2 gap-4 mb-4 lg:mb-0'>
                 <div className='dark:bg-gray-900 relative bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex items-center justify-center p-4 rounded-xl shadow-lg'>
                   <div>
                     <div className='absolute inset-0 bg-gradient-to-b from-transparent to-main/20 dark:from-transparent dark:to-main/80 opacity-100 rounded-lg'></div>
-                    <h3 className="dark:text-text-light text-text-dark text-lg font-semibold">
+                    <h3 className="dark:text-text-light text-text-dark text-lg text-center font-semibold">
                       Mojí největší oblibou je tvorba moderních a responzivních designů
                     </h3>
                   </div>
                 </div>
                 <div className='bg-gradient-to-br from-purple-500 to-violet-700 border dark:border-text-light/15 border-text-dark/30 h-full flex items-center justify-center p-4 rounded-xl shadow-lg'>
-                  <div className='flex flex-col items-center'>
+                  <div className='flex flex-col items-center '>
                     <h3 className="text-text-light text-lg font-semibold">Chceš začít společný projekt?</h3>
                     <Button
                       variant="secondary"
@@ -110,7 +110,7 @@ const BentoGrid: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className='dark:bg-gray-900 bg-gray-200 relative group overflow-hidden border dark:border-text-light/15 border-text-dark/30 flex w-full lg:w-1/2 mt-4 lg:mt-0 md:mt-0 h-[350px] items-center justify-center p-4 rounded-xl shadow-lg'>
+              <div className='dark:bg-gray-900 bg-gray-200 relative group overflow-hidden border dark:border-text-light/15 border-text-dark/30 flex w-full lg:w-1/2 lg:mt-0 md:mt-0 h-[350px] items-center justify-center p-4 rounded-xl shadow-lg'>
                 <div className=''>
                   <h2 className="text-text-dark dark:text-text-light text-xl font-bold pb-40 z-20">
                     Momentálně vytvářím vlastní CMS pro správu e-shopu a webu
@@ -118,7 +118,7 @@ const BentoGrid: React.FC = () => {
                 </div>
                 <div className=''>
                   <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20 rounded-lg'></div>
-                  <Image src="/mockups/code-editor.svg" width={800} height={600} alt='Code snippet' className='rounded-xl shadow-lg drop-shadow-xl absolute -bottom-24  -right-8 w-3/4'/>
+                  <Image src="/mockups/code-editor.svg" width={800} height={600} alt='Code snippet' className='w-3/4 rounded-xl shadow-lg drop-shadow-xl absolute -bottom-24  -right-8 '/>
                 </div>
               </div>
             </section>
