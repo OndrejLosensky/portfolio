@@ -3,7 +3,7 @@
 import { AiOutlineDoubleRight } from "react-icons/ai";
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
-import { FaLaptopCode } from 'react-icons/fa';
+import { FaLaptopCode, FaSchool } from 'react-icons/fa';
 import Image from 'next/image';
 import { LuLaptop2 } from "react-icons/lu";
 import Link from "next/link";
@@ -72,6 +72,13 @@ const TimelineEvent: React.FC<TimelineEventProps> = ({ icon, title, description,
 
 const Timeline: React.FC = () => {
   const events = [
+    {
+      icon: <FaSchool />,
+      title: "SPŠS Betlémská",
+      date: "2020 – 2024",
+      description: "4-leté denní studium s vybraným oborem IT. ",
+      tags: ["C#","Sqlite", "CAD", "CAM", "Hardware", "Linux"]
+    },
     {
       icon: <FaLaptopCode />,
       title: "Odborná stáž - Česká spořitelna",
