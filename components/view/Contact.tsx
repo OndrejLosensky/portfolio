@@ -34,7 +34,7 @@ export default function ContactSection() {
       <span className="text-sm font-light text-shark-300"> Chcete mi něco sdělit, něco nabídnout nebo se jen zeptat? Stačí vyplnit tento formulář a já vám nejdéle během 3 pracovních dní odpovím </span>
       <div className="bg-[#8af8eb] absolute top-[2rem] -z-10 right-[0rem] lg:right-[-5rem] dark:bg-opacity-75 h-[31.25rem] w-[31.25rem] md:w-[60rem] rounded-full blur-[15rem] ] dark:bg-[#56b595]"></div>
 
-      <form onSubmit={handleSubmit} className="mt-6 px-4 sm:px-8 z-10 py-6 bg-shark-100 dark:hover:border-shark-300 hover:border-shark-900  border border-shark-400 duration-300 dark:bg-shark-900 rounded-md mx-auto w-full">
+      <form onSubmit={handleSubmit} className="mt-8 px-4 sm:px-8 z-10 py-6 bg-shark-100 dark:hover:border-shark-300 hover:border-shark-900  border border-shark-400 duration-300 dark:bg-shark-900 rounded-md mx-auto w-full">
         
         <div className="mb-4">
           <label htmlFor="name" className="block text-sm font-medium  text-gray-700 dark:text-shark-100">

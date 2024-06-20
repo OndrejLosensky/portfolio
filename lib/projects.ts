@@ -29,4 +29,11 @@ export const projectsData = [
       tags: ["Next.js", "TypeScript", "TailwindCSS", "ClerkAuth", "Firebase"],
       imageUrl: logo,
     },
+    {
+      title: "CodeCommerce",
+      description:
+        "Webová aplikace pro správu jednoduché e-shopu pomocí administrátorského panelu",
+      tags: ["Next.js", "TypeScript", "TailwindCSS", "ClerkAuth", "Firebase"],
+      imageUrl: logo,
+    },
   ] as const;

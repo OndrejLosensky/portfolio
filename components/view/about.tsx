@@ -70,7 +70,7 @@ export default function AboutSection() {
         </div>
         <div className="w-full lg:ml-20 mt-16 lg:w-2/3">
           <SectionTitle heading="O mě" subHeading="Kdo jsem?" />
-          <h2 className="md:text-4xl lg:text-5xl text-3xl flex flex-col mb-1 font-bold bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50">
+          <h2 className="md:text-4xl pt-2 lg:text-5xl text-3xl flex flex-col mb-1 font-bold bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50">
               <span>Ondřej Losenský</span>
           </h2>
           <p className="text-xs md:text-lg my-2 text-green-500 font-medium pt-2 flex flex-row items-center"> <CiCircleCheck className="mr-2 w-6 h-6"/> <span>Jsem otevřen pracovním příležitostem</span></p>

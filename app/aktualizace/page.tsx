@@ -4,12 +4,12 @@ import React from 'react';
 
 import { IoMdHome } from "react-icons/io";
 
-export default function KLPage() {
+export default function UpdatesPage() {
   return (
     <div className='max-w-screen my-28 overflow-hidden w-1/2 mx-auto flex flex-col'>
-      <h2 className='text-4xl text-primary font-bold text-center pb-2'>Projekt Královská levandule</h2>
-     <p> 
-        
+      <h2 className='text-4xl text-primary font-bold text-center pb-2'>Verze mého portfólia</h2>
+     <p className='text-center'> 
+            Zde naleznete nejnovější změny týkající se webové stránky, cen i možností nabídky
       </p>
 
       <Link href="/">

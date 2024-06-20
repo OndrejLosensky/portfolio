@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 
 import HeroSection from '@/components/view/hero';
+import NewsletterForm from '@/components/newsletter/newsletter-section';
 
 const BentoGrid = dynamic(() => import('@/components/layout/bento-grid'), {
   ssr: false,
@@ -33,6 +34,7 @@ export default function Content() {
       <BentoGrid/>
       <ProjectsSection/>
       <ExperienceSection/>
+      <NewsletterForm/>
       <ContactSection/>
     </main>
   );

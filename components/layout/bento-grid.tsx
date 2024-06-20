@@ -8,6 +8,7 @@ import { FaCheck } from "react-icons/fa6";
 import { IoIosGlobe } from "react-icons/io";
 import TechstackSlider from '../action/carousel/techstack-carousel';
 import { cardDetails } from '../action/carousel/carousel.config';
+import TechstackCarouselReversed from '../action/carousel/techstack-carousel-reversed';
 
 const BentoGrid: React.FC = () => {
   const [ref, isVisible] = useIntersectionObserver();
@@ -79,6 +80,7 @@ const BentoGrid: React.FC = () => {
                   <div className='w-[70%] h-full mx-auto overflow-hidden relative'>
                     <div className='absolute inset-0 bg-gradient-to-l w-full z-20 from-gray-200 via-transparent to-gray-200 dark:from-gray-900 dark:via-transparent dark:to-gray-900 opacity-100 rounded-lg'></div>
                     <TechstackSlider cardDetails={cardDetails} />
+                    <TechstackCarouselReversed cardDetails={cardDetails} />
                   </div>
                 </div>
               </div>
@@ -113,10 +115,11 @@ const BentoGrid: React.FC = () => {
               <div className='dark:bg-gray-900 bg-gray-200 relative group overflow-hidden border dark:border-text-light/15 border-text-dark/30 flex w-full lg:w-1/2 lg:mt-0 md:mt-0 h-[350px] items-center justify-center p-4 rounded-xl shadow-lg'>
                 <div className=''>
                   <h2 className="text-text-dark dark:text-text-light text-xl font-bold pb-40 z-20">
-                    Momentálně vytvářím vlastní CMS pro správu e-shopu a webu
+                    Momentálně vytvářím vlastní CMS pro správu e-shopu
                   </h2>
                 </div>
                 <div className=''>
+                  <p className='absolute bottom-4 font-semibold drop-shadow-2xl right-4 z-20'> CodeCommerce </p>
                   <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20 rounded-lg'></div>
                   <Image src="/mockups/code-editor.svg" width={800} height={600} alt='Code snippet' className='w-3/4 rounded-xl shadow-lg drop-shadow-xl absolute -bottom-24  -right-8 '/>
                 </div>

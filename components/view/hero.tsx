@@ -48,7 +48,7 @@ export default function HeroSection() {
                 <kbd className="px-[8px] py-[2px] scale-75 mr-2 dark:bg-shark-700 bg-shark-300 text-shark-600 dark:text-shark-100 rounded-md">H</kbd>
                 <span className="font-light dark:text-shark-100 text-shark-600"> pro zapnutí světlého režimu  </span>
               </p> 
-              <div className='w-full items-center justify-center  flex flex-col'>
+              <div className='w-full items-center justify-center mb-8 flex flex-col'>
                   <h1 className='text-md lg:text-xl mb-2 font-sora font-light flex flex-row'> Ahoj <Image src="/additional-icons/wave.svg" width={24} height={24} className="mx-1" alt="Wave emoji" />, jmenuji se </h1>
                   <h2 className="md:text-4xl lg:text-5xl text-3xl flex flex-col mb-1 font-bold text-center bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50">
                     <span>Ondřej Losenský</span>
@@ -68,7 +68,7 @@ export default function HeroSection() {
                       className="group relative"
                       onClick={() => handleClick(link.url)}
                     >
-                      <link.icon className="text-xl group-hover:text-malibu-500 transition duration-300" />
+                      <link.icon className="text-xl group-hover:text-primary transition duration-300" />
                       <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">
                         {link.name}
                       </span>
