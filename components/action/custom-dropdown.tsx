@@ -38,17 +38,17 @@ const CustomDropdown: FC = () => {
     <div className='hidden xl:flex flex-row items-center justify-center gap-x-4'>
       <div className="relative" ref={dropdownRef}>
         <button
-          className="flex items-center px-2 py-1 rounded-md border bg-transparent"
+          className="flex items-center px-2 py-1 rounded-md border border-text-dark/60 dark:border-text-light/60 bg-transparent"
           onClick={() => setIsOpen(!isOpen)}
         >
           <Image src={selectedLanguage.icon} width={24} height={24} alt={`${selectedLanguage.label} flag icon`} />
           <span className="ml-2">{selectedLanguage.label}</span>
           <FaChevronDown
-            className={`ml-2 h-4 w-4 transform transition-transform duration-300 ${isOpen ? '-rotate-180' : ''}`}
+            className={`ml-2 h-4 w-4  transform transition-transform duration-300 ${isOpen ? '-rotate-180' : ''}`}
           />
         </button>
         {isOpen && (
-          <div className="absolute mt-1 w-full bg-transparent dark:bg-transparent border border-white shadow-lg z-10 rounded-md">
+          <div className="absolute mt-1 w-full bg-transparent dark:bg-transparent border border-text-dark dark:border-text-light shadow-lg z-10 rounded-md">
             {languages.map((lang) => (
               <button
                 key={lang.value}

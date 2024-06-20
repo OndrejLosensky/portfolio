@@ -16,6 +16,7 @@ import Image from "next/image";
 
 import { IoIosSend } from "react-icons/io";
 import { useState } from "react";
+import { Loader } from "lucide-react";
 
 
 export default function ContactSection() {
@@ -85,7 +86,7 @@ export default function ContactSection() {
           <button
             type="submit"
             disabled={state.submitting}
-            className="items-center gap-x-2 inline-flex justify-center w-full px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-bermuda-500 hover:bg-bermuda-600 duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bermuda-500"
+            className="items-center gap-x-2 inline-flex justify-center w-full px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-bermuda-500 hover:bg-bermuda-600 active:bg-primary-active active:scale-90 duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bermuda-500"
           >
             <span>Odeslat</span>
             <IoIosSend/>
@@ -103,25 +104,16 @@ export default function ContactSection() {
       <h2 className={`dark:text-shark-200 text-shark-600 mb-2 ${isSent ? "pt-12": "mt-24"} text-center text-sm font-light`}> Tento web byl vytvořen pomocí těchto technologií </h2>
       <div className="flex flex-row items-center gap-x-6 scale-75 opacity-75 w-full justify-center">
           <div className="group relative">
-            <SiTypescript className="w-10 h-10"/>
+            <Image src="/icons/ts.svg" width={64} height={64} alt="TypeScript icon"/>
             <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">TypeScript</span>
           </div>
-          <div className="group relative">
-            <SiJavascript  className="w-10 h-10" /> 
-            <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">JavaScript</span>
-          </div>
 
           <div className="group relative">
-            <FaReact className="w-10 h-10"/>
-            <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">React</span>
-          </div>
-
-          <div className="group relative">
-            <RiNextjsFill  className="w-10 h-10"/>
+            <Image src="/icons/next.js.svg" width={64} height={64} alt="Nextjs icon"/>
             <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">Next.js</span>
           </div>
           <div className="group relative">
-            <RiTailwindCssFill  className="w-10 h-10"/>
+            <Image src="/icons/tailwind.svg" width={64} height={64} alt="TailwindCSS icon"/>
             <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">TailwindCSS</span>
           </div>
       </div>

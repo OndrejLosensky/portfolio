@@ -4,9 +4,7 @@ import SectionTitle from "../layout/section-title";
 import { useSectionInView } from "../../lib/hooks";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
 import { CiCircleCheck } from "react-icons/ci";
-
 
 interface Skill {
   name: string;
@@ -27,10 +25,10 @@ const skills: Skill[] = [
   { name: 'TypeScript', level: '40%', icon: "/icons/ts.svg" },
   { name: 'CSS', level: '95%', icon: "/icons/css.svg" },
   { name: 'JavaScript', level: '80%', icon: "/icons/js.svg" },
-  { name: 'HTML', level: '100%', icon:"/icons/html.svg" },
+  { name: 'HTML', level: '100%', icon: "/icons/html.svg" },
   { name: 'Sqlite', level: '80%', icon: "/icons/sqlite.svg" },
   { name: 'MongoDB', level: '10%', icon: "/icons/mongo.png" },
-  { name: 'TailwindCSS', level: '85%', icon:"/icons/tailwind.svg" },
+  { name: 'TailwindCSS', level: '85%', icon: "/icons/tailwind.svg" },
   { name: 'Wordpress', level: '90%', icon: "/icons/wordpress.svg" },
 ];
 
@@ -63,7 +61,7 @@ export default function AboutSection() {
   const { ref } = useSectionInView("O mně");
 
   return (
-    <div ref={ref} id="about" className="min-h-screen max-w-screen w-[90%] z-10 mb-64 relative  mx-auto flex flex-col space-y-4">
+    <div ref={ref} id="about" className="min-h-screen max-w-screen w-[90%] z-10 mb-64 relative mx-auto flex flex-col space-y-4">
       
       <section className="flex flex-col lg:flex-row lg:gap-x-6 lg:items-center">
         <div className="w-full lg:w-1/3 relative lg:mt-12">
@@ -71,8 +69,7 @@ export default function AboutSection() {
             <Image src="/profile_pic.jpeg" height={200} width={200} alt="My personal photo" className="w-2/3 hover:scale-125 lg:hover:scale-110 duration-300 lg:w-full mx-auto rounded-xl border border-text-dark dark:border-text-light shadow-lg" />
         </div>
         <div className="w-full lg:ml-20 mt-16 lg:w-2/3">
-        <SectionTitle heading="O mě" subHeading="Kdo jsem?" />
-
+          <SectionTitle heading="O mě" subHeading="Kdo jsem?" />
           <h2 className="md:text-4xl lg:text-5xl text-3xl flex flex-col mb-1 font-bold bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50">
               <span>Ondřej Losenský</span>
           </h2>
@@ -87,40 +84,47 @@ export default function AboutSection() {
             Tento rok jsem vystudoval střední průmyslovou školu v Praze s vybraným oborem IT. Mezi moje velké koníčky patří programování webových aplikací,
             tvorba amatérských grafických designů a mnoho různých věcí. Na mém portfoliu naleznete kontakt na mě, nějaké mé projekty, kompletní životopis
             jak ve formě PDF tak zde v podobě vertikální časové osy.
-
           </p>
-
         </div>     
       </section>
 
-
-      <h2 className="pt-24 text-xl"> Technologie s kterými jsem se alespoň setkal nebo je používám často</h2>
-      <ul className="flex gap-4">
+      <h2 className="pt-24 text-xl">Technologie s kterými jsem se alespoň setkal nebo je používám často</h2>
+      <ul className="flex flex-wrap gap-4">
         {skills.map((skill, index) => (
           <motion.li
+            key={index}
             initial="initial"
             whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            custom={index} key={index} className="bg-black/10 group relative hover:scale-105 hover:bg-black/20 dark:bg-white/10 p-4 rounded dark:hover:bg-white/20 transition-colors duration-300">
-                <Image src={skill.icon} alt="Icon" height={32} width={32}/>
-                <span className="absolute -bottom-8  left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">
-                  {skill.name}
-                </span>
+            viewport={{ once: true }}
+            custom={index}
+            variants={fadeInAnimationVariants}
+            className="bg-black/10 group relative hover:scale-105 hover:bg-black/20 dark:bg-white/10 p-4 rounded dark:hover:bg-white/20 transition-colors duration-300"
+          >
+            <Image src={skill.icon} alt={`${skill.name} icon`} height={32} width={32} />
+            <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">
+              {skill.name}
+            </span>
           </motion.li>
         ))}
       </ul>
 
-      <h2 className="pt-12 text-xl">Nástroj, které používám nejčastěji </h2>
-      <ul className="flex gap-4">
+      <h2 className="pt-12 text-xl">Nástroje, které používám nejčastěji</h2>
+      <ul className="flex flex-wrap gap-4">
         {tools.map((tool, index) => (
-          <li key={index} className="bg-black/10 group relative hover:scale-105 hover:bg-black/20 dark:bg-white/10 p-4 rounded dark:hover:bg-white/20 transition-colors duration-300 flex items-center justify-center gap-2">
-            <Image src={tool.icon} alt="Icon" height={32} width={32}/>
-            <span className="absolute -bottom-8  left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">
-                {tool.name}
+          <motion.li
+            key={index}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            custom={index}
+            variants={fadeInAnimationVariants}
+            className="bg-black/10 group relative hover:scale-105 hover:bg-black/20 dark:bg-white/10 p-4 rounded dark:hover:bg-white/20 transition-colors duration-300 flex items-center justify-center gap-2"
+          >
+            <Image src={tool.icon} alt={`${tool.name} icon`} height={32} width={32} />
+            <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">
+              {tool.name}
             </span>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </div>

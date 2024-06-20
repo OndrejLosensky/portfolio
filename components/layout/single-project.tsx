@@ -51,8 +51,8 @@ export default function Project({
         <Image
           src={imageUrl}
           alt="Project I worked on"
-          quality={95}
-          className="lg:absolute lg:block lg:top-8 lg:-right-40 lg:w-[28.25rem] rounded-t-lg shadow-2xl
+          quality={100}
+          className="lg:absolute lg:block lg:top-8 lg:-right-40 lg:w-[30.25rem] rounded-t-lg shadow-2xl
         transition 
         group-hover:scale-[1.04]
         group-hover:-translate-x-3

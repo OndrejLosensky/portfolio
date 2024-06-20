@@ -1,8 +1,12 @@
 "use client";
 
+import { AiOutlineDoubleRight } from "react-icons/ai";
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
-import { FaReact, FaSchool } from 'react-icons/fa';
+import { FaLaptopCode } from 'react-icons/fa';
+import Image from 'next/image';
+import { LuLaptop2 } from "react-icons/lu";
+import Link from "next/link";
 
 interface TimelineEventProps {
   icon: React.ReactElement;
@@ -10,9 +14,11 @@ interface TimelineEventProps {
   description: string;
   date: string;
   isReversed: boolean;
+  link?: string;
+  tags?: string[];
 }
 
-const TimelineEvent: React.FC<TimelineEventProps> = ({ icon, title, description,date, isReversed }) => {
+const TimelineEvent: React.FC<TimelineEventProps> = ({ icon, title, description, date, isReversed, link, tags }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -37,11 +43,28 @@ const TimelineEvent: React.FC<TimelineEventProps> = ({ icon, title, description,
           {icon}
         </h1>
       </div>
-      <div className="order-1 h-[150px] bg-shark-50 dark:bg-shark-900 border border-shark-500 dark:border-shark-300 rounded-lg shadow-xl w-5/12 px-6 py-4">
-        <h3 className="mb-3 font-bold text-shark-800 flex flex-row items-center gap-x-2 dark:text-shark-100 text-xl">{title}<span className='font-mono font-light text-sm pt-1 text-shark-300'> {date} </span></h3>
+      <div className="order-1 h-auto bg-shark-50 dark:bg-shark-900 border border-shark-500 dark:border-shark-300 rounded-lg shadow-xl w-5/12 px-6 py-4">
+        <h3 className="mb-3 font-bold text-shark-800 flex flex-row items-center gap-x-2 dark:text-shark-100 text-xl">
+          {title}
+          <span className='font-mono font-light text-sm pt-1 text-shark-300'>{date}</span>
+        </h3>
+        {tags && tags.length > 0 && (
+          <div className="mb-2">
+            {tags.map((tag, index) => (
+              <span key={index} className="inline-block bg-blue-200 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
         <p className="text-sm leading-snug tracking-wide text-shark-600 dark:text-shark-300 text-opacity-100">
           {description}
         </p>
+        {link && (
+          <Link href={link} className="text-primary hover:font-bold duration-300 group text-sm mt-2 flex flex-row gap-x-1 items-center">
+            <span className="">Zjistit více</span> <AiOutlineDoubleRight/>
+          </Link>
+        )}
       </div>
     </motion.div>
   );
@@ -50,28 +73,33 @@ const TimelineEvent: React.FC<TimelineEventProps> = ({ icon, title, description,
 const Timeline: React.FC = () => {
   const events = [
     {
-      icon: <FaReact />,
+      icon: <FaLaptopCode />,
       title: "Odborná stáž - Česká spořitelna",
       date: "Květen 2022",
       description: "Práce s Adobe Illustrator, SSRS ve Visual Studiu a Excel",
+      tags: ["Illustrator","Photoshop", "SSRS", "Excel"]
     },
     {
-      icon: <FaSchool />,
+      icon: <FaLaptopCode />,
       title: "Odborná stáž - Česká spořitelna",
       date: "Květen 2023",
       description: "Python script pro nahrání a následné filtrování veřejných smluv z rejstříku",
+      tags: ["Python", "Excel", "CSV"]
     },
     {
-      icon: <FaReact/>,
+      icon: <Image src="/additional-icons/logo.svg" width={26} height={26} alt='KL icon'/>,
       title: "Královská levandule - web",
       date: "2022 - 2023",
       description: "Kompletní tvorba webové stránky Královské levandule pomocí Wordpressu a custom code bloků",
+      link: "/kralovska-levandule",
+      tags: ["Wordpress"]
     },
     {
-      icon: <FaSchool />,
+      icon: <LuLaptop2/>,
       title: "Havel & Partners",
       date: "Srpen 2023",
-      description: "Bridága v IT oddělení jako IT support výpomoc",
+      description: "Brigáda v IT oddělení jako IT support výpomoc",
+      tags: ["IT Support"]
     },
   ];
 
@@ -87,6 +115,8 @@ const Timeline: React.FC = () => {
             description={event.description}
             date={event.date}
             isReversed={index % 2 !== 0}
+            link={event.link} 
+            tags={event.tags} 
           />
         ))}
       </div>
