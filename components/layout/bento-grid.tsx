@@ -44,11 +44,12 @@ const BentoGrid: React.FC = () => {
             </div>
           </div>
           <div className='grid grid-rows-2 w-full mt-4 lg:mt-0 lg:w-1/2 gap-y-4'>
-            <div className='dark:bg-gray-900 bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex items-center justify-center p-4 rounded-lg shadow-lg'>
+            <div className='dark:bg-gray-900 relative bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex items-center justify-center p-4 rounded-lg shadow-lg'>
               <div className='flex flex-col items-center'>
                 <h3 className="text-text-dark dark:text-text-light text-lg font-semibold">Nejnovější projekt</h3>
                 <Button className="mt-2 text-text-dark dark:text-text-light duration-300 px-4 py-2 rounded-md shadow-md">Podívat se</Button>
               </div>
+              <Image src="/mockups/KL.svg" width={400} height={350} alt='Project image' />
             </div>
             <div className='dark:bg-gray-900 bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex flex-row items-center justify-center p-4 rounded-lg shadow-lg overflow-hidden'>
               <div className='w-[30%] h-full flex flex-col justify-center text-left items-center'>
