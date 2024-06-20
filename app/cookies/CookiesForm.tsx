@@ -51,8 +51,11 @@ export default function CookiesForm() {
       </div>
       {isClosed && (
         <div className='fixed hover:py-2 duration-300 bottom-0 left-2 py-0.5 px-2 bg-gradient-to-tr to-bermuda-600 from-emerald-400 rounded-t-full cursor-pointer flex items-center' onClick={handleReopen} title="Znovu otevřít nastavení cookies">
-            <div className='relative'>
+            <div className='group relative'>
                 <IoIosArrowBack className='text-white rotate-90 mt-1' />
+                <span className="absolute -top-8 ml-1 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">
+                    Otevřít
+                </span>
             </div>
         </div>
       )}

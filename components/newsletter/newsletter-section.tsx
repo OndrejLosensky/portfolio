@@ -2,7 +2,7 @@ import React from 'react';
 
 const NewsletterForm: React.FC = () => {
   return (
-    <section className="bg-gray-200/80 dark:bg-gray-800/80 rounded-xl border my-32 mb-40 mx-24 shadow-lg border-text-dark/30 dark:border-text-light/30 py-8">
+    <section className="bg-gray-200/80 dark:bg-gray-800/80 rounded-xl border my-32 mb-48 mx-24 shadow-lg border-text-dark/30 dark:border-text-light/30 py-8">
       <div className="flex flex-col items-center mx-auto px-4 sm:px-6 lg:px-8">
         <div className="w-2/3 mx-auto  flex flex-col items-center">
           <h2 className="text-3xl font-bold leading-tight mb-4">Přihlaste se k odběru mého newsletteru</h2>
@@ -13,7 +13,7 @@ const NewsletterForm: React.FC = () => {
             <input
               type="email"
               placeholder="Vaše e-mailová adresa"
-              className="bg-gray-100 dark:bg-gray-600 w-72 border border-gray-400 dark:border-gray-700 rounded-md px-4 py-2 mb-2 sm:mb-0 sm:mr-2 focus:outline-none focus:ring-2 focus:ring-primary text-gray-800"
+              className="bg-gray-100 dark:bg-gray-600 w-72 border border-gray-400 dark:border-gray-700 rounded-md px-4 py-2 mb-2 sm:mb-0 sm:mr-2 focus:outline-none focus:ring-2 focus:ring-primary text-text-dark dark:text-text-light"
             />
             <button
               type="submit"
