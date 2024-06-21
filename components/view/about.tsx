@@ -80,7 +80,6 @@ export default function AboutSection() {
           <div className="flex flex-row items-center gap-x-1 mt-4">
             <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Programátor </p>
             <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Kóder </p>
-            <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Designér </p>
             <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Administrátor</p>
           </div>
           <p className="mt-4 text-sm text-shark-500 dark:text-shark-200">

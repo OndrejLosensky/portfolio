@@ -44,7 +44,7 @@ const BentoGrid: React.FC = () => {
                 <div className='absolute inset-0 bg-gradient-to-b from-transparent to-main opacity-100 rounded-lg'></div>
                 <div className='relative z-10 flex flex-col p-6'>
                   <IoIosGlobe className='w-10 h-10 mb-2 text-text-light dark:text-text-light'/>
-                  <h2 className="text-4xl flex flex-col mb-1 font-bold bg-clip-text text-transparent bg-gradient-to-tr dark:from-neutral-50 dark:to-neutral-400 from-neutral-100 to-neutral-400 bg-opacity-50">
+                  <h2 className="text-3xl md:text-4xl flex flex-col mb-1 font-bold bg-clip-text text-transparent bg-gradient-to-tr dark:from-neutral-50 dark:to-neutral-400 from-neutral-100 to-neutral-400 bg-opacity-50">
                     <span>Tvorba webu na míru</span>
                   </h2>
                   <p className='text-text-light dark:text-text-light/70'> Stačí se domluvit a váš web může být na světě </p>
@@ -71,21 +71,21 @@ const BentoGrid: React.FC = () => {
                   <div className='absolute inset-0 bg-gradient-to-br dark:from-transparent from-transparent to-gray-100 dark:to-gray-900 opacity-55 rounded-lg'></div>
                 </div>
                 <div className='dark:bg-gray-900 bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex flex-row items-center justify-center p-4 rounded-lg shadow-lg overflow-hidden'>
-                  <div className='w-[45%] lg:w-[30%] h-full flex flex-col justify-center text-left items-center'>
+                  <div className='w-[0%] md:w-[30%] h-full flex flex-col justify-center text-left items-center'>
                     <div className='-ml-8'>
-                      <p className='font-extralight lowercase text-text-dark/60 dark:text-text-light/60'> Nejvíce používám tyto</p>
-                      <h3 className="text-text-dark dark:text-text-light font-bold text-lg">Technologie</h3>
+                      <p className='hidden md:flex font-extralight lowercase text-text-dark/60 dark:text-text-light/60'> Nejvíce používám tyto</p>
+                      <h3 className="hidden md:flex text-text-dark dark:text-text-light font-bold text-lg">Technologie</h3>
                     </div>
                   </div>
-                  <div className='w-[55%] lg:w-[70%] h-full flex flex-col mx-auto overflow-hidden relative'>
-                    <div className='absolute inset-0 bg-gradient-to-l w-full z-20 from-gray-200 via-transparent to-gray-200 dark:from-gray-900 dark:via-transparent dark:to-gray-900 opacity-100 rounded-lg'></div>
-                    <div className='h-1/3'>
+                  <div className='w-[95%] md:w-[70%] h-full flex flex-col mx-auto overflow-hidden relative'>
+                    <div className='absolute inset-0 bg-gradient-to-l w-full z-20 from-gray-200 via-transparent to-gray-200 dark:from-gray-900 dark:via-transparent dark:to-gray-900 opacity-100'></div>
+                    <div className='h-1/3 scale-75 md:scale-100'>
                       <TechstackSlider cardDetails={cardDetailsTop} />
                     </div>
-                    <div className='h-1/3'>
+                    <div className='h-1/3 scale-75 md:scale-100'>
                       <TechstackCarouselReversed cardDetails={cardDetailsMiddle} />
                     </div>
-                    <div className='h-1/3'>
+                    <div className='h-1/3 scale-75 md:scale-100'>
                       <TechstackSlider cardDetails={cardDetailsBottom} />
                     </div>
                   </div>
