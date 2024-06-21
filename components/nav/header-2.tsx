@@ -26,7 +26,14 @@ export default function Header() {
             <Image src={logoSrc} height={32} width={32} alt="Logo" className="mr-2"/>
             <span className="font-bold text-bermuda-400"> Losenský</span>Ondřej
           </Link>
-          <HeaderLinks />
+           <div className="flex flex-row gap-x-6">
+                <Link href="/"> Úvod</Link>
+                <Link href="/"> O mně</Link>
+                <Link href="/"> Projekty</Link>
+                <Link href="/"> Práce</Link>
+                <Link href="/"> Kontakt</Link>
+
+           </div> 
           <CustomDropdown/>
         </nav>
       </motion.header>      

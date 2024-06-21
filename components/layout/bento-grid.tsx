@@ -58,7 +58,7 @@ const BentoGrid: React.FC = () => {
               <div className='grid grid-rows-2 w-full mt-4 lg:mt-0 lg:w-1/2 gap-y-4'>
                 <div className='dark:bg-gray-900 group relative bg-gray-200 border w-full overflow-hidden dark:border-text-light/15 border-text-dark/30 h-full flex items-center justify-center p-4 rounded-lg shadow-lg'>
                   <div className='flex flex-col z-10 w-1/2 lg:w-1/3'>
-                    <h3 className="text-text-dark dark:text-text-light text-sm lg:text-lg font-semibold ml-12">Nejnovější projekt</h3>
+                    <h3 className="text-text-dark dark:text-text-light text-sm lg:text-lg font-semibold  lg:ml-12">Nejnovější projekt</h3>
                     <Link href="/kralovska-levandule">
                       <Button className="mt-2 scale-75 lg:scale-100 text-text-dark dark:text-text-light bg-primary dark:bg-primary hover:bg-primary-hover dark:hover:bg-primary-hover duration-200 -ml-3 lg:ml-12 px-4 py-2 rounded-md shadow-md active:bg-primary-active active:scale-[0.65] lg:active:scale-75">
                         Podívat se
@@ -66,21 +66,20 @@ const BentoGrid: React.FC = () => {
                     </Link>
                   </div>
                   <div className='w-1/2 lg:w-2/3'>
-                    <Image src="/mockups/KL.svg" width={500} height={400} alt='Project image' className='xl:w-96 xl:h-72 h-48 w-72 group-hover:-rotate-3 group-hover:scale-[1.04] duration-300 absolute -bottom-16 -right-20'/>
+                    <Image src="/mockups/KL.svg" width={500} height={400} alt='Project image' className='xl:w-96 xl:h-72 h-40 w-72 group-hover:-rotate-3 group-hover:scale-[1.04] duration-300 absolute -bottom-16 -right-20'/>
                   </div>
                   <div className='absolute inset-0 bg-gradient-to-br dark:from-transparent from-transparent to-gray-100 dark:to-gray-900 opacity-55 rounded-lg'></div>
                 </div>
                 <div className='dark:bg-gray-900 bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex flex-row items-center justify-center p-4 rounded-lg shadow-lg overflow-hidden'>
-                  <div className='w-[30%] h-full flex flex-col justify-center text-left items-center'>
+                  <div className='w-[45%] lg:w-[30%] h-full flex flex-col justify-center text-left items-center'>
                     <div className='-ml-8'>
                       <p className='font-extralight lowercase text-text-dark/60 dark:text-text-light/60'> Nejvíce používám</p>
                       <h3 className="text-text-dark dark:text-text-light font-bold text-lg">Technologie</h3>
                     </div>
                   </div>
-                  <div className='w-[70%] h-full mx-auto overflow-hidden relative'>
+                  <div className='w-[55%] lg:w-[70%] h-full mx-auto overflow-hidden relative'>
                     <div className='absolute inset-0 bg-gradient-to-l w-full z-20 from-gray-200 via-transparent to-gray-200 dark:from-gray-900 dark:via-transparent dark:to-gray-900 opacity-100 rounded-lg'></div>
                     <TechstackSlider cardDetails={cardDetails} />
-                    <TechstackCarouselReversed cardDetails={cardDetails} />
                   </div>
                 </div>
               </div>
@@ -121,7 +120,7 @@ const BentoGrid: React.FC = () => {
                 <div className=''>
                   <p className='absolute bottom-4 font-semibold drop-shadow-2xl right-4 z-20'> CodeCommerce </p>
                   <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20 rounded-lg'></div>
-                  <Image src="/mockups/code-editor.svg" width={800} height={600} alt='Code snippet' className='w-3/4 rounded-xl shadow-lg drop-shadow-xl absolute -bottom-24  -right-8 '/>
+                  <Image src="/mockups/code-editor.svg" width={800} height={600} alt='Code snippet' className='w-full lg:w-3/4 rounded-xl shadow-lg drop-shadow-xl absolute -bottom-8 lg:-bottom-24  -right-8 '/>
                 </div>
               </div>
             </section>

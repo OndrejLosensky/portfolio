@@ -1,53 +1,60 @@
 .carousel-container {
-    overflow: hidden;
-    position: relative;
-    height: 100%;
-    border-color: #4b5563;
-    width: 150%;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  border-color: #4b5563;
+  width: 100%; /* Adjusted width for responsiveness */
+}
+
+.carousel-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Adjusted width for responsiveness */
+  max-width: 300px; /* Maximum width to maintain card size on larger screens */
+  height: 150px;
+  border-radius: 20%;
+}
+
+.carousel-card > img {
+  height: auto; /* Allow image height to adjust proportionally */
+  width: 100%; /* Make image width 100% of parent */
+  max-width: 100%; /* Ensure image does not exceed its natural size */
+  border-radius: 10%;
+}
+
+.carousel-track {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  gap: 16px;
+  width: 200%;
+  height: 100%;
+  animation: slide 8s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
   }
-  
+  100% {
+    left: -100%;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
   .carousel-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 150px;
-    /*
-    &:hover {
-      transform: scale(1.1);
-      box-shadow: 0px 0px 8px rgba(222, 222, 222, 0.362),
-        2px 4px 8px rgba(152, 133, 133, 0.392),
-        2px 4px 8px rgba(139, 154, 139, 0.303);
-    }*/
-    border-radius: 20%; 
-  }
-  
-  .carousel-card > img {
-    height: 80px;
-    width: 400px;
-    border-radius: 10%;
-  }
-  
-  .carousel-track {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    top: 0;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
-    gap: 32px;
-    width: 200%;
-    height: 100%;
-    animation: slide 8s linear infinite;
+    max-width: 100%; /* Adjust max-width to fill smaller screens */
+    width: auto; /* Allow cards to expand to fit smaller screens */
   }
 
-  @keyframes slide {
-    0% {
-      left: 0;
-    }
-    100% {
-      left: -100%;
-    }
+  .carousel-track {
+    gap: 6px; /* Further reduce gap for very small screens */
   }
+}

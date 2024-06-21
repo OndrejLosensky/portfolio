@@ -21,10 +21,10 @@ const config: Config = {
           "0 0px 4px rgba(64,210, 235, 0.1)",
           "0 0px 4px rgba(64, 235,183, 0.1)"
         ],
-        glow2:
-        [
-          "0px 0px 8px rgba(220,50, 222, 0.4)",
-        ]
+        glow2: [
+          "0 0px 8px rgba(64,210, 235, 0.2)",
+          "0 0px 8px rgba(64, 235,183, 0.25)"
+        ],
       },
       colors: {
         'main': "#1a1e23",
