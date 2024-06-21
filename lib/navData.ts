@@ -11,10 +11,11 @@ export const links = [
       name: "Projekty",
       hash: "#projects",
     },
+    /*
     {
       name: "Práce",
       hash: "#work",
-    },
+    },*/
     {
       name: "Kontakt",
       hash: "#contact",
