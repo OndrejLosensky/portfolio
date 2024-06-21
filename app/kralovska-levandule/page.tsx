@@ -1,4 +1,4 @@
-import Header from '@/components/nav/header-2';
+import Header from '@/components/nav/Header';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';

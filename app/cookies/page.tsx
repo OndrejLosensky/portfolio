@@ -1,4 +1,4 @@
-import Header from '@/components/nav/header-2';
+import Header from '@/components/nav/Header';
 import Footer from '@/components/nav/footer';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -8,7 +8,7 @@ import { IoMdHome } from "react-icons/io";
 
 export default function CookiesPage() {
   return (
-    <div className='max-w-screen my-28 overflow-hidden w-1/2 mx-auto flex flex-col justify-between h-screen'>
+    <div className='max-w-screen my-28 overflow-hidden w-3/4 lg:w-1/2 mx-auto flex flex-col justify-between h-screen'>
       <Header/>
       <div>
         <h2 className='text-4xl text-primary font-bold text-center pb-4'>Souhlas s použitím souborů cookies</h2>

@@ -1,6 +1,6 @@
 "use client"
 
-import Header from '@/components/nav/header-2';
+import Header from '@/components/nav/Header';
 import Footer from '@/components/nav/footer';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -18,7 +18,7 @@ export default function GDPRPage() {
   return (
     <div className='max-w-screen my-28 overflow-hidden w-full justify-between flex flex-col items-center mx-auto'>
     <Header/>
-      <div className='w-1/2 mx-auto'>
+      <div className='w-3/4 lg:w-1/2 mx-auto'>
         <h2 className='text-4xl text-primary font-bold text-center pb-2'>Zásady ochrany osobních údajů</h2>
         <div className='p-4 rounded-lg'>
             <p className='text-base'>

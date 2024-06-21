@@ -6,7 +6,7 @@ import Link from 'next/link';
 import React from 'react';
 import { IoMdHome } from "react-icons/io";
 import { FaChevronDown } from "react-icons/fa";
-import Header from '@/components/nav/header-2';
+import Header from '@/components/nav/Header';
 import Footer from '@/components/nav/footer-2';
 
 interface OfferProps {
