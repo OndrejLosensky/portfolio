@@ -74,6 +74,10 @@ export interface CardDetails {
       imgUrl: "/icons/mongo.svg",
       title: "Text 7"
     }, 
+    7: {
+      imgUrl: "/icons/gpt.svg",
+      title: "Text 8"
+    }, 
   };
 
   export const cardDetailsBottom: CardDetails = {

@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 
 const NewsletterForm: React.FC = () => {
@@ -16,6 +18,15 @@ const NewsletterForm: React.FC = () => {
               className="bg-gray-100 dark:bg-gray-600 border border-gray-400 dark:border-gray-700 rounded-md px-4 py-2 mb-2 sm:mb-0 sm:mr-2 focus:outline-none focus:ring-2 focus:ring-primary text-text-dark dark:text-text-light"
             />
             <button
+              onClick={async function handleOnClick() {
+                const results = await fetch('/api/login', {
+                  method: 'POST',
+                  body: JSON.stringify({
+                    validationCode: `tt226-5398x`
+                  })
+                });
+                console.log('results', results)
+              }}
               type="submit"
               className="bg-primary dark:bg-primary hover:bg-primary-hover dark:hover:bg-primary-hover duration-200 active:bg-primary-active dark:active:bg-primary-active text-text-light dark:text-text-light font-semibold rounded-md px-4 py-2 sm:py-2 sm:px-6 focus:outline-none focus:ring-2 focus:ring-primary"
             >

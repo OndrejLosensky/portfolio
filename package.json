@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "email": "email dev --dir app/emails"
   },
   "dependencies": {
     "@formspree/react": "^2.5.1",
@@ -14,6 +15,7 @@
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.7",
+    "@react-email/components": "^0.0.19",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.10",
@@ -24,10 +26,12 @@
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-email": "^2.1.4",
     "react-icons": "^5.2.1",
     "react-intersection-observer": "^9.10.3",
     "react-loader-spinner": "^6.1.6",
     "react-use": "^17.5.0",
+    "resend": "^3.3.0",
     "styled-components": "^6.1.11",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
