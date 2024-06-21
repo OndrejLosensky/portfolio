@@ -39,17 +39,17 @@ const BentoGrid: React.FC = () => {
           <div className="flex flex-col h-full w-full gap-4">
             {/* Projects section */}
             <section className='flex flex-col lg:flex-row gap-x-4'>
-              <div className='group relative w-full lg:w-1/2 h-[450px] md:h-[600px] flex flex-col items-start justify-end rounded-lg shadow-lg border dark:border-text-light/15 border-text-dark/30 dark:bg-gray-900 bg-gray-200'>
-                <Image src="/image5.jpeg" alt='Macbook image' width={600} height={400} className='absolute w-full h-full rounded-lg opacity-75'/>
+              <div className='group relative w-full lg:w-1/2 h-[360px] md:h-[600px] flex flex-col items-start justify-end rounded-lg shadow-lg border dark:border-text-light/15 border-text-dark/30 dark:bg-gray-900 bg-gray-200'>
+                <Image src="/image5.jpeg" alt='Macbook image' width={300} height={400} className='absolute w-full h-full rounded-lg opacity-75'/>
                 <div className='absolute inset-0 bg-gradient-to-b from-transparent to-main opacity-100 rounded-lg'></div>
                 <div className='relative z-10 flex flex-col p-6'>
                   <IoIosGlobe className='w-10 h-10 mb-2 text-text-light dark:text-text-light'/>
-                  <h2 className="text-3xl md:text-4xl flex flex-col mb-1 font-bold bg-clip-text text-transparent bg-gradient-to-tr dark:from-neutral-50 dark:to-neutral-400 from-neutral-100 to-neutral-400 bg-opacity-50">
+                  <h2 className="text-2xl md:text-4xl flex flex-col mb-1 font-bold bg-clip-text text-transparent bg-gradient-to-tr dark:from-neutral-50 dark:to-neutral-400 from-neutral-100 to-neutral-400 bg-opacity-50">
                     <span>Tvorba webu na míru</span>
                   </h2>
                   <p className='text-text-light dark:text-text-light/70'> Stačí se domluvit a váš web může být na světě </p>
                   <Link href="/tvorba-webu">
-                    <Button className='mt-2 w-1/2 text-text-light bg-primary dark:bg-primary hover:bg-primary-hover dark:hover:bg-primary-hover active:bg-primary-active active:scale-90 duration-200'>
+                    <Button className='mt-2 text-text-light bg-primary dark:bg-primary hover:bg-primary-hover dark:hover:bg-primary-hover active:bg-primary-active active:scale-90 duration-200'>
                       Mám zájem o web
                     </Button>
                   </Link>
@@ -109,7 +109,7 @@ const BentoGrid: React.FC = () => {
                     <h3 className="text-text-light text-lg font-semibold">Chceš začít společný projekt?</h3>
                     <Button
                       variant="secondary"
-                      className={`mt-2 mx-auto w-[300px] rounded-md shadow-md gap-x-4 border border-text-light/60 dark:border-text-light/60 px-4 py-2 ${
+                      className={`mt-2 mx-auto w-[260px] md:w-[300px] text-xs md:text-md rounded-md shadow-md gap-x-4 border border-text-light/60 dark:border-text-light/60 px-4 py-2 ${
                         copied ? 'text-green-500 dark:text-green-500 ' : 'dark:bg-main bg-main dark:hover:bg-main/95 hover:bg-main/95 text-white'
                       }`}
                       onClick={copyToClipboard}
