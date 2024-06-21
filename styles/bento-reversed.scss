@@ -1,4 +1,4 @@
-.carousel-container {
+.carousel-container-reversed {
     overflow: hidden;
     position: relative;
     height: 100%;
@@ -29,7 +29,7 @@
     border-radius: 10%;
   }
   
-  .carousel-track {
+  .carousel-track-reversed {
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -40,10 +40,10 @@
     gap: 32px;
     width: 200%;
     height: 100%;
-    animation: slide 8s linear infinite;
+    animation: slide-reversed 10s linear infinite;
   }
 
-  @keyframes slide {
+  @keyframes slide-reversed {
     0% {
       right: 0;
     }

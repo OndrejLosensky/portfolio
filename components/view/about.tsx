@@ -30,6 +30,9 @@ const skills: Skill[] = [
   { name: 'MongoDB', level: '10%', icon: "/icons/mongo.png" },
   { name: 'TailwindCSS', level: '85%', icon: "/icons/tailwind.svg" },
   { name: 'Wordpress', level: '90%', icon: "/icons/wordpress.svg" },
+  { name: 'PHP', level: '90%', icon: "/icons/php.svg" },
+  { name: 'C#', level: '90%', icon: "/icons/cs.svg" },
+  { name: 'Godot', level: '90%', icon: "/icons/godot2.svg" },
 ];
 
 const tools: Tool[] = [
@@ -75,6 +78,7 @@ export default function AboutSection() {
           </h2>
           <p className="text-xs md:text-lg my-2 text-green-500 font-medium pt-2 flex flex-row items-center"> <CiCircleCheck className="mr-2 w-6 h-6"/> <span>Jsem otevřen pracovním příležitostem</span></p>
           <div className="flex flex-row items-center gap-x-1 mt-4">
+            <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Programátor </p>
             <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Kóder </p>
             <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Designér </p>
             <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Administrátor</p>

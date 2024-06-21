@@ -9,8 +9,8 @@ interface TechstackCarouselProps {
 
 const TechstackCarousel: React.FC<TechstackCarouselProps> = ({ cardDetails }) => {
   return (
-    <div className="carousel-container">
-      <div className="carousel-track">
+    <div className="carousel-container-reversed">
+      <div className="carousel-track-reversed">
         {Object.keys(cardDetails).map((detailKey) => {
           const keyNum = parseInt(detailKey, 10); // Convert detailKey to number
           return (

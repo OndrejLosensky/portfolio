@@ -30,9 +30,7 @@ export default function Header() {
                 <Link href="/"> Úvod</Link>
                 <Link href="/"> O mně</Link>
                 <Link href="/"> Projekty</Link>
-                <Link href="/"> Práce</Link>
                 <Link href="/"> Kontakt</Link>
-
            </div> 
           <CustomDropdown/>
         </nav>

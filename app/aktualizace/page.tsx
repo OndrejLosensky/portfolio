@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import React from 'react';
 import { IoMdHome } from "react-icons/io";
+import Header from '@/components/nav/header-2';
 
 const blogPosts = [
   { id: 1, title: 'První neúplné vydání (0.2.4)', date: '20.6.2024', content: 'Vytvořil jsem největší část celého webu, včetně částí a jiných stránek, responzivního designu apod. Texty jsou skoro hotové, obrázky a odkazy také... ' },
@@ -10,6 +11,8 @@ const blogPosts = [
 export default function UpdatesPage() {
   return (
     <div className='max-w-screen my-28 overflow-hidden w-full mx-auto'>
+      <Header/>
+      
       <div className='mx-auto'>
         <h2 className='text-4xl text-primary font-bold text-center pb-2'>Verze mého portfólia</h2>
         <p className='text-center'>

@@ -33,7 +33,9 @@ export default function Content() {
       <AboutSection/>
       <BentoGrid/>
       <ProjectsSection/>
+      {/* 
       <ExperienceSection/>
+      */}
       <NewsletterForm/>
       <ContactSection/>
     </main>

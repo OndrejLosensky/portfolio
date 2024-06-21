@@ -7,7 +7,7 @@ import { FaCopy } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa6";
 import { IoIosGlobe } from "react-icons/io";
 import TechstackSlider from '../action/carousel/techstack-carousel';
-import { cardDetails } from '../action/carousel/carousel.config';
+import { cardDetailsTop, cardDetailsMiddle, cardDetailsBottom } from '../action/carousel/carousel.config';
 import TechstackCarouselReversed from '../action/carousel/techstack-carousel-reversed';
 
 const BentoGrid: React.FC = () => {
@@ -73,13 +73,21 @@ const BentoGrid: React.FC = () => {
                 <div className='dark:bg-gray-900 bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex flex-row items-center justify-center p-4 rounded-lg shadow-lg overflow-hidden'>
                   <div className='w-[45%] lg:w-[30%] h-full flex flex-col justify-center text-left items-center'>
                     <div className='-ml-8'>
-                      <p className='font-extralight lowercase text-text-dark/60 dark:text-text-light/60'> Nejvíce používám</p>
+                      <p className='font-extralight lowercase text-text-dark/60 dark:text-text-light/60'> Nejvíce používám tyto</p>
                       <h3 className="text-text-dark dark:text-text-light font-bold text-lg">Technologie</h3>
                     </div>
                   </div>
-                  <div className='w-[55%] lg:w-[70%] h-full mx-auto overflow-hidden relative'>
+                  <div className='w-[55%] lg:w-[70%] h-full flex flex-col mx-auto overflow-hidden relative'>
                     <div className='absolute inset-0 bg-gradient-to-l w-full z-20 from-gray-200 via-transparent to-gray-200 dark:from-gray-900 dark:via-transparent dark:to-gray-900 opacity-100 rounded-lg'></div>
-                    <TechstackSlider cardDetails={cardDetails} />
+                    <div className='h-1/3'>
+                      <TechstackSlider cardDetails={cardDetailsTop} />
+                    </div>
+                    <div className='h-1/3'>
+                      <TechstackCarouselReversed cardDetails={cardDetailsMiddle} />
+                    </div>
+                    <div className='h-1/3'>
+                      <TechstackSlider cardDetails={cardDetailsBottom} />
+                    </div>
                   </div>
                 </div>
               </div>
