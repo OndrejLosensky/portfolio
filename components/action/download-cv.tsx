@@ -20,12 +20,12 @@ export const DownloadCV = () => {
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle className="font-bold text-2xl">Please select the language of the CV</DialogTitle>
+                    <DialogTitle className="font-bold text-2xl">Vyberte jazyk v jakém chcete stáhnout CV</DialogTitle>
                     <DialogDescription className="pt-4">
-                        After clicking on download it will automatically start downloading chosen version. If the download doesnt start, please try again
+                        Po kliknutí na tlačítko stáhnout se soubor automaticky začne stahovat. Pokud se tak nestane zkuste prosím obnovit prohlížeč
                         <div className="flex flex-row mx-auto items-center justify-center mt-4 gap-x-4">
                             <Button> <Image src="/additional-icons/cz.svg" width={20} height={20} alt="Czech icon" className="mr-2"/> Česky</Button>
-                            <Button> <Image src="/additional-icons/en.svg" width={20} height={20} alt="Britain icon" className="mr-2"/> English </Button>
+                            <Button disabled> <Image src="/additional-icons/en.svg" width={20} height={20} alt="Britain icon" className="mr-2"/> English </Button>
                             <Button disabled> <Image src="/additional-icons/de.svg" width={20} height={20} alt="Germany icon" className="mr-2"/> German </Button>
                         </div>
                     </DialogDescription>
