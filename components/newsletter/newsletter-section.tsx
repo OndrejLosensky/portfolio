@@ -19,7 +19,7 @@ const NewsletterForm: React.FC = () => {
             />
             <button
               onClick={async function handleOnClick() {
-                const results = await fetch('/api/login', {
+                const results = await fetch('/api/newsletter', {
                   method: 'POST',
                   body: JSON.stringify({
                     validationCode: `tt226-5398x`

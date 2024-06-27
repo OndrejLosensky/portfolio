@@ -1,6 +1,6 @@
 import { Resend } from 'resend';
 
-import { SpaceJellyLoginCodeEmail } from '@/app/emails/login';
+import { SpaceJellyLoginCodeEmail } from '@/app/emails/newsletter';
 
 const resend = new Resend('re_EXyo2Cpd_LFcRQpPsu12C9fDZZmnTrRmj');
 

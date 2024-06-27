@@ -117,7 +117,7 @@ export default function HeaderLinks() {
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-shark-950 text-shark-600 transition dark:text-shark-50 dark:hover:text-shark-100 font-medium",
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-shark-950 text-shark-800 transition dark:text-shark-50 dark:hover:text-shark-100 font-medium",
                   {
                     "text-red-500": activeSection === link.name,
                   }

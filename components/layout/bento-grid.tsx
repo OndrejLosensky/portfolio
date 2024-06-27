@@ -126,9 +126,9 @@ const BentoGrid: React.FC = () => {
                   </h2>
                 </div>
                 <div className=''>
-                  <p className='absolute bottom-4 font-semibold drop-shadow-2xl right-4 z-20'> CodeCommerce </p>
+                  <p className='absolute bottom-4 font-semibold drop-shadow-2xl right-4 z-20 text-text-light'> CodeCommerce </p>
                   <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20 rounded-lg'></div>
-                  <Image src="/mockups/code-editor.svg" width={800} height={600} alt='Code snippet' className='w-full lg:w-3/4 rounded-xl shadow-lg drop-shadow-xl absolute -bottom-8 lg:-bottom-24  -right-8 '/>
+                  <Image src="/mockups/app.svg" width={800} height={600} alt='Code snippet' className='w-full lg:w-3/4 rounded-xl shadow-lg drop-shadow-xl absolute -bottom-8 lg:-bottom-24  -right-8 '/>
                 </div>
               </div>
             </section>

@@ -1,24 +1,41 @@
 import Header from "@/components/nav/Header";
 import Footer from "@/components/nav/footer";
-import { FaArrowRight } from "react-icons/fa";
+import { DynamicDialog } from "@/components/action/dynamic-dialog";
+
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { IoMdHome } from "react-icons/io";
 
 interface Option {
   title: string;
   description: string;
+  features: string[];
+  pricing: string;
+  image: string; 
 }
+
 
 const cmsOptions: Option[] = [
   {
     title: "Jednoduchý web, z vašeho grafického návrhu",
     description: "Vytvořím vám jednoduchý web pomocí grafických návrhů a předloh, které mi dodáte, tvořím na platformě Wordpress nebo Joomla",
+    features: ["WordPress", "Joomla", "Responsive Design", "SEO Friendly"],
+    pricing: "Starting at $500",
+    image: "/rmtdev.png",
   },
   {
     title: "Pokročilejší web s mými grafickými návrhy",
     description: "O něco pokročilejší web, kdy vám i navrhu vzhled a celý obsah. Nejčastěji na platformu Wordpress, ale po domluvě může být na čemkoliv",
+    features: ["Custom Design", "WordPress", "SEO Optimized", "E-commerce Integration"],
+    pricing: "Starting at $1000",
+    image: "/rmtdev.png",
   },
   {
     title: "Rozsáhlý web",
     description: "Multi-page rozsáhlejší web, vytvořím vám rozložení, grafické prvky a napíšu texty. Při velkém projektu jsem ochotný na zakázku vytvořit vlastní CMS na míru",
+    features: ["Multi-page", "Custom CMS", "Advanced SEO", "Ongoing Support"],
+    pricing: "Starting at $3000",
+    image: "/rmtdev.png",
   },
 ];
 
@@ -26,18 +43,26 @@ const frameworkOptions: Option[] = [
   {
     title: "Tvorba webu pomocí statické kódu",
     description: "Vytvořím vám jednoduchý web pomocí HTML a Kaskádových stylů. Vhodná možnost pro nenáročné zájemce",
+    features: ["HTML", "CSS", "Responsive Design"],
+    pricing: "Starting at $300",
+    image: "/rmtdev.png",
   },
   {
     title: "Tvorba webu pomocí dynamického kódu",
     description: "Vytvořím pokročilou stránku pomocí dynamického programování. Například pomocí Next.js a spoustu moderních knihoven",
+    features: ["Next.js", "React", "API Integration", "Dynamic Content"],
+    pricing: "Starting at $1500",
+    image: "/rmtdev.png",
   },
 ];
-
 
 const graphicsOptions: Option[] = [
   {
     title: "Grafické návrhy pro webové stránky",
     description: "Vytvořím vám grafiku pro webové stránky, blogy, portfólia apod. Pro tvorbu používám Adobe Photoshop, Figmu a Framer",
+    features: ["Adobe Photoshop", "Figma", "Framer", "Custom Designs"],
+    pricing: "Starting at $200 per design",
+    image: "/rmtdev.png",
   },
 ];
 
@@ -56,13 +81,7 @@ export default function WebDevelopmentPage() {
           <h2 className="font-semibold text-3xl text-text-dark/70 dark:text-text-light/70 pb-4">Tvorba webu pomocí CMS</h2>
           <div className="grid grid-cols-2 gap-6">
             {cmsOptions.map((option, index) => (
-              <div key={index} className="group p-4 border-[0.5px] border-text-dark dark:border-text-light/25 rounded-lg flex justify-between items-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300">
-                <div>
-                  <h2 className="font-semibold text-2xl">{option.title}</h2>
-                  <p className="w-3/4 font-light text-sm pt-2">{option.description}</p>
-                </div>
-                <FaArrowRight className="w-10 h-10 transition-transform duration-300 -rotate-45 group-hover:rotate-0" />
-              </div>
+              <DynamicDialog key={index} option={option} />
             ))}
           </div>
         </div>
@@ -71,36 +90,30 @@ export default function WebDevelopmentPage() {
           <h2 className="font-semibold text-3xl text-text-dark/70 dark:text-text-light/70 pb-4">Ručně psané</h2>
           <div className="grid grid-cols-2 gap-6">
             {frameworkOptions.map((option, index) => (
-              <div key={index} className="group p-4 border-[0.5px] border-text-dark dark:border-text-light/25 rounded-lg flex justify-between items-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300">
-                <div>
-                  <h2 className="font-semibold text-2xl">{option.title}</h2>
-                  <p className="w-3/4 font-light text-sm pt-2">{option.description}</p>
-                </div>
-                <FaArrowRight className="w-8 h-8 transition-transform duration-300 group-hover:rotate-0 -rotate-45" />
-              </div>
+              <DynamicDialog key={index} option={option} />
             ))}
           </div>
         </div>
-
 
         <div className="mt-24 mb-40">
           <h2 className="font-semibold text-3xl text-text-dark/70 dark:text-text-light/70 pb-4">Grafické návrhy</h2>
           <div className="grid grid-cols-2 gap-6">
             {graphicsOptions.map((option, index) => (
-              <div key={index} className="group p-4 border-[0.5px] border-text-dark dark:border-text-light/25 rounded-lg flex justify-between items-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300">
-                <div>
-                  <h2 className="font-semibold text-2xl">{option.title}</h2>
-                  <p className="w-3/4 font-light text-sm pt-2">{option.description}</p>
-                </div>
-                <FaArrowRight className="w-8 h-8 transition-transform duration-300 group-hover:rotate-0 -rotate-45" />
-              </div>
+              <DynamicDialog key={index} option={option} />
             ))}
           </div>
         </div>
 
-        <p className="pb-20 text-center font-light text-text-dark/80 dark:text-text-light/80"> Momentálně nejsou uvedeny více podrobné informace ani ceny za jednotlivé služby. Pokud máte zájem neváhejte mě kontaktovat e-mailem </p>
-
+        <p className="pb-20 text-center font-light text-text-dark/80 dark:text-text-light/80">
+          Momentálně nejsou uvedeny více podrobné informace ani ceny za jednotlivé služby. Pokud máte zájem neváhejte mě kontaktovat e-mailem
+        </p>
       </div>
+      <Link href="/" className='mx-auto'>
+          <Button className='mx-auto mt-8 flex items-center gap-x-2'>
+            <IoMdHome className='w-6 h-auto'/>
+            <span>Zpět na domovskou stránku</span>
+          </Button>
+        </Link> 
       <Footer />
     </section>
   );

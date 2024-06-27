@@ -63,7 +63,7 @@ export interface CardDetails {
       title: "Text 4"
     },
     4: {
-      imgUrl: "/icons/sqlite.svg",
+      imgUrl: "/icons/sqlite_w.svg",
       title: "Text 5"
     },
     5: {
@@ -75,7 +75,7 @@ export interface CardDetails {
       title: "Text 7"
     }, 
     7: {
-      imgUrl: "/icons/gpt.svg",
+      imgUrl: "/icons/gpt_w.svg",
       title: "Text 8"
     }, 
   };
@@ -98,7 +98,7 @@ export interface CardDetails {
       title: "Text 4"
     },
     4: {
-      imgUrl: "/icons/github.svg",
+      imgUrl: "/icons/github_w.svg",
       title: "Text 5"
     },
     5: {

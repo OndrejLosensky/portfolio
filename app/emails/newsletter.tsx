@@ -22,7 +22,7 @@ import {
   }: SpaceJellyLoginCodeEmailProps) => (
     <Html>
       <Head />
-      <Preview>Your login code for Space Jelly</Preview>
+      <Preview> Děkuji, za vaše přihlášení k pravidelnému zásílání novinek</Preview>
       <Body style={main}>
         <Container style={container}>
           <Text style={{
@@ -30,22 +30,15 @@ import {
             fontSize: '16px',
             fontWeight: '600'
           }}>
-            👾 Space Jelly
+            Ondřej Losenský
           </Text>
-          <Heading style={heading}>Your login code for Space Jelly</Heading>
-          <Section style={buttonContainer}>
-            <Button style={button} href="https://spacejelly.dev">
-              Login to Space Jelly
-            </Button>
-          </Section>
+          <Heading style={heading}>Newsletter – Ondřej Losenský</Heading>
           <Text style={paragraph}>
-            This link and code will only be valid for the next 5 minutes. If the
-            link does not work, you can use the login verification code directly:
+            Pokud si nepřejete aby jste dostávali nadále e-maily neváhejte mě kontaktovat na adresu: <strong>losenskyondrej@gmail.com</strong>
           </Text>
-          <code style={code}>{validationCode}</code>
           <Hr style={hr} />
-          <Link href="https://spacejelly.dev" style={reportLink}>
-            Space Jelly
+          <Link href="https://losensky.tech" style={reportLink}>
+            Můj web
           </Link>
         </Container>
       </Body>
