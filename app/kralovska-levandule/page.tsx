@@ -1,4 +1,5 @@
 import Header from '@/components/nav/Header';
+import Footer from '@/components/nav/footer';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,9 +9,29 @@ import { IoMdHome } from "react-icons/io";
 
 export default function KLPage() {
   return (
-    <div className='max-w-screen my-28 overflow-hidden w-[80%] mx-auto flex flex-col'>
+    <div className='w-3/4 mx-auto flex flex-col justify-between min-h-screen'>
       <Header/>
-      <div>
+      <div className='grid grid-cols-1 lg:grid-cols-2 '>
+        <Image src="/mockups/KL.svg" width={300} height={300} alt='Showcase image' className='w-full  h-full rounded-lg drop-shadow-glow2'/>
+        <div className='flex flex-col justify-center ml-8'>
+          <h2 className='text-3xl font-semibold text-primary pb-2'>Královská levandule</h2>
+          <p className='text-lg text-text-dark/70 dark:text-text-light/70 block'> Projekt královské levandule vznikl v roce 2021 jako malá rodinná levandulová farma. O necelý rok později začala vznikat webová stránka </p>
+          <p className='pt-4 block text-lg  text-text-dark/70 dark:text-text-light/70 '> Celý web je postavený na CMS platformě Wordpress a momentálně plánuji web přestavit na verzi ručně kódovanou. Dále je k webu dostupný i e-shop, který je vytvořet na platformě Shoptet.cz <br /> </p>
+          <h3> Zde můžete najít odkazy:</h3>
+          <div className='flex flex-row gap-x-4 mt-8'> 
+              <Button> Web </Button>
+              <Button> E-shop </Button>
+              <Button variant="ghost" disabled> Zdrojový kód je soukromý </Button>
+          </div>
+        </div> 
+      </div>
+      <Footer/>
+    </div>
+  );
+}
+
+/* 
+<div>
         <h2 className='text-4xl text-primary font-bold text-left pb-2'><span className='font-light'>Projekt</span> Královská levandule</h2>
         <p> 
             Zjistěte více o mém prvním reálném projektu, ke kterému jsem se dostal v roce 2022
@@ -49,6 +70,4 @@ export default function KLPage() {
           </Button>
         </Link>    
       </div>
-    </div>
-  );
-}
+      */
