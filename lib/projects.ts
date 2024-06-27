@@ -1,5 +1,6 @@
 import logo from "@/public/rmtdev.png";
-
+import kl from "@/public/mockups/KL.svg";
+import codecommerce from "@/public/mockups/App.svg";
 export const projectsData = [
     {
       title: "DataDepot",
@@ -13,7 +14,7 @@ export const projectsData = [
       description:
         "První reálný projekt, který již 2 roky běží on-line na adrese www.kralovskalevandule.cz. Momentálně běží na CMS Wordpress, ale brzy dokončím verzi pomocí Next.js",
       tags: ["Python", "Lavarell", "MongoDB", "Sqlite", "CSV"],
-      imageUrl: logo,
+      imageUrl: kl,
     },
     {
       title: "CodeVault",
@@ -34,6 +35,6 @@ export const projectsData = [
       description:
         "Webová aplikace pro správu jednoduché e-shopu pomocí administrátorského panelu",
       tags: ["Next.js", "TypeScript", "TailwindCSS", "ClerkAuth", "Firebase"],
-      imageUrl: logo,
+      imageUrl: codecommerce,
     },
   ] as const;

@@ -79,7 +79,7 @@ export default function WebDevelopmentPage() {
 
         <div className="mt-24">
           <h2 className="font-semibold text-3xl text-text-dark/70 dark:text-text-light/70 pb-4">Tvorba webu pomocí CMS</h2>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1  lg:grid-cols-2 gap-6">
             {cmsOptions.map((option, index) => (
               <DynamicDialog key={index} option={option} />
             ))}
@@ -88,7 +88,7 @@ export default function WebDevelopmentPage() {
 
         <div className="mt-24">
           <h2 className="font-semibold text-3xl text-text-dark/70 dark:text-text-light/70 pb-4">Ručně psané</h2>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1  lg:grid-cols-2 gap-6">
             {frameworkOptions.map((option, index) => (
               <DynamicDialog key={index} option={option} />
             ))}
@@ -97,7 +97,7 @@ export default function WebDevelopmentPage() {
 
         <div className="mt-24 mb-40">
           <h2 className="font-semibold text-3xl text-text-dark/70 dark:text-text-light/70 pb-4">Grafické návrhy</h2>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {graphicsOptions.map((option, index) => (
               <DynamicDialog key={index} option={option} />
             ))}
