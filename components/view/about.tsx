@@ -91,8 +91,8 @@ export default function AboutSection() {
         </div>     
       </section>
 
-      <h2 className="pt-24 text-xl">Technologie s kterými jsem se alespoň setkal nebo je používám často</h2>
-      <ul className="flex flex-wrap gap-4">
+      <h2 className="pt-24 text-md md:text-lg lg:text-xl">Technologie s kterými často pracuji</h2>
+      <ul className="grid grid-cols-4 lg:flex lg:flex-wrap gap-4">
         {skills.map((skill, index) => (
           <motion.li
             key={index}
@@ -111,8 +111,8 @@ export default function AboutSection() {
         ))}
       </ul>
 
-      <h2 className="pt-12 text-xl">Nástroje, které používám nejčastěji</h2>
-      <ul className="flex flex-wrap gap-4">
+      <h2 className="pt-12 text-md md:text-lg lg:text-xl">Nástroje, které používám nejčastěji</h2>
+      <ul className="grid grid-cols-4 lg:flex lg:flex-wrap gap-4">
         {tools.map((tool, index) => (
           <motion.li
             key={index}

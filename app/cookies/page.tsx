@@ -8,10 +8,10 @@ import { IoMdHome } from "react-icons/io";
 
 export default function CookiesPage() {
   return (
-    <div className='max-w-screen w-3/4 lg:w-2/3 mx-auto flex flex-col justify-between h-screen'>
+    <div className='max-w-screen w-3/4 lg:w-2/3 mx-auto flex flex-col justify-between min-h-screen'>
       <Header/>
-      <div>
-        <h2 className='text-4xl text-primary font-bold text-center pb-6'>Souhlas s použitím souborů cookies</h2>
+      <div className='my-32'>
+        <h2 className='text-2xl lg:text-4xl text-primary font-bold text-center pb-6'>Souhlas s použitím souborů cookies</h2>
         <p>Vítáme vás na naší stránce. Používáme soubory cookies, abychom vám mohli poskytovat lepší služby a zlepšit vaši uživatelskou zkušenost. Pokud pokračujete v používání naší stránky, souhlasíte s naším používáním souborů cookies.</p>
         <br />
         <p>Tento web je provozován Ondřejem Losenským. Pokud máte jakékoliv otázky ohledně zpracování vašich osobních údajů, prosím, kontaktujte mě na <strong>losenskyondrej@gmail.com</strong></p>

@@ -25,7 +25,7 @@ export default function ContactSection() {
   }
 
   return (
-    <div  id="contact" ref={ref} className="relative h-screen max-h-screen w-full mx-auto z-10">
+    <div  id="contact" ref={ref} className="relative min-h-screen max-h-screen w-full mx-auto z-10">
       <SectionTitle heading="Kontakt" subHeading="Kontaktujte mě během pár kliknutí" />
       <span className="text-sm font-light text-shark-300 "> Chcete mi něco sdělit, něco nabídnout nebo se jen zeptat? Stačí vyplnit tento formulář </span>
       <div className="bg-[#8af8eb] absolute top-[2rem] -z-10 right-[0rem] lg:right-[-5rem] dark:bg-opacity-75 h-[31.25rem] w-[31.25rem] md:w-[60rem] rounded-full blur-[15rem] ] dark:bg-[#56b595]"></div>
@@ -98,22 +98,7 @@ export default function ContactSection() {
         <div> </div>
       )}
 
-      <h2 className={`dark:text-shark-200 text-shark-600 mb-2 ${isSent ? "pt-12": "mt-24"} text-center text-sm font-light`}> Tento web byl vytvořen pomocí těchto technologií </h2>
-      <div className="flex flex-row items-center gap-x-6 scale-75 opacity-75 w-full justify-center">
-          <div className="group relative">
-            <Image src="/icons/ts.svg" width={64} height={64} alt="TypeScript icon"/>
-            <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">TypeScript</span>
-          </div>
 
-          <div className="group relative">
-            <Image src="/icons/next.js.svg" width={64} height={64} alt="Nextjs icon"/>
-            <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">Next.js</span>
-          </div>
-          <div className="group relative">
-            <Image src="/icons/tailwind.svg" width={64} height={64} alt="TailwindCSS icon"/>
-            <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">TailwindCSS</span>
-          </div>
-      </div>
     </div>
   );
 }

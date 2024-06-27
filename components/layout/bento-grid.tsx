@@ -30,10 +30,10 @@ const BentoGrid: React.FC = () => {
     <section ref={ref as any}>
       {isVisible ? (
         <div id='bento' className="flex h-full w-full flex-col items-center justify-center my-16 ">
-          <span className="relative text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-bermuda-300  to-bermuda-500 text-center drop-shadow-glow">
+          <span className="relative text-2xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-bermuda-300  to-bermuda-500 text-center drop-shadow-glow">
             Přehled
           </span>
-          <p className="text-center text-xl pt-1 font-light text-text-dark dark:text-text-light mb-12">
+          <p className="text-center text-md md:text-lg lg:text-xl pt-1 font-light text-text-dark dark:text-text-light mb-12">
             Získejte rychlý předmět o veškerých možnostech a zajímavostech
           </p>
           <div className="flex flex-col h-full w-full gap-4">

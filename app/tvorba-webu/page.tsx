@@ -72,13 +72,13 @@ export default function WebDevelopmentPage() {
       <Header />
 
       <div className="text-left">
-        <h2 className="text-5xl mt-32 text-center text-primary font-bold">Tvorba webu na míru</h2>
-        <p className="text-xl text-center font-light text-text-dark dark:text-text-light pt-4">
+        <h2 className="text-2xl md:text-3xl lg:text-5xl mt-32 text-center text-primary font-bold">Tvorba webu na míru</h2>
+        <p className="text-md md:text-lg lg:text-xl text-center font-light text-text-dark dark:text-text-light pt-4">
           Vyberte si z dané nabídky níže co přesně potřebujete a kontaktujte mě.
         </p>
 
         <div className="mt-24">
-          <h2 className="font-semibold text-3xl text-text-dark/70 dark:text-text-light/70 pb-4">Tvorba webu pomocí CMS</h2>
+          <h2 className="font-semibold text-xl md:text-2xl lg:text-3xl text-text-dark/70 dark:text-text-light/70 pb-4">Tvorba webu pomocí CMS</h2>
           <div className="grid grid-cols-1  lg:grid-cols-2 gap-6">
             {cmsOptions.map((option, index) => (
               <DynamicDialog key={index} option={option} />
@@ -87,7 +87,7 @@ export default function WebDevelopmentPage() {
         </div>
 
         <div className="mt-24">
-          <h2 className="font-semibold text-3xl text-text-dark/70 dark:text-text-light/70 pb-4">Ručně psané</h2>
+          <h2 className="font-semibold text-xl md:text-2xl lg:text-3xl text-text-dark/70 dark:text-text-light/70 pb-4">Ručně psané</h2>
           <div className="grid grid-cols-1  lg:grid-cols-2 gap-6">
             {frameworkOptions.map((option, index) => (
               <DynamicDialog key={index} option={option} />
@@ -96,7 +96,7 @@ export default function WebDevelopmentPage() {
         </div>
 
         <div className="mt-24 mb-40">
-          <h2 className="font-semibold text-3xl text-text-dark/70 dark:text-text-light/70 pb-4">Grafické návrhy</h2>
+          <h2 className="font-semibold text-xl md:text-2xl lg:text-3xl text-text-dark/70 dark:text-text-light/70 pb-4">Grafické návrhy</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {graphicsOptions.map((option, index) => (
               <DynamicDialog key={index} option={option} />

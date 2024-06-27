@@ -4,14 +4,14 @@ import React from 'react';
 
 const NewsletterForm: React.FC = () => {
   return (
-    <section className="bg-gray-200/80 dark:bg-gray-800/80 rounded-xl border my-32 mb-48 mx-0 lg:mx-24 shadow-lg border-text-dark/30 dark:border-text-light/30 py-8">
+    <section className="bg-gray-200/80 dark:bg-gray-800/80 rounded-xl border my-32 mb-48 -mx-0 lg:mx-24 shadow-lg border-text-dark/30 dark:border-text-light/30 py-8">
       <div className="flex flex-col items-center mx-auto px-4 sm:px-6 lg:px-8">
         <div className="w-2/3 mx-auto flex flex-col items-center">
           <h2 className="text-xl md:text-3xl text-center font-bold leading-tight mb-4">Přihlaste se k odběru mého newsletteru</h2>
           <p className="text-text-dark/60 text-center text-sm md:text-md lg:text-lg dark:text-text-light/60 mb-6">
             Zůstaňte v obraze s nejnovějšími aktualizacemi, změny a dalšími věcmi.      
           </p>
-          <form className="flex flex-col lg:flex-row lg:items-center lg:gap-x-2 mx-auto">
+          <form className="flex flex-col lg:flex-row lg:items-center lg:gap-x-2">
             <input
               type="email"
               placeholder="Vaše e-mailová adresa"

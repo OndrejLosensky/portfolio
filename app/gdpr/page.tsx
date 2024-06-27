@@ -18,10 +18,10 @@ export default function GDPRPage() {
   return (
     <div className='max-w-screen w-3/4 justify-between min-h-screen flex flex-col items-center mx-auto'>
       <Header/>
-      <div className='w-3/4 lg:w-2/3 mx-auto mt-32'>
-          <h2 className='text-4xl text-primary font-bold text-center pb-2'>Zásady ochrany osobních údajů</h2>
+      <div className='w-full lg:w-2/3 mx-auto mt-32'>
+          <h2 className='text-2xl lg:text-4xl text-primary font-bold text-center pb-2'>Zásady ochrany osobních údajů</h2>
           <div className='p-4 rounded-lg'>
-              <p className='text-base'>
+              <p className='text-base w-full'>
               <strong>I. Základní ustanovení</strong><br />
               1. Správcem osobních údajů podle čl. 4 bod 7 nařízení Evropského parlamentu a Rady (EU) 2016/679 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů (dále jen: „GDPR“) je Ondřej Losenský se sídlem v Rudné u Prahy (dále jen: „správce“).<br /><br />
               2. Kontaktní údaje správce jsou:<br />
@@ -54,7 +54,7 @@ export default function GDPRPage() {
           </div>
 
           <div className="flex ml-4 mt-2">
-              <Button className='flex flex-row gap-x-2 ' onClick={handleDownloadPDF}> <MdFileDownload/> <span>Stáhnout Zásady ochrany osobních údajů (PDF)</span></Button>
+              <Button className='flex flex-row gap-x-2 ' onClick={handleDownloadPDF}> <MdFileDownload/> <span>Stáhnout G.D.P.R. (PDF)</span></Button>
           </div>
 
           <Link href="/">
