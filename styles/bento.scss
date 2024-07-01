@@ -4,6 +4,9 @@
   height: 100%;
   border-color: #4b5563;
   width: 100%; /* Adjusted width for responsiveness */
+
+  /* Hide carousel on small devices */
+  display: block; /* Ensure it's visible by default */
 }
 
 .carousel-card {
@@ -49,6 +52,10 @@
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
+  .carousel-container {
+    display: none; /* Hide carousel on small screens */
+  }
+
   .carousel-card {
     max-width: 100%; /* Adjust max-width to fill smaller screens */
     width: auto; /* Allow cards to expand to fit smaller screens */

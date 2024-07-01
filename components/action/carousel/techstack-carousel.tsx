@@ -22,10 +22,10 @@ const TechstackCarousel: React.FC<TechstackCarouselProps> = ({ cardDetails }) =>
           );
         })}
          {Object.keys(cardDetails).map((detailKey) => {
-          const keyNum = parseInt(detailKey, 10); // Convert detailKey to number
+          const keyNum = parseInt(detailKey, 10);
           return (
             <CarouselItem
-              key={keyNum} // Use keyNum as key prop
+              key={keyNum} 
               imgUrl={cardDetails[keyNum].imgUrl}
               imgTitle={cardDetails[keyNum].title}
             />

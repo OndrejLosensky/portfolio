@@ -79,13 +79,13 @@ const BentoGrid: React.FC = () => {
                   </div>
                   <div className='w-[95%] md:w-[70%] h-full flex flex-col mx-auto overflow-hidden relative'>
                     <div className='absolute inset-0 bg-gradient-to-l w-full z-20 from-gray-200 via-transparent to-gray-200 dark:from-gray-900 dark:via-transparent dark:to-gray-900 opacity-100'></div>
-                    <div className='h-1/3 scale-75 md:scale-100'>
+                    <div className='h-0 lg:h-1/3 scale-75 md:scale-100'>
                       <TechstackSlider cardDetails={cardDetailsTop} />
                     </div>
-                    <div className='h-1/3 scale-75 md:scale-100'>
+                    <div className='h-full lg:h-1/3 scale-100 md:scale-100'>
                       <TechstackCarouselReversed cardDetails={cardDetailsMiddle} />
                     </div>
-                    <div className='h-1/3 scale-75 md:scale-100'>
+                    <div className='lg:h-1/3 scale-75 md:scale-100'>
                       <TechstackSlider cardDetails={cardDetailsBottom} />
                     </div>
                   </div>
