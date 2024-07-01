@@ -13,13 +13,8 @@ import {
   } from "@react-email/components";
   import * as React from "react";
   
-  interface SpaceJellyLoginCodeEmailProps {
-    validationCode?: string;
-  }
   
-  export const SpaceJellyLoginCodeEmail = ({
-    validationCode,
-  }: SpaceJellyLoginCodeEmailProps) => (
+  export const SpaceJellyLoginCodeEmail = () => (
     <Html>
       <Head />
       <Preview> Děkuji, za vaše přihlášení k pravidelnému zásílání novinek</Preview>
@@ -45,11 +40,6 @@ import {
     </Html>
   );
   
-  SpaceJellyLoginCodeEmail.PreviewProps = {
-    validationCode: "tt226-5398x",
-  } as SpaceJellyLoginCodeEmailProps;
-  
-  export default SpaceJellyLoginCodeEmail;
   
   const main = {
     backgroundColor: "#ffffff",
@@ -79,22 +69,6 @@ import {
     color: "#3c4149",
   };
   
-  const buttonContainer = {
-    padding: "27px 0 27px",
-  };
-  
-  const button = {
-    backgroundColor: "#ffdb00",
-    borderRadius: "3px",
-    fontWeight: "700",
-    color: "#001523",
-    fontSize: "15px",
-    textDecoration: "none",
-    textAlign: "center" as const,
-    display: "block",
-    padding: "11px 23px",
-  };
-  
   const reportLink = {
     fontSize: "14px",
     color: "#b4becc",
@@ -105,13 +79,3 @@ import {
     margin: "42px 0 26px",
   };
   
-  const code = {
-    fontFamily: "monospace",
-    fontWeight: "700",
-    padding: "1px 4px",
-    backgroundColor: "#dfe1e4",
-    letterSpacing: "-0.3px",
-    fontSize: "21px",
-    borderRadius: "4px",
-    color: "#3c4149",
-  };

@@ -64,7 +64,7 @@ export default function AboutSection() {
   const { ref } = useSectionInView("O mně");
 
   return (
-    <div ref={ref} id="about" className="min-h-screen max-w-screen w-[90%] z-10 mb-64 relative mx-auto flex flex-col space-y-4">
+    <div ref={ref} id="about" className="min-h-screen max-w-screen w-[100%] z-10 mb-64 relative mx-auto flex flex-col space-y-4">
       
       <section className="flex flex-col lg:flex-row lg:gap-x-6 lg:items-center">
         <div className="w-full lg:w-1/3 relative lg:mt-12">
@@ -77,17 +77,14 @@ export default function AboutSection() {
               <span>Ondřej Losenský</span>
           </h2>
           <p className="text-xs md:text-lg my-2 text-green-500 font-medium pt-2 flex flex-row items-center"> <CiCircleCheck className="mr-2 w-6 h-6"/> <span>Jsem otevřen pracovním příležitostem</span></p>
-          <div className="flex flex-row items-center gap-x-1 mt-4">
+          <div className="flex flex-row items-center gap-x-2 mt-4">
             <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Programátor </p>
             <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Kóder </p>
             <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Administrátor</p>
           </div>
           <p className="mt-4 text-sm text-shark-500 dark:text-shark-200">
-            Jmenuji se Ondřej Losenský a je mi 19 let. Pocházím z Prahy a již několik let se věnuji Informačním technologiím a grafice.
-            Tento rok jsem vystudoval střední průmyslovou školu v Praze s vybraným oborem IT. Mezi moje velké koníčky patří programování webových aplikací,
-            tvorba amatérských grafických designů a mnoho různých věcí. Na mém portfoliu naleznete kontakt na mě, nějaké mé projekty, kompletní životopis
-            jak ve formě PDF tak zde v podobě vertikální časové osy.
-          </p>
+          Jmenuji se Ondřej Losenský, je mi 19 let a pocházím z Prahy. Právě jsem dokončil střední průmyslovou školu v oboru IT. Věnuji se programování webových aplikací, amatérskému grafickému designu a dalším technologickým zájmům. Na mém portfoliu najdete mé kontaktní údaje, projekty a životopis ve formátu PDF ve více jazycích
+          Zároveň se můžeme domluvit na vytvoření webové stránky na míru nebo nějakého projektu. Pro více se podívejte do sekce <strong>Tvorba webu</strong></p>
         </div>     
       </section>
 
