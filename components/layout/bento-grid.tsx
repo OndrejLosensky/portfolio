@@ -40,7 +40,7 @@ const BentoGrid: React.FC = () => {
             {/* Projects section */}
             <section className='flex flex-col lg:flex-row gap-x-4'>
               <div className='group relative w-full lg:w-1/2 h-[360px] md:h-[600px] flex flex-col items-start justify-end rounded-lg shadow-lg border dark:border-text-light/15 border-text-dark/30 dark:bg-gray-900 bg-gray-200'>
-                <Image src="/image5.jpeg" alt='Macbook image' width={300} height={400} className='absolute w-full h-full rounded-lg opacity-75'/>
+                <Image src="/tvorba-webu.webp" alt='Macbook image' width={300} height={400} className='absolute w-full h-full rounded-lg opacity-75'/>
                 <div className='absolute inset-0 bg-gradient-to-b from-transparent to-main opacity-100 rounded-lg'></div>
                 <div className='relative z-10 flex flex-col p-6'>
                   <IoIosGlobe className='w-10 h-10 mb-2 text-text-light dark:text-text-light'/>

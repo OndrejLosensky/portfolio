@@ -1,6 +1,6 @@
 import logo from "@/public/rmtdev.png";
-import kl from "@/public/mockups/KL.svg";
-import codecommerce from "@/public/mockups/App.svg";
+import kl from "@/public/kl.webp";
+import codecommerce from "@/public/app.webp";
 export const projectsData = [
     {
       title: "DataDepot",

@@ -69,7 +69,7 @@ export default function AboutSection() {
       <section className="flex flex-col lg:flex-row lg:gap-x-6 lg:items-center">
         <div className="w-full lg:w-1/3 relative lg:mt-12">
             <div className="bg-[#3c8d77] absolute top-[-2rem] -z-20 left-[-1rem] md:left-[0rem] lg:left-[-5rem] -rotate-45 opacity-30 h-[10rem] md:h-[30rem] lg:w-[35rem] w-[20rem] rounded-full blur-[2em] dark:bg-[#82e8cfee]"></div>
-            <Image src="/profile_pic.jpeg" height={200} width={200} alt="My personal photo" className="w-2/3 hover:scale-125 lg:hover:scale-110 duration-300 lg:w-full mx-auto rounded-xl border border-text-dark dark:border-text-light shadow-lg" />
+            <Image src="/pf.webp" height={200} width={200} alt="My personal photo" className="w-2/3 hover:scale-125 lg:hover:scale-110 duration-300 lg:w-full mx-auto rounded-xl border border-text-dark dark:border-text-light shadow-lg" />
         </div>
         <div className="w-full lg:ml-20 mt-16 lg:w-2/3">
           <SectionTitle heading="O mě" subHeading="Kdo jsem?" />
