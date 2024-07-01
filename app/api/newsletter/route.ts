@@ -1,6 +1,6 @@
 import { Resend } from 'resend';
 
-import { SpaceJellyLoginCodeEmail } from '@/app/emails/newsletter';
+import { NewsletterEmail } from '@/app/emails/newsletter';
 
 const resend = new Resend('re_EXyo2Cpd_LFcRQpPsu12C9fDZZmnTrRmj');
 
@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     from: 'onboarding@resend.dev',
     to: 'losenskyondrej@gmail.com',
     subject: 'Ondřej Losenský - novinky',
-    react: SpaceJellyLoginCodeEmail({
+    react: NewsletterEmail({
       validationCode
     })
   });
