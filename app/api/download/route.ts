@@ -1,8 +1,9 @@
 import path from 'path';
 import { promises as fs } from 'fs';
+import { Request } from 'express'; 
 import { NextApiRequest, NextApiResponse } from 'next';
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (req: NextApiRequest | Request, res: NextApiResponse) => {
     const { lang } = req.query as { lang: string };
 
     const filePath = path.join(process.cwd(), 'CV', `cv_${lang}.pdf`);
