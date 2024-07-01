@@ -1,7 +1,7 @@
 import path from 'path';
 import { promises as fs } from 'fs';
-import { Request } from 'express'; 
 import { NextApiRequest, NextApiResponse } from 'next';
+import { Request } from 'express'; // Import Request from 'express' for compatibility
 
 const handler = async (req: NextApiRequest | Request, res: NextApiResponse) => {
     const { lang } = req.query as { lang: string };
@@ -19,4 +19,4 @@ const handler = async (req: NextApiRequest | Request, res: NextApiResponse) => {
     }
 };
 
-export { handler as GET };
+export default handler;
