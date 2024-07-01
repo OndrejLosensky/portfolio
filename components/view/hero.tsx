@@ -82,8 +82,8 @@ export default function HeroSection() {
 
         </motion.div>
         
-        <div className="arrow-container mt-12 flex">
-              <div className='arrow' onClick={() => scrollToSection('bento')}></div>
+        <div className="arrow-container mt-12"  onClick={() => scrollToSection('bento-grid')}>
+              <div className='arrow'></div>
         </div>  
     </div>
   )

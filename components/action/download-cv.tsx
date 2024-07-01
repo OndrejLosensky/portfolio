@@ -10,16 +10,12 @@ import { MdArrowRightAlt } from "react-icons/md";
 import { Button } from "../ui/button";
 import Image from "next/image";
 
-const downloadFile = (lang: string) => {
-    const link = document.createElement('a');
-    link.href = `/api/download?lang=${lang}`;
-    link.setAttribute('download', `cv_${lang}.pdf`);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-};
-
 export const DownloadCV = () => {
+    const openCVInNewTab = (lang: string) => {
+        const url = `/CV/cv_${lang}.pdf`;
+        window.open(url, '_blank');
+    };
+
     return (
         <Dialog>
             <DialogTrigger className="flex flex-row items-center group">
@@ -32,13 +28,13 @@ export const DownloadCV = () => {
                     <DialogDescription className="pt-4">
                         Po kliknutí na tlačítko stáhnout se soubor automaticky začne stahovat. Pokud se tak nestane zkuste prosím obnovit prohlížeč
                         <div className="flex flex-row mx-auto items-center justify-center mt-4 gap-x-4">
-                            <Button onClick={() => downloadFile('cz')}>
+                            <Button onClick={() => openCVInNewTab('cz')}>
                                 <Image src="/additional-icons/cz.svg" width={20} height={20} alt="Czech icon" className="mr-2" /> Česky
                             </Button>
-                            <Button onClick={() => downloadFile('en')} disabled>
+                            <Button onClick={() => openCVInNewTab('en')} disabled>
                                 <Image src="/additional-icons/en.svg" width={20} height={20} alt="Britain icon" className="mr-2" /> English
                             </Button>
-                            <Button onClick={() => downloadFile('de')} disabled>
+                            <Button onClick={() => openCVInNewTab('de')} disabled>
                                 <Image src="/additional-icons/de.svg" width={20} height={20} alt="Germany icon" className="mr-2" /> German
                             </Button>
                         </div>

@@ -7,24 +7,24 @@ import NewsletterForm from '@/components/newsletter/newsletter-section';
 
 const BentoGrid = dynamic(() => import('@/components/layout/bento-grid'), {
   ssr: false,
-  loading: () => <p>Načítání</p>,
+  loading: () => <p className='text-center'>Načítání sekce...</p>,
 });
 const ContactSection = dynamic(() => import('@/components/view/Contact'), {
   ssr: false,
-  loading: () => <p>Načítání</p>,
+  loading: () => <p className='text-center'>Načítání sekce...</p>,
 });
 const ProjectsSection = dynamic(() => import('@/components/view/Projects'), {
   ssr: false,
-  loading: () => <p>Načítání.</p>,
+  loading: () => <p className='text-center'>Načítání sekce...</p>,
 });
 
 const ExperienceSection = dynamic(() => import('@/components/view/VerticalTimeline'), {
   ssr: false,
-  loading: () => <p>Načítání</p>,
+  loading: () => <p className='text-center'>Načítání sekce...</p>,
 });
 const AboutSection = dynamic(() => import('@/components/view/about'), {
   ssr: false,
-  loading: () => <p>Načítání</p>,
+  loading: () => <p className='text-center'>Načítání sekce...</p>,
 });
 
 
