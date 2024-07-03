@@ -89,7 +89,7 @@ const BentoGrid: React.FC = () => {
             {/* End of Projects section */}
             {/* Tasks section */}
             <section className='flex flex-col lg:flex-row gap-x-4'>
-              <div className='grid grid-rows-2 w-full lg:w-1/2 gap-4 mb-4 lg:mb-0'>
+              <div className='grid grid-rows-2 w-full md:w-1/2 lg:w-1/3 gap-4 mb-4 lg:mb-0'>
                 <div className='dark:bg-gray-900 relative bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex items-center justify-center p-4 rounded-xl shadow-lg'>
                   <div>
                     <div className='absolute inset-0 bg-gradient-to-b from-transparent to-main/30 dark:from-transparent dark:to-main/80 opacity-100 rounded-lg'></div>
@@ -100,20 +100,20 @@ const BentoGrid: React.FC = () => {
                 </div>
                 <div className='bg-gradient-to-br from-purple-500 to-violet-700 border dark:border-text-light/15 border-text-dark/30 h-full flex items-center justify-center p-4 rounded-xl shadow-lg'>
                   <div className='flex flex-col items-center '>
-                    <h3 className="text-text-light text-lg font-semibold">Chceš začít společný projekt?</h3>
+                    <h3 className="text-text-light lg:text-lg md:text-md text-sm font-semibold">Chceš začít společný projekt?</h3>
                     <Button
                       variant="secondary"
-                      className={`mt-2 mx-auto w-[260px] md:w-[300px] text-xs md:text-md rounded-md shadow-md gap-x-4 border border-text-light/60 dark:border-text-light/60 px-4 py-2 ${
+                      className={`mt-2 mx-auto w-[260px] md:w-[220px] text-xs md:text-md rounded-md shadow-md gap-x-4 border border-text-light/60 dark:border-text-light/60 px-4 py-2 ${
                         copied ? 'text-green-500 dark:text-green-500 ' : 'dark:bg-main bg-main dark:hover:bg-main/95 hover:bg-main/95 text-white'
                       }`}
                       onClick={copyToClipboard}
                     >
-                      {copied ? <FaCheck /> : <FaCopy />} {copied ? 'Zkopírováno!' : 'Zkopírovat moji e-mailovou adresu'}
+                      {copied ? <FaCheck /> : <FaCopy />} {copied ? 'Zkopírováno!' : 'Zkopírovat e-mail'}
                     </Button>
                   </div>
                 </div>
               </div>
-              <div className='dark:bg-gray-900 flex-col bg-gray-200 relative group overflow-hidden border dark:border-text-light/15 border-text-dark/30 flex lg:flex-col w-full lg:w-1/2 lg:mt-0 md:mt-0 h-[250px] md:h-[350px] items-center justify-center p-4 rounded-xl shadow-lg'>
+              <div className='dark:bg-gray-900 flex-col bg-gray-200 relative group overflow-hidden border dark:border-text-light/15 border-text-dark/30 flex lg:flex-col w-full md:w-1/2 lg:w-2/3 lg:mt-0 md:mt-0 h-[250px] md:h-[350px] items-center justify-center p-4 rounded-xl shadow-lg'>
                 <div className='flex flex-col w-[100%]  h-full'>
                     <h2 className=" text-center pt-4 text-text-dark dark:text-text-light text-md md:text-lg lg:text-xl font-bold z-20">
                       Momentálně vytvářím vlastní CMS pro správu e-shopu

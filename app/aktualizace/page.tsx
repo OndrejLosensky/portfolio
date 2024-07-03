@@ -6,6 +6,7 @@ import Header from '@/components/nav/header-copy';
 import Footer from '@/components/nav/footer';
 
 const blogPosts = [
+  { id: 3, title: 'Poslední větší změny před zveřejněním (0.4.11)', date: '3.7.2024', content: 'Opravil jsem většinu chyb v zobrazování, přidal lehké optimalizace a pár efektů, momentálně zbývá jen změnit obrázky, lehce poupravit texty a bude to... ' },
   { id: 2, title: 'Příprava na zveřejnění (0.3.6)', date: '27.6.2024', content: 'Postupně jsem připojil react-email pro vytvoření automatické newsletteru, dokončil jsem responzivní funkce, přepracoval layout nějakých stran a připravil obrázky ' },
   { id: 1, title: 'První neúplné vydání (0.2.4)', date: '20.6.2024', content: 'Vytvořil jsem největší část celého webu, včetně částí a jiných stránek, responzivního designu apod. Texty jsou skoro hotové, obrázky a odkazy také... ' },
 ];
