@@ -1,15 +1,15 @@
 export const links = [
     {
       name: "Úvod",
-      hash: "#home",
+      hash: "#uvod",
     },
     {
       name: "O mně",
-      hash: "#about",
+      hash: "#o-mne",
     },
     {
       name: "Projekty",
-      hash: "#projects",
+      hash: "#projekty",
     },
     /*
     {
@@ -18,6 +18,6 @@ export const links = [
     },*/
     {
       name: "Kontakt",
-      hash: "#contact",
+      hash: "#kontakt",
     }
   ] as const;

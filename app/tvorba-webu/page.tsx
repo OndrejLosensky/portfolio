@@ -1,4 +1,4 @@
-import Header from "@/components/nav/Header";
+import Header from "@/components/nav/header-copy";
 import Footer from "@/components/nav/footer";
 import { DynamicDialog } from "@/components/action/dynamic-dialog";
 

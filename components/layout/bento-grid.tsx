@@ -55,28 +55,22 @@ const BentoGrid: React.FC = () => {
                   </Link>
                 </div>
               </div>
-              <div className='grid grid-rows-2 w-full mt-4 lg:mt-0 lg:w-1/2 gap-y-4'>
+              <div className='grid grid-rows-2 w-full min-h-64 mt-4 lg:mt-0 lg:w-1/2 gap-y-4'>
                 <div className='dark:bg-gray-900 group relative bg-gray-200 border w-full overflow-hidden dark:border-text-light/15 border-text-dark/30 h-full flex items-center justify-center p-4 rounded-lg shadow-lg'>
-                  <div className='flex flex-col z-10 w-1/2 lg:w-1/3'>
-                    <h3 className="text-text-dark dark:text-text-light text-sm lg:text-lg font-semibold  lg:ml-12">Nejnovější projekt</h3>
+                  <div className='flex flex-col z-10 md:ml-20 lg:ml-2 w-[30%] lg:w-[25%] '>
+                    <h3 className="text-text-dark dark:text-text-light text-xs md:text-md lg:text-lg font-semibold ">Poslední projekt</h3>
                     <Link href="/kralovska-levandule">
-                      <Button className="mt-2 scale-75 lg:scale-100 text-text-dark dark:text-text-light bg-primary dark:bg-primary hover:bg-primary-hover dark:hover:bg-primary-hover duration-200 -ml-3 lg:ml-12 px-4 py-2 rounded-md shadow-md active:bg-primary-active active:scale-[0.65] lg:active:scale-75">
+                      <button className="mt-2 scale-100 lg:scale-100 text-text-dark dark:text-text-light bg-primary dark:bg-primary hover:bg-primary-hover dark:hover:bg-primary-hover duration-200  px-[8px] py-[4px] text-xs md:text-md md:px-4 md:py-2 rounded-md shadow-md active:bg-primary-active active:scale-[0.65] lg:active:scale-75">
                         Podívat se
-                      </Button>
+                      </button>
                     </Link>
                   </div>
-                  <div className='w-1/2 lg:w-2/3'>
-                    <Image src="/mockups/KL.svg" width={500} height={400} alt='Project image' className='xl:w-96 xl:h-72 h-40 w-72 group-hover:-rotate-3 group-hover:scale-[1.04] duration-300 absolute -bottom-16 -right-20'/>
+                  <div className='w-[70%] lg:w-[75%]'>
+                    <Image src="/mockups/KL.svg" width={500} height={400} alt='Project image' className='md:w-96 lg:w-full lg:h-full md:translate-x-0 lg:translate-x-12 h-40 w-72 group-hover:-rotate-3 group-hover:scale-[1.04] duration-300 absolute md:-bottom-12 md:-right-0 lg:-bottom-16 lg:-right-20 -bottom-16 -right-20'/>
                   </div>
                   <div className='absolute inset-0 bg-gradient-to-br dark:from-transparent from-transparent to-gray-100 dark:to-gray-900 opacity-55 rounded-lg'></div>
                 </div>
                 <div className='dark:bg-gray-900 bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex flex-row items-center justify-center p-4 rounded-lg shadow-lg overflow-hidden'>
-                  <div className='w-[0%] md:w-[30%] h-full flex flex-col justify-center text-left items-center'>
-                    <div className='-ml-8'>
-                      <p className='hidden md:flex font-extralight lowercase text-text-dark/60 dark:text-text-light/60'> Nejvíce používám tyto</p>
-                      <h3 className="hidden md:flex text-text-dark dark:text-text-light font-bold text-lg">Technologie</h3>
-                    </div>
-                  </div>
                   <div className='w-[95%] md:w-[70%] h-full flex flex-col mx-auto overflow-hidden relative'>
                     <div className='absolute inset-0 bg-gradient-to-l w-full z-20 from-gray-200 via-transparent to-gray-200 dark:from-gray-900 dark:via-transparent dark:to-gray-900 opacity-100'></div>
                     <div className='h-0 lg:h-1/3 scale-75 md:scale-100'>
@@ -98,9 +92,9 @@ const BentoGrid: React.FC = () => {
               <div className='grid grid-rows-2 w-full lg:w-1/2 gap-4 mb-4 lg:mb-0'>
                 <div className='dark:bg-gray-900 relative bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex items-center justify-center p-4 rounded-xl shadow-lg'>
                   <div>
-                    <div className='absolute inset-0 bg-gradient-to-b from-transparent to-main/20 dark:from-transparent dark:to-main/80 opacity-100 rounded-lg'></div>
-                    <h3 className="dark:text-text-light text-text-dark text-lg text-center font-semibold">
-                      Mojí největší oblibou je tvorba moderních a responzivních designů
+                    <div className='absolute inset-0 bg-gradient-to-b from-transparent to-main/30 dark:from-transparent dark:to-main/80 opacity-100 rounded-lg'></div>
+                    <h3 className="dark:text-text-light text-text-dark text-md text-center font-semibold">
+                      Mým největším koníčkem je tvorba moderních a responzivních designů.
                     </h3>
                   </div>
                 </div>
@@ -119,16 +113,12 @@ const BentoGrid: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className='dark:bg-gray-900 bg-gray-200 relative group overflow-hidden border dark:border-text-light/15 border-text-dark/30 flex w-full lg:w-1/2 lg:mt-0 md:mt-0 h-[350px] items-center justify-center p-4 rounded-xl shadow-lg'>
-                <div className=''>
-                  <h2 className="text-text-dark dark:text-text-light text-xl font-bold pb-40 z-20">
-                    Momentálně vytvářím vlastní CMS pro správu e-shopu
-                  </h2>
-                </div>
-                <div className=''>
-                  <p className='absolute bottom-4 font-semibold drop-shadow-2xl right-4 z-20 text-text-light'> CodeCommerce </p>
-                  <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20 rounded-lg'></div>
-                  <Image src="/mockups/app.svg" width={800} height={600} alt='Code snippet' className='w-full lg:w-3/4 rounded-xl shadow-lg drop-shadow-xl absolute -bottom-8 lg:-bottom-24  -right-8 '/>
+              <div className='dark:bg-gray-900 flex-col bg-gray-200 relative group overflow-hidden border dark:border-text-light/15 border-text-dark/30 flex lg:flex-col w-full lg:w-1/2 lg:mt-0 md:mt-0 h-[250px] md:h-[350px] items-center justify-center p-4 rounded-xl shadow-lg'>
+                <div className='flex flex-col w-[100%]  h-full'>
+                    <h2 className=" text-center pt-4 text-text-dark dark:text-text-light text-md md:text-lg lg:text-xl font-bold z-20">
+                      Momentálně vytvářím vlastní CMS pro správu e-shopu
+                    </h2>
+                    <Image src="/mockups/app.svg" width={800} height={600} alt='Code snippet' className='z-10 w-full translate-y-8 h-auto mx-auto'/> 
                 </div>
               </div>
             </section>
@@ -136,7 +126,7 @@ const BentoGrid: React.FC = () => {
           </div>
         </div>
       ) : (
-        <p>Loading...</p>
+        <p>Načítám sekci...</p>
       )}
     </section>
   );

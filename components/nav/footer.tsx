@@ -13,8 +13,6 @@ export default function Footer() {
             <Link href="/cookies" className="hover:text-text-dark dark:hover:text-text-light text-text-dark/60 dark:text-text-light/60 duration-200"> Cookies</Link>
             <span className="opacity-40 px-2"> | </span>
             <Link href="/gdpr" className="hover:text-text-dark dark:hover:text-text-light text-text-dark/60 dark:text-text-light/60 duration-200"> G.D.P.R</Link>
-            <span className="opacity-40 px-2"> | </span>
-            <Link href="/aktualizace" className="hover:text-text-dark dark:hover:text-text-light text-text-dark/60 dark:text-text-light/60 duration-200"> Novinky</Link>
           </div>
           <div className="flex flex-row justify-between gap-x-4 mt-2 md:mt-0 md:pb-0 pb-8">
             <p className="text-sm font-thin pt-1"> Všechna práva vyhrazena.  </p>

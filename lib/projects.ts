@@ -16,6 +16,7 @@ export const projectsData = [
       tags: ["Python", "Lavarell", "MongoDB", "Sqlite", "CSV"],
       imageUrl: kl,
     },
+    /*
     {
       title: "CodeVault",
       description:
@@ -29,7 +30,7 @@ export const projectsData = [
         "Aplikace na podobné bázi akorát pro ukládání hesel a všemu podobnému",
       tags: ["Next.js", "TypeScript", "TailwindCSS", "ClerkAuth", "Firebase"],
       imageUrl: logo,
-    },
+    },*/
     {
       title: "CodeCommerce",
       description:

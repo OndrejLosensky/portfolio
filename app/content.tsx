@@ -56,6 +56,8 @@ export default function Content() {
             <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">TailwindCSS</span>
           </div>
       </div>
+
+      <p className='text-sm text-text-dark/70 dark:text-text-light/70 text-center py-20'> Web je stále ve vývoji, finální verze bude až později tento rok </p>
     </main>
   );
 }

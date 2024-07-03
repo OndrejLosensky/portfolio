@@ -51,13 +51,13 @@ export default function ContactSection() {
 
   return (
     <ToastProvider>
-      <div id="contact" ref={ref} className="relative min-h-screen max-h-screen w-full mx-auto z-10">
+      <div id="kontakt" ref={ref} className="relative min-h-screen max-h-screen w-full mx-auto z-10">
         <SectionTitle heading="Kontakt" subHeading="Kontaktujte mě během pár kliknutí" />
-        <span className="text-sm font-light text-shark-300"> Chcete mi něco sdělit, něco nabídnout nebo se jen zeptat? Stačí vyplnit tento formulář </span>
+        <span className="text-sm font-light text-shark-300"> Chcete mi něco sdělit, něco nabídnout nebo se jen zeptat? Stačí vyplnit tento formulář <br />Běžně odpovídám do 2 pracovních dní </span>        
         <div className="bg-[#8af8eb] absolute top-[2rem] -z-10 right-[0rem] lg:right-[-5rem] dark:bg-opacity-75 h-[31.25rem] w-[31.25rem] md:w-[60rem] rounded-full blur-[15rem] ] dark:bg-[#56b595]"></div>
         
         <div>
-          <form onSubmit={handleSubmit} className="relative mt-8 z-20 px-4 sm:px-8 py-6 dark:hover:border-shark-300 hover:border-shark-900 border border-shark-400 duration-300 dark:bg-transparent rounded-md mx-auto w-full">
+          <form onSubmit={handleSubmit} className="relative bg-text-light/70 mt-8 z-20 px-4 sm:px-8 py-6 dark:hover:border-shark-300 hover:border-shark-900 border border-shark-400 duration-300 dark:bg-main/60 rounded-md mx-auto w-full">
             <div className="mb-4">
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-shark-100">
                 Jméno

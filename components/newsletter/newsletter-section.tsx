@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import { Button } from '../ui/button';
+
 const NewsletterForm: React.FC = () => {
   return (
     <section className='mb-32'>
@@ -12,13 +14,14 @@ const NewsletterForm: React.FC = () => {
             <p className="text-text-dark/60 text-center text-sm md:text-md lg:text-lg dark:text-text-light/60 mb-6">
               Zůstaňte v obraze s nejnovějšími aktualizacemi, změny a dalšími věcmi.      
             </p>
-            <form className="flex flex-col lg:flex-row lg:items-center lg:gap-x-2">
+            <form className="flex flex-col lg:flex-row w-full lg:items-center lg:gap-x-2">
               <input
                 type="email"
                 placeholder="Vaše e-mailová adresa"
-                className="bg-gray-100 dark:bg-gray-600 border border-gray-400 dark:border-gray-700 rounded-md px-4 py-2 mb-2 lg:mb-0 focus:outline-none focus:ring-2 focus:ring-primary text-text-dark dark:text-text-light"
+                className="bg-gray-100 dark:bg-gray-600 border border-gray-400 dark:border-gray-700 rounded-md px-4 py-2 w-full mb-2 lg:mb-0 focus:outline-none focus:ring-2 focus:ring-primary text-text-dark dark:text-text-light"
               />
-              <button
+              <Button
+                disabled
                 onClick={async function handleOnClick() {
                   const results = await fetch('/api/newsletter', {
                     method: 'POST',
@@ -29,15 +32,15 @@ const NewsletterForm: React.FC = () => {
                   console.log('results', results)
                 }}
                 type="submit"
-                className="w-full bg-primary dark:bg-primary hover:bg-primary-hover dark:hover:bg-primary-hover duration-200 active:bg-primary-active dark:active:bg-primary-active text-text-light dark:text-text-light font-semibold rounded-md px-4 py-2 sm:py-2 sm:px-6 focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full lg:w-1/3 bg-primary dark:bg-primary hover:bg-primary-hover dark:hover:bg-primary-hover duration-200 active:bg-primary-active dark:active:bg-primary-active text-text-light dark:text-text-light font-semibold rounded-md px-4 py-2 sm:py-2 sm:px-6 focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 Mám zájem
-              </button>
+              </Button>
             </form>
           </div>
         </div>
       </div>
-      <p className='text-center text-sm font-light text-text-dark dark:text-text-light/80'> Newsletter je momentálně ve vývoji, zádáním vaše e-mailu souhlasíte s užitím vašich osobních dat </p>
+      <p className='text-center text-sm font-light text-text-dark dark:text-text-light/80'> Newsletter je momentálně ve vývoji, brzy bude dostupný, zádáním vaše e-mailu souhlasíte s užitím vašich osobních dat </p>
     </section>
   );
 };

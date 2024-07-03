@@ -64,7 +64,7 @@ export default function AboutSection() {
   const { ref } = useSectionInView("O mně");
 
   return (
-    <div ref={ref} id="about" className="min-h-screen max-w-screen w-[100%] z-10 mb-64 relative mx-auto flex flex-col space-y-4">
+    <div ref={ref} id="o-mne" className="min-h-screen max-w-screen w-[100%] z-10 mb-64 relative mx-auto flex flex-col space-y-4">
       
       <section className="flex flex-col lg:flex-row lg:gap-x-6 lg:items-center">
         <div className="w-full lg:w-1/3 relative lg:mt-12">
@@ -98,7 +98,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
             custom={index}
             variants={fadeInAnimationVariants}
-            className="bg-black/10 group relative hover:scale-105 hover:bg-black/20 dark:bg-white/10 p-4 rounded dark:hover:bg-white/20 transition-colors duration-300"
+            className="bg-black/10 group relative hover:scale-105 hover:bg-black/20 dark:bg-white/10 p-4 rounded dark:hover:bg-white/20 transition-colors duration-300 flex items-center justify-center gap-2"
           >
             <Image src={skill.icon} alt={`${skill.name} icon`} height={32} width={32} />
             <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">

@@ -6,6 +6,7 @@ import Footer from "@/components/nav/footer";
 import CookiesForm from './cookies/CookiesForm';
 import Loader from '@/components/loaders/loader';
 import Content from './content';
+import EmailTicket from '@/components/action/email-ticket';
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
           <Content />
           <Footer />
           <CookiesForm/>
+          <EmailTicket/>
         </div>
     </main>
   );

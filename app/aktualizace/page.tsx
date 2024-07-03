@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import React from 'react';
 import { IoMdHome } from "react-icons/io";
-import Header from '@/components/nav/Header';
+import Header from '@/components/nav/header-copy';
 import Footer from '@/components/nav/footer';
 
 const blogPosts = [
