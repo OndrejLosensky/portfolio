@@ -17,7 +17,7 @@ const NewsletterForm: React.FC = () => {
             <form className="flex flex-col lg:flex-row w-full lg:items-center lg:gap-x-2">
               <input
                 type="email"
-                placeholder="Vaše e-mailová adresa"
+                placeholder="Váš e-mail"
                 className="bg-gray-100 dark:bg-gray-600 border border-gray-400 dark:border-gray-700 rounded-md px-4 py-2 w-full mb-2 lg:mb-0 focus:outline-none focus:ring-2 focus:ring-primary text-text-dark dark:text-text-light"
               />
               <Button
