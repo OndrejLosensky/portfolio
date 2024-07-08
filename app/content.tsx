@@ -31,6 +31,7 @@ const AboutSection = dynamic(() => import('@/components/view/about'), {
 export default function Content() {
   return (
     <main className="flex flex-col mx-auto">
+      {/* */}
       <HeroSection/>
       <AboutSection/>
       <BentoGrid/>
