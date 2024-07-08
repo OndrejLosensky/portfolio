@@ -111,7 +111,7 @@ export default function HeaderLinks() {
         <ul className="hidden xl:flex w-[22rem] flex-wrap items-center justify-center gap-y-2 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
           {links.map((link) => (
             <motion.li
-              className="h-3/4 flex items-center justify-center relative"
+              className="h-3/4 mt-[2px] flex items-center justify-center relative"
               key={link.hash}
               ref={(el) => { sectionRefs.current[link.name] = el; }} // Assign ref to each link
             >
