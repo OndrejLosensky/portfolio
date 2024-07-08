@@ -8,14 +8,13 @@ export const links = [
       hash: "#o-mne",
     },
     {
+      name: "Přehled",
+      hash: "#prehled",
+    },
+    {
       name: "Projekty",
       hash: "#projekty",
     },
-    /*
-    {
-      name: "Práce",
-      hash: "#work",
-    },*/
     {
       name: "Kontakt",
       hash: "#kontakt",

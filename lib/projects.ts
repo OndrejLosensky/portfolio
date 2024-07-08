@@ -1,20 +1,20 @@
-import logo from "@/public/rmtdev.png";
-import kl from "@/public/kl.webp";
+import datadepot from "@/public/mockups/datadepot.png";
+import kl from "@/public/mockups/KL.png";
 import codecommerce from "@/public/app.webp";
 export const projectsData = [
+    { 
+      title: "Královská levandule",
+      description:
+        "První reálný projekt, který již 2 rokem běží on-line na adrese www.kralovskalevandule.cz.",
+      tags: ["Wordpress", "Figma", "PHP"],
+      imageUrl: kl,
+    },
     {
       title: "DataDepot",
       description:
-        "Vlastní nápad, který jsem tvořil během maturitního období. Naučil jsem se zde spoustu nových věcí co se týče API, databází, i front-end stylování",
+        "Jednoduchá aplikace pro správu hesel, poznámek a code snippets vše společně s přehlednou stránkou na statistiky a plně funkční registrací",
       tags: ["Next.js", "JavaScript", "Firebase", "Sqlite", "TailwindCSS"],
-      imageUrl: logo,
-    },
-    {
-      title: "Královská levandule",
-      description:
-        "První reálný projekt, který již 2 roky běží on-line na adrese www.kralovskalevandule.cz. Momentálně běží na CMS Wordpress, ale brzy dokončím verzi pomocí Next.js",
-      tags: ["Python", "Lavarell", "MongoDB", "Sqlite", "CSV"],
-      imageUrl: kl,
+      imageUrl: datadepot,
     },
     /*
     {
@@ -35,7 +35,7 @@ export const projectsData = [
       title: "CodeCommerce",
       description:
         "Webová aplikace pro správu jednoduché e-shopu pomocí administrátorského panelu",
-      tags: ["Next.js", "TypeScript", "TailwindCSS", "ClerkAuth", "Firebase"],
+      tags: ["Next.js", "TypeScript", "TailwindCSS", "ClerkAuth", "Prisma"],
       imageUrl: codecommerce,
     },
   ] as const;

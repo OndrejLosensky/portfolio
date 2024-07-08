@@ -57,7 +57,7 @@ export default function Content() {
           </div>
       </div>
 
-      <p className='text-sm text-text-dark/70 dark:text-text-light/70 text-center py-20'> Web je stále ve vývoji, finální verze bude až později tento rok </p>
+      <p className='text-sm text-text-dark/70 dark:text-text-light/70 text-center py-20'> Web je stále ve vývoji, finální verze bude až později tento rok. Pokud narazíte na jakékoliv potíže neváhejte mě kontaktovat </p>
     </main>
   );
 }

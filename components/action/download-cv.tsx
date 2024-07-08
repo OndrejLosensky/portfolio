@@ -24,7 +24,7 @@ export const DownloadCV = () => {
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle className="font-bold text-2xl">Vyberte jazyk v jakém chcete stáhnout CV</DialogTitle>
+                    <DialogTitle className="font-bold text-2xl">Vyberte jazyk mého CV</DialogTitle>
                     <DialogDescription className="pt-4">
                         Po kliknutí na tlačítko stáhnout se soubor automaticky začne stahovat. Pokud se tak nestane zkuste prosím obnovit prohlížeč
                         <div className="flex flex-row mx-auto items-center justify-center mt-4 gap-x-4">
