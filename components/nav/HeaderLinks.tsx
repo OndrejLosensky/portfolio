@@ -113,7 +113,7 @@ export default function HeaderLinks() {
             <motion.li
               className="h-3/4 mt-[2px] flex items-center justify-center relative"
               key={link.hash}
-              ref={(el) => { sectionRefs.current[link.name] = el; }} // Assign ref to each link
+              ref={(el) => { sectionRefs.current[link.name] = el; }}
             >
               <Link
                 className={clsx(
