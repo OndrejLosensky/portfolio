@@ -20,7 +20,7 @@ const BentoGrid: React.FC = () => {
       setCopied(true);
       setTimeout(() => {
         setCopied(false);
-      }, 3000); // 3 seconds delay
+      }, 3000); // Delayed the change of text when copying e-mail from button
     }).catch(err => {
       console.error('Failed to copy: ', err);
     });
@@ -28,7 +28,6 @@ const BentoGrid: React.FC = () => {
 
   return (
     <section id='prehled' ref={ref as any}>
-      {isVisible ? (
         <div className="flex h-full w-full flex-col items-center justify-center my-16 ">
           <span className="relative text-2xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-bermuda-300  to-bermuda-500 text-center drop-shadow-glow">
             Přehled
@@ -125,9 +124,6 @@ const BentoGrid: React.FC = () => {
             {/* End of Tasks section */}
           </div>
         </div>
-      ) : (
-        <p>Načítám sekci...</p>
-      )}
     </section>
   );
 };
