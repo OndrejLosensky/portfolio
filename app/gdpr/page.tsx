@@ -8,6 +8,7 @@ import React from 'react';
 
 import { IoMdHome } from "react-icons/io";
 import { MdFileDownload } from "react-icons/md";
+import CookiesForm from '../cookies/CookiesForm';
 
 export default function GDPRPage() {
 
@@ -65,6 +66,7 @@ export default function GDPRPage() {
           </Link>
       </div>
 
+      <CookiesForm/>
       <Footer/>
     </div>
   );

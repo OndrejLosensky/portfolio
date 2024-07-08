@@ -66,7 +66,7 @@ const BentoGrid: React.FC = () => {
                     </Link>
                   </div>
                   <div className='w-[70%] lg:w-[75%]'>
-                    <Image src="/mockups/KL.svg" width={500} height={400} alt='Project image' className='md:w-96 lg:w-full lg:h-full md:translate-x-0 lg:translate-x-12 h-40 w-72 group-hover:-rotate-3 group-hover:scale-[1.04] duration-300 absolute md:-bottom-12 md:-right-0 lg:-bottom-16 lg:-right-20 -bottom-16 -right-20'/>
+                    <Image src="/kl.webp" width={500} height={400} alt='Project image' className='md:w-96 lg:w-full lg:h-full md:translate-x-0 lg:translate-x-12 h-40 w-72 group-hover:-rotate-3 group-hover:scale-[1.04] duration-300 absolute md:-bottom-12 md:-right-0 lg:-bottom-16 lg:-right-20 -bottom-16 -right-20'/>
                   </div>
                   <div className='absolute inset-0 bg-gradient-to-br dark:from-transparent from-transparent to-gray-100 dark:to-gray-900 opacity-55 rounded-lg'></div>
                 </div>
@@ -118,7 +118,7 @@ const BentoGrid: React.FC = () => {
                     <h2 className=" text-center pt-4 text-text-dark dark:text-text-light text-md md:text-lg lg:text-xl font-bold z-20">
                       Momentálně vytvářím vlastní CMS pro správu e-shopu
                     </h2>
-                    <Image src="/mockups/app.svg" width={800} height={600} alt='Code snippet' className='z-10 w-full translate-y-8 h-auto mx-auto'/> 
+                    <Image src="/mockups/app.svg" width={800} height={600} alt='Code snippet' className='z-20 w-full translate-y-8 h-auto mx-auto'/> 
                 </div>
               </div>
             </section>

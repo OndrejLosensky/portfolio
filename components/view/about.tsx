@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { CiCircleCheck } from "react-icons/ci";
 import { IoMdPin } from "react-icons/io";
+import Link from "next/link";
 
 interface Skill {
   name: string;
@@ -77,8 +78,8 @@ export default function AboutSection() {
           <h2 className="md:text-4xl pt-2 lg:text-5xl text-3xl flex flex-col mb-1 font-bold bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50">
               <span>Ondřej Losenský</span>
           </h2>
-          <div className="flex flex-row gap-x-4 my-3">
-            <p className="text-xs md:text-lg text-green-500 font-medium flex flex-row items-center border-r-2 border-text-dark/60 dark:border-text-light/60 pr-4"> <CiCircleCheck className="mr-2 w-6 h-6"/> <span>Jsem otevřen pracovním příležitostem</span></p>
+          <div className="flex flex-col lg:flex-row gap-x-4 my-3">
+            <p className="text-xs md:text-lg text-green-500 font-medium flex flex-row items-center border-r-0 pb-2 lg:pb-0 lg:border-r-2 border-text-dark/60 dark:border-text-light/60 pr-4"> <CiCircleCheck className="mr-2 w-6 h-6"/> <span>Jsem otevřen pracovním příležitostem</span></p>
             <p className="text-xs md:text-lg text-text-dark dark:text-text-light font-medium flex flex-row items-center"> <IoMdPin className="text-red-500 mr-2 w-6 h-6"/> <span>Praha</span></p>
           </div>
           <div className="flex flex-row items-center gap-x-2 mt-4">
@@ -87,8 +88,8 @@ export default function AboutSection() {
             <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Administrátor</p>
           </div>
           <p className="mt-4 text-sm text-shark-500 dark:text-shark-200">
-          Jmenuji se Ondřej Losenský, je mi 19 let a pocházím z Prahy. Právě jsem dokončil střední průmyslovou školu v oboru IT. Věnuji se programování webových aplikací, amatérskému grafickému designu a dalším technologickým zájmům. Na mém portfoliu najdete mé kontaktní údaje, projekty a životopis ve formátu PDF ve více jazycích
-          Zároveň se můžeme domluvit na vytvoření webové stránky na míru nebo nějakého projektu. Pro více se podívejte do sekce <strong>Tvorba webu</strong></p>
+          Jmenuji se Ondřej Losenský, je mi 19 let a jsem z Prahy. Právě jsem dokončil střední průmyslovou školu v oboru IT. Věnuji se programování webových aplikací, správě systémů a dalším technologickým zájmům. Na mém portfoliu najdete mé kontaktní údaje, projekty a životopis ve formátu PDF ve více jazycích.
+          Zároveň se můžeme domluvit na vytvoření webové stránky na míru nebo nějakého projektu. Pro více se podívejte do sekce <strong><Link href="/tvorba-webu">Tvorba webu</Link></strong></p>
         </div>     
       </section>
 

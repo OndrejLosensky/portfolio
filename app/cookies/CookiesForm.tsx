@@ -29,7 +29,7 @@ export default function CookiesForm() {
 
   return (
     <>
-      <div className={`fixed bottom-2 overflow-hidden left-1/2 z-20 transform -translate-x-1/2 p-2 rounded-lg lg:rounded-full flex-col w-full lg:w-[80%] bg-gray-200 dark:bg-gray-900 border border-gray-500 text-center flex lg:flex-row items-center justify-between transition-transform duration-500 ${isClosed ? 'translate-y-full' : ''}`} style={{ right: isClosed ? '100%' : 'auto' }}>
+      <div className={`fixed bottom-2 overflow-hidden left-1/2 z-10 transform -translate-x-1/2 p-2 rounded-lg lg:rounded-full flex-col w-[90%] lg:w-[80%] bg-gray-200 dark:bg-gray-900 border border-gray-500 text-center flex lg:flex-row items-center justify-between transition-transform duration-500 ${isClosed ? 'translate-y-full' : ''}`} style={{ right: isClosed ? '100%' : 'auto' }}>
         <p className='pl-2 text-xs flex flex-col space-y-2 lg:space-y-0 lg:flex-row items-center gap-x-4 text-gray-600 dark:text-gray-200'>
           <Image src="/icons/cookies.png" alt='icon' width={24} height={24}/>
           <span>Používáme pouze nezbytné cookies a volitelné cookies pro správnou funkci stránky </span>
@@ -49,7 +49,7 @@ export default function CookiesForm() {
         </div>
       </div>
       {isClosed && (
-        <div className='fixed hover:py-2 duration-300 bottom-0 left-2 py-0.5 px-2 bg-gradient-to-tr to-bermuda-600 from-emerald-400 rounded-t-full cursor-pointer flex items-center' onClick={handleReopen} title="Znovu otevřít nastavení cookies">
+        <div className='z-1 fixed hover:py-2 duration-300 bottom-0 left-2 py-0.5 px-2 bg-gradient-to-tr to-bermuda-600 from-emerald-400 rounded-t-full cursor-pointer flex items-center' onClick={handleReopen} title="Znovu otevřít nastavení cookies">
             <div className='group relative'>
                 <IoIosArrowBack className='text-white rotate-90 mt-1' />
                 <span className="absolute -top-8 ml-1 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">

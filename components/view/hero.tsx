@@ -55,7 +55,7 @@ export default function HeroSection() {
                   </h2>
                   <p className='text-shark-500 dark:text-shark-50 font-light text-wrap w-3/4 lg:w-1/2 text-xs md:text-lg mt-2 mb-6'> Vítejte na mém portfoliu! Jsem full-stack softwarový vývojář z Prahy📍 a absolvent střední školy. Specializuji se na tvorbu moderních a responzivních webů a vysoce efektivních řešení pomocí nejnovějších technologií. Také se zajímám o veškeré dění v oblastech AI a dalších odvětvích</p>
                   <div className='flex flex-row gap-x-4 items-center mx-auto'>
-                    <Button onClick={() => scrollToSection('about')} className='dark:bg-bermuda-500 dark:hover:bg-bermuda-600 bg-bermuda-500 text-shark-100 px-4 py-2 rounded-md hover:bg-bermuda-600 active:bg-bermuda-700 active:scale-90 duration-200'> 
+                    <Button onClick={() => scrollToSection('o-mne')} className='dark:bg-bermuda-500 dark:hover:bg-bermuda-600 bg-bermuda-500 text-shark-100 px-4 py-2 rounded-md hover:bg-bermuda-600 active:bg-bermuda-700 active:scale-90 duration-200'> 
                         Pokračovat 
                     </Button>
                     <DownloadCV/>                
@@ -82,7 +82,7 @@ export default function HeroSection() {
 
         </motion.div>
         
-        <div className="arrow-container mt-12"  onClick={() => scrollToSection('bento-grid')}>
+        <div className="arrow-container mt-12"  onClick={() => scrollToSection('prehled')}>
               <div className='arrow'></div>
         </div>  
     </div>

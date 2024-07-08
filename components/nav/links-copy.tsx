@@ -55,7 +55,25 @@ export default function HeaderLinksCopy() {
                         className={clsx(
                           "flex items-center px-3 py-3 hover:text-shark-950 text-shark-600 transition dark:text-shark-50 dark:hover:text-shark-100 font-medium"
                         )}
-                        href={"/#about"}
+                        href={"/#uvod"}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setTimeOfLastClick(Date.now());
+                          setIsOpen(false);
+                        }}
+                      >
+                        Úvod
+        
+                      </Link>
+                    </motion.li>
+                    <motion.li
+                      className="h-3/4 flex items-center justify-center"
+                    >
+                      <Link
+                        className={clsx(
+                          "flex items-center px-3 py-3 hover:text-shark-950 text-shark-600 transition dark:text-shark-50 dark:hover:text-shark-100 font-medium"
+                        )}
+                        href={"/#o-mne"}
                         onClick={(e) => {
                           e.preventDefault();
                           setTimeOfLastClick(Date.now());
@@ -63,6 +81,60 @@ export default function HeaderLinksCopy() {
                         }}
                       >
                         O mně
+        
+                      </Link>
+                    </motion.li>
+                    <motion.li
+                      className="h-3/4 flex items-center justify-center"
+                    >
+                      <Link
+                        className={clsx(
+                          "flex items-center px-3 py-3 hover:text-shark-950 text-shark-600 transition dark:text-shark-50 dark:hover:text-shark-100 font-medium"
+                        )}
+                        href={"/#prehled"}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setTimeOfLastClick(Date.now());
+                          setIsOpen(false);
+                        }}
+                      >
+                        Přehled
+        
+                      </Link>
+                    </motion.li>
+                    <motion.li
+                      className="h-3/4 flex items-center justify-center"
+                    >
+                      <Link
+                        className={clsx(
+                          "flex items-center px-3 py-3 hover:text-shark-950 text-shark-600 transition dark:text-shark-50 dark:hover:text-shark-100 font-medium"
+                        )}
+                        href={"/#projekty"}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setTimeOfLastClick(Date.now());
+                          setIsOpen(false);
+                        }}
+                      >
+                        Projekty
+        
+                      </Link>
+                    </motion.li>
+                    <motion.li
+                      className="h-3/4 flex items-center justify-center"
+                    >
+                      <Link
+                        className={clsx(
+                          "flex items-center px-3 py-3 hover:text-shark-950 text-shark-600 transition dark:text-shark-50 dark:hover:text-shark-100 font-medium"
+                        )}
+                        href={"/#kontakt"}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setTimeOfLastClick(Date.now());
+                          setIsOpen(false);
+                        }}
+                      >
+                        Kontakt
         
                       </Link>
                     </motion.li>
@@ -101,6 +173,14 @@ export default function HeaderLinksCopy() {
                         href={"/#o-mne"}  
                       >
                         O mně
+                      </Link>
+                      <Link
+                        className={clsx(
+                          "flex items-center px-3 py-3 hover:text-shark-950 text-shark-600 transition dark:text-shark-50 dark:hover:text-shark-100 font-medium"
+                        )}
+                        href={"/#prehled"}  
+                      >
+                        Přehled
                       </Link>
                       <Link
                         className={clsx(

@@ -7,14 +7,12 @@ import {
     DialogTrigger,
   } from "@/components/ui/dialog";
   import { FaArrowRight } from "react-icons/fa";
-  import Image from "next/image";
   
   interface Option {
     title: string;
     description: string;
     features: string[];
     pricing: string;
-    image: string;
   }
   
   interface DynamicDialogProps {
@@ -33,14 +31,13 @@ import {
             <FaArrowRight className="w-10 h-10 transition-transform duration-300 -rotate-45 group-hover:rotate-0" />
           </div>
         </DialogTrigger>
-        <DialogContent className="w-[60rem]">
+        <DialogContent className="w-[20rem] lg:w-[60rem]">
           <DialogHeader>
-            <DialogTitle className="font-bold text-2xl">{option.title}</DialogTitle>
+            <DialogTitle className="font-bold text-2xl pt-10">{option.title}</DialogTitle>
             <DialogDescription className="pt-4">{option.description}</DialogDescription>
           </DialogHeader>
           <div className="pt-4">
-            <Image src={option.image} alt={option.title} width={500} height={300} className="rounded-lg" />
-            <h3 className="font-semibold text-xl pt-4">Features:</h3>
+            <h3 className="font-semibold text-xl pt-4">Vlastnosti</h3>
             <ul className="list-disc list-inside pt-2">
               {option.features.map((feature, index) => (
                 <li key={index} className="font-light text-sm">{feature}</li>
