@@ -17,7 +17,8 @@ import {
 export default function ContactSection() {
   const { ref } = useSectionInView("Kontakt", 0.5);
   const [isSent, setIsSent] = useState(false);
-  const [showToast, setShowToast] = useState(false);
+  const [showSuccessToast, setShowSuccessToast] = useState(false);
+  const [showErrorToast, setShowErrorToast] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,17 +30,22 @@ export default function ContactSection() {
   useEffect(() => {
     if (state.succeeded) {
       setIsSent(true);
-      setShowToast(true);
+      setShowSuccessToast(true);
       setFormData({
         name: '',
         email: '',
         message: ''
       });
       setTimeout(() => {
-        setShowToast(false);
+        setShowSuccessToast(false);
+      }, 4000);
+    } else if (state.errors) {
+      setShowErrorToast(true);
+      setTimeout(() => {
+        setShowErrorToast(false);
       }, 4000);
     }
-  }, [state.succeeded]);
+  }, [state.succeeded, state.errors]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -123,18 +129,30 @@ export default function ContactSection() {
           </form>
         </div>
 
-        {showToast && (
+        {showSuccessToast && (
           <Toast className="border-0 border-transparent">
             <div className="flex items-center justify-between p-4 bg-text-light dark:bg-text-dark border border-text-dark/60 dark:border-text-light/60 rounded-md shadow-lg">
               <div>
-                <ToastTitle className="text-green-500">Success</ToastTitle>
+                <ToastTitle className="text-green-500">Úspěšně odesláno</ToastTitle>
                 <ToastDescription className="text-green-500">Děkuji za vaši zprávu, odpovím vám co nejdříve</ToastDescription>
               </div>
-              <ToastClose onClick={() => setShowToast(false)} />
+              <ToastClose onClick={() => setShowSuccessToast(false)} />
             </div>
           </Toast>
         )}
-        
+
+        {showErrorToast && (
+          <Toast className="border-0 border-transparent">
+            <div className="flex items-center justify-between p-4 bg-text-light dark:bg-text-dark border border-text-dark/60 dark:border-text-light/60 rounded-md shadow-lg">
+              <div>
+                <ToastTitle className="text-red-500">Chyba při odesílání</ToastTitle>
+                <ToastDescription className="text-red-500">Došlo k chybě při odesílání formuláře. Zkuste to prosím znovu.</ToastDescription>
+              </div>
+              <ToastClose onClick={() => setShowErrorToast(false)} />
+            </div>
+          </Toast>
+        )}
+
         <ToastViewport className="fixed top-0 right-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]" />
       </div>
     </ToastProvider>

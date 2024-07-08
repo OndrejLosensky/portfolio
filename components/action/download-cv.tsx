@@ -19,7 +19,7 @@ export const DownloadCV = () => {
     return (
         <Dialog>
             <DialogTrigger className="flex flex-row items-center group">
-                <span>Stáhnout CV</span>
+                <span>Ukázat CV</span>
                 <MdArrowRightAlt className='ml-2 w-6 h-7 text-shark-600 dark:text-shark-100 transform group-hover:translate-x-1 transition-transform duration-200' />
             </DialogTrigger>
             <DialogContent>

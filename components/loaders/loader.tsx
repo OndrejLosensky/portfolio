@@ -3,8 +3,9 @@ import Image from 'next/image';
 import React from 'react';
 
 const Loader = () => (
-  <div className="flex flex-col items-center w-screen justify-center min-h-screen bg-main">
+  <div className="flex flex-col items-center w-screen justify-center min-h-screen bg-main ">
     <Image src="/logo.svg" width={128} height={128} alt='Logo' className='mb-16'/>
+    <div className="bg-[#8af8eb] absolute top-[0rem] md:top-[-16rem] z-10  right-[8rem] md:right-[8rem] h-[25rem] md:h-[31.25rem] w-[20rem] md:w-[61.25rem] rounded-full blur-[12rem] dark:bg-[#56b595]"></div>
     <p className='text-xl text-text-light pb-8 font-extralight'> Vyčkejte chvíli, stránka se načítá </p>
     <div className="loader" />
         <style jsx>{`

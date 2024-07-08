@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ondřej Losenský",
-  description: "Personal web portfolio",
+  description: "Ondřej Losenský - Vývojář webových stránek a dalších technologií",
 };
 
 export default function RootLayout({
