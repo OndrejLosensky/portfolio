@@ -34,7 +34,7 @@ export const projectsData = [
     {
       title: "CodeCommerce",
       description:
-        "Webová aplikace pro správu jednoduché e-shopu pomocí administrátorského panelu",
+        "Webová aplikace pro správu jednoduchého e-shopu pomocí administrátorského panelu",
       tags: ["Next.js", "TypeScript", "TailwindCSS", "ClerkAuth", "Prisma"],
       imageUrl: codecommerce,
     },
