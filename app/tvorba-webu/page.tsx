@@ -19,13 +19,13 @@ interface Option {
 
 const cmsOptions: Option[] = [
   {
-    title: "Jednoduchý web, z vašeho grafického návrhu",
+    title: "Jednoduchý web",
     description: "Vytvořím vám jednoduchý web pomocí grafických návrhů a předloh, které mi dodáte, tvořím na platformě Wordpress nebo Joomla",
     features: ["WordPress", "Joomla", "Responzivní design", "Funkční SEO"],
     pricing: "cena: zaleží na domluvě",
   },
   {
-    title: "Pokročilejší web s mými grafickými návrhy",
+    title: "Pokročilejší web",
     description: "O něco pokročilejší web, kdy vám i navrhu vzhled a celý obsah. Nejčastěji na platformu Wordpress, ale po domluvě může být na čemkoliv",
     features: ["Můj Design", "WordPress", "SEO => 90", "Možnost integrace e-shopu"],
     pricing: "cena: zaleží na domluvě",
@@ -66,6 +66,8 @@ export default function WebDevelopmentPage() {
   return (
     <section className="w-3/4 space-y-12 mx-auto flex flex-col">
       <Header />
+
+      <div className="bg-[#8af8eb] absolute top-[4rem] md:top-[-4rem] -z-10  right-[8rem] md:right-[8rem] h-[16rem] md:h-[21rem] w-[22rem] md:w-[30rem] rounded-full blur-[14rem] dark:bg-[#79d7b8cd]"></div>
 
       <div className="text-left">
         <h2 className="text-2xl md:text-3xl lg:text-5xl mt-32 text-center text-primary font-bold">Tvorba webu na míru</h2>

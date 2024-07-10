@@ -28,10 +28,11 @@ const BentoGrid: React.FC = () => {
 
   return (
     <section id='prehled' ref={ref as any}>
-        <div className="flex h-full w-full flex-col items-center justify-center my-16 ">
+        <div className="relative flex h-full w-full flex-col items-center justify-center my-16 ">
           <span className="relative text-2xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-bermuda-300  to-bermuda-500 text-center drop-shadow-glow">
             Přehled
           </span>
+          <div className="bg-[#8af8eb] absolute top-[24rem] md:top-[20rem] -z-10  right-[2rem] md:right-[8rem] h-[12rem] md:h-[20.25rem] w-[15.25rem] md:w-[25.25rem] rounded-full blur-[18rem] dark:bg-[#56b595b6]"></div>
           <p className="text-center text-md md:text-lg lg:text-xl pt-1 font-light text-text-dark dark:text-text-light mb-12">
             Získejte rychlý předmět o veškerých možnostech a zajímavostech
           </p>
@@ -87,7 +88,7 @@ const BentoGrid: React.FC = () => {
             </section>
             {/* End of Projects section */}
             {/* Tasks section */}
-            <section className='flex flex-col lg:flex-row gap-x-4'>
+            <section className='flex flex-col md:flex-row gap-x-4'>
               <div className='grid grid-rows-2 w-full md:w-1/2 lg:w-1/3 gap-4 mb-4 lg:mb-0'>
                 <div className='dark:bg-gray-900 relative bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex items-center justify-center p-4 rounded-xl shadow-lg'>
                   <div>

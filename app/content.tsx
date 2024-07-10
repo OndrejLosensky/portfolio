@@ -55,9 +55,17 @@ export default function Content() {
             <Image src="/icons/tailwind.svg" width={64} height={64} alt="TailwindCSS icon"/>
             <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">TailwindCSS</span>
           </div>
+          <div className="group relative">
+            <Image src="/icons/framer-motion.svg" width={64} height={64} alt="Framer icon"/>
+            <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">Framer Motion</span>
+          </div>
+          <div className="group relative">
+            <Image src="/icons/react-email.png" width={64} height={64} alt="React-email icon"/>
+            <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">React-email</span>
+          </div>
       </div>
 
-      <p className='text-sm text-text-dark/70 dark:text-text-light/70 text-center py-20'> Web je stále ve vývoji, finální verze bude až později tento rok. Pokud narazíte na jakékoliv potíže neváhejte mě kontaktovat </p>
+      <p className='text-sm text-text-dark/70 dark:text-text-light/70 text-center py-20'> Web je stále ve vývoji, finální verze bude až později tento rok.</p>
     </main>
   );
 }
