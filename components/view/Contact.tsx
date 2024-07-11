@@ -63,7 +63,7 @@ export default function ContactSection() {
         <div className="bg-[#8af8eb] absolute top-[2rem] -z-10 right-[0rem] lg:right-[-5rem] dark:bg-opacity-75 h-[31.25rem] w-[31.25rem] md:w-[60rem] rounded-full blur-[15rem] ] dark:bg-[#56b595]"></div>
         
         <div>
-          <form netlify onSubmit={handleSubmit} className="relative bg-text-light/70 mt-8 z-20 px-4 sm:px-8 py-6 dark:hover:border-shark-300 hover:border-shark-900 border border-shark-400 duration-300 dark:bg-main/60 rounded-md mx-auto w-full">
+          <form onSubmit={handleSubmit} className="relative bg-text-light/70 mt-8 z-20 px-4 sm:px-8 py-6 dark:hover:border-shark-300 hover:border-shark-900 border border-shark-400 duration-300 dark:bg-main/60 rounded-md mx-auto w-full">
             <div className="mb-4">
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-shark-100">
                 Jméno
