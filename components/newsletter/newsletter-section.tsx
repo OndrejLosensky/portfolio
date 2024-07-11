@@ -46,3 +46,4 @@ const NewsletterForm: React.FC = () => {
 };
 
 export default NewsletterForm;
+

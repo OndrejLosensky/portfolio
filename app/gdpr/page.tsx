@@ -18,6 +18,7 @@ export default function GDPRPage() {
 
   return (
     <div className='max-w-screen w-3/4 justify-between min-h-screen flex flex-col items-center mx-auto'>
+      
       <HeaderCopy/>
       <div className='w-full lg:w-2/3 mx-auto mt-32'>
           <h2 className='text-2xl lg:text-4xl text-primary font-bold text-center pb-2'>Zásady ochrany osobních údajů</h2>
