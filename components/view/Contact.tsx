@@ -42,7 +42,7 @@ export default function ContactSection() {
     } else if (state.errors) {
       setShowErrorToast(true);
       setTimeout(() => {
-        setShowErrorToast(false);
+        setShowErrorToast(false); 
       }, 4000);
     }
   }, [state.succeeded, state.errors]);

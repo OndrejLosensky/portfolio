@@ -44,10 +44,10 @@ export default function Project({
                 </li>
               ))}
             </ul>
-            <div className="space-x-2">
+            <div className="grid grid-cols-2 xl:grid-cols-3 gap-2">
               {websiteLink ? (
                 <Button variant="ghost">
-                  <Link href={websiteLink} className="flex flex-row items-center gap-x-2">
+                  <Link href={websiteLink} className="flex flex-row items-center space-x-2">
                     <CiGlobe className="w-5 h-5" /> <span>Website</span>
                   </Link>
                 </Button>
@@ -57,7 +57,7 @@ export default function Project({
                   disabled
                   className="opacity-50 cursor-not-allowed"
                 >
-                  <span className="flex flex-row items-center gap-x-2">
+                  <span className="flex flex-row items-center space-x-2">
                     <CiGlobe className="w-5 h-5" /> <span>Website</span>
                   </span>
                 </Button>
@@ -65,7 +65,7 @@ export default function Project({
 
               {githubLink ? (
                 <Button variant="ghost">
-                  <Link href={githubLink} className="flex flex-row items-center gap-x-2">
+                  <Link href={githubLink} className="flex flex-row items-center space-x-2">
                     <FaGithub className="w-5 h-5" /> <span>Github</span>
                   </Link>
                 </Button>
