@@ -1,9 +1,11 @@
 "use client";
 
-import { useRef } from "react";
 import { projectsData } from "@/lib/projects";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { Button } from "../ui/button";
+import Link from "next/link";
+import { CiGlobe } from "react-icons/ci";
+import { FaGithub, FaShoppingBasket } from "react-icons/fa";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -12,60 +14,90 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  githubLink,
+  websiteLink,
+  otherLink,
+  gradient, 
 }: ProjectProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
-    <motion.div
-      ref={ref}
-      style={{
-        scale: scaleProgess,
-        opacity: opacityProgess,
-      }}
-      className="group mb-3 sm:mb-8 last:mb-0"
-    >
-      <section className="bg-text-light dark:bg-text-dark lg:h-96 flex flex-col border border-text-dark/30 dark:border-text-light/30 rounded-lg overflow-hidden sm:pr-8 relative hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20 duration-200">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-text-dark/80 dark:text-text-light/80">
-            {description}
-          </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
-              <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
-                key={index}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
+    <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-auto flex flex-col justify-between h-full">
+      <section className="flex flex-col flex-grow">
+        <div className={`w-full bg-gradient-to-br ${gradient}`}>
+          <Image
+            src={imageUrl}
+            alt={title} 
+            quality={90}
+            className="w-full p-4 aspect-video h-auto rounded-2xl hover:scale-[1.05] duration-200"
+          />
         </div>
+        <div className="p-5 flex flex-col flex-grow">
+          <div className="flex-grow">
+            <h3 className="text-white text-xl font-semibold pt-4 pb-2">{title}</h3>
+            <p className="text-gray-400 text-sm mb-5">{description}</p>
+          </div>
+          <div className="mt-auto">
+            <ul className="flex flex-wrap gap-2 mb-6">
+              {tags.map((tag, index) => (
+                <li key={index} className="bg-gray-700 text-white text-xs rounded-full px-3 py-1">
+                  {tag}
+                </li>
+              ))}
+            </ul>
+            <div className="space-x-2">
+              {websiteLink ? (
+                <Button variant="ghost">
+                  <Link href={websiteLink} className="flex flex-row items-center gap-x-2">
+                    <CiGlobe className="w-5 h-5" /> <span>Website</span>
+                  </Link>
+                </Button>
+              ) : (
+                <Button 
+                  variant="ghost" 
+                  disabled
+                  className="opacity-50 cursor-not-allowed"
+                >
+                  <span className="flex flex-row items-center gap-x-2">
+                    <CiGlobe className="w-5 h-5" /> <span>Website</span>
+                  </span>
+                </Button>
+              )}              
 
-        <Image
-          src={imageUrl}
-          alt="Project I worked on"
-          quality={100}
-          className="lg:absolute lg:block lg:top-8 lg:-right-40 lg:w-[30.25rem] rounded-t-lg shadow-2xl
-        transition 
-        group-hover:scale-[1.04]
-        group-hover:-translate-x-3
-        group-hover:translate-y-3
-        group-hover:-rotate-2
+              {githubLink ? (
+                <Button variant="ghost">
+                  <Link href={githubLink} className="flex flex-row items-center gap-x-2">
+                    <FaGithub className="w-5 h-5" /> <span>Github</span>
+                  </Link>
+                </Button>
+              ) : (
+                <Button 
+                  variant="ghost" 
+                  disabled
+                  className="opacity-50 cursor-not-allowed"
+                >
+                  <span className="flex flex-row items-center gap-x-2">
+                    <FaGithub className="w-5 h-5" /> <span>Github</span>
+                  </span>
+                </Button>
+              )}
 
-        group-even:group-hover:translate-x-3
-        group-even:group-hover:translate-y-3
-        group-even:group-hover:rotate-2
-
-        group-even:right-[initial] group-even:-left-40"
-        />
+              {otherLink ? (
+                    <Button variant="ghost">
+                      <Link href={otherLink} className="flex flex-row items-center gap-x-2">
+                        <FaShoppingBasket className="w-5 h-5" /> <span>Eshop</span>
+                      </Link>
+                    </Button>
+              ) : (
+                <Button className="hidden"> 
+                    <div>
+                        Ostatní  
+                    </div>  
+                </Button>
+              )}
+            </div>
+          </div>
+        </div>
       </section>
-    </motion.div>
+    </div>
   );
 }

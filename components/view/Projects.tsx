@@ -6,19 +6,30 @@ import React from "react";
 import { projectsData } from "@/lib/projects";
 import Project from "@/components/layout/single-project";
 import { useSectionInView } from "@/lib/hooks";
+import { Button } from "../ui/button";
+import { FaLaptopCode } from "react-icons/fa";
+import Link from "next/link";
 
 export default function ProjectsSection() {
   const { ref } = useSectionInView("Projekty", 0.5);
 
   return (
-    <section ref={ref} id="projekty" className="scroll-mt-28  mx-auto mt-32 mb-28">
+    <section ref={ref} id="projekty" className="scroll-mt-28 w-full md:w-2/3 mx-auto mt-32 mb-28">
       <SectionTitle heading='Projekty' subHeading='Zde se nachází přehled nějakých mých projektů, které lze najít většinou najít i na mém GitHubu' />
-      <div className="mx-auto max-w-full grid grid-cols-1 xl:grid-cols-2 gap-4 mt-8">
+      <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 mt-8">
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
             <Project {...project} />
           </React.Fragment>
-        ))}
+        ))}        
+      </div>
+      <div className="w-full flex items-center">
+        <Link href="/dalsi-projekty" className="mt-12 mx-auto active:scale-90 duration-200" > 
+          <Button  size="custom" variant="outline"  className="flex flex-row gap-x-3 items-center" >
+              <FaLaptopCode className="w-5 h-5"/> 
+              <span>Další projekty...</span>
+          </Button> 
+        </Link>              
       </div>
     </section>
   );

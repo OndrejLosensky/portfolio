@@ -36,10 +36,12 @@ export default function Content() {
       <BentoGrid/>
       <ProjectsSection/>
       {/* 
-      <ExperienceSection/>
-      */}
+      <ExperienceSection/>      
       <NewsletterForm/>
+      */}
       <ContactSection/>
+
+      {/* 
       <h2 className={`dark:text-shark-200 text-shark-600 pb-2 text-center text-sm font-light`}> Tento web byl vytvořen pomocí těchto technologií </h2>
       <div className="mb-16 flex flex-row items-center gap-x-6 scale-75 opacity-75 w-full justify-center">
           <div className="group relative">
@@ -65,7 +67,10 @@ export default function Content() {
           </div>
       </div>
 
+
       <p className='text-sm text-text-dark/70 dark:text-text-light/70 text-center py-20'> Web je stále ve vývoji, finální verze bude až později tento rok.</p>
+
+            */}
     </main>
   );
 }

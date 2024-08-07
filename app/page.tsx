@@ -25,10 +25,11 @@ export default function Home() {
           <Content />
           <Footer />
           <CookiesForm/>
-          <EmailTicket/>
 
-        </div>
-                              {/*    */}
+           {/*  
+          <EmailTicket/>
+          */}
+        </div>                            
     </main>
   );
 }
