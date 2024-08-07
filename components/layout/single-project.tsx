@@ -23,7 +23,7 @@ export default function Project({
   return (
     <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-auto flex flex-col justify-between h-full">
       <section className="flex flex-col flex-grow">
-        <div className={`w-full bg-gradient-to-br ${gradient}`}>
+        <div className={`w-full bg-gradient-to-br from-violet-300 via-indigo-300 to-orange-300 ${gradient}`}>
           <Image
             src={imageUrl}
             alt={title} 
