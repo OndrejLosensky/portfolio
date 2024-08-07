@@ -29,7 +29,7 @@ export default function CookiesForm() {
 
   return (
     <>
-      <div className={`fixed bottom-2 overflow-hidden left-1/2 z-10 transform -translate-x-1/2 p-2 rounded-lg lg:rounded-full flex-col w-[90%] lg:w-[80%] bg-gray-200 dark:bg-gray-900 border border-gray-500 text-center flex lg:flex-row items-center justify-between transition-transform duration-500 ${isClosed ? 'translate-y-full' : ''}`} style={{ right: isClosed ? '100%' : 'auto' }}>
+      <div className={`fixed bottom-2 overflow-hidden left-1/2 z-30 transform -translate-x-1/2 p-2 rounded-lg lg:rounded-full flex-col w-[90%] lg:w-[80%] bg-gray-200 dark:bg-gray-900 border border-gray-500 text-center flex lg:flex-row items-center justify-between transition-transform duration-500 ${isClosed ? 'translate-y-full' : ''}`} style={{ right: isClosed ? '100%' : 'auto' }}>
         <p className='pl-2 text-xs flex flex-col space-y-2 lg:space-y-0 lg:flex-row items-center gap-x-4 text-gray-600 dark:text-gray-200'>
           <Image src="/icons/cookies.png" alt='icon' width={24} height={24}/>
           <span>Používáme pouze nezbytné cookies a volitelné cookies pro správnou funkci stránky </span>

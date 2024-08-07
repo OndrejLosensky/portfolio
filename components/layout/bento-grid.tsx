@@ -28,7 +28,7 @@ const BentoGrid: React.FC = () => {
 
   return (
     <section id='prehled' ref={ref as any}>
-        <div className="relative flex h-full w-full flex-col items-center justify-center my-16 ">
+        <div className="-z-10 relative flex h-full w-full flex-col items-center justify-center my-16 ">
           <span className="relative text-2xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-bermuda-300  to-bermuda-500 text-center drop-shadow-glow">
             Přehled
           </span>
@@ -72,7 +72,7 @@ const BentoGrid: React.FC = () => {
                 </div>
                 <div className='dark:bg-gray-900 bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex flex-row items-center justify-center p-4 rounded-lg shadow-lg overflow-hidden'>
                   <div className='w-[95%] md:w-[70%] h-full flex flex-col mx-auto overflow-hidden relative'>
-                    <div className='absolute inset-0 bg-gradient-to-l w-full z-20 from-gray-200 via-transparent to-gray-200 dark:from-gray-900 dark:via-transparent dark:to-gray-900 opacity-100'></div>
+                    <div className='absolute inset-0 bg-gradient-to-l w-full -z-1 from-gray-200 via-transparent to-gray-200 dark:from-gray-900 dark:via-transparent dark:to-gray-900 opacity-100'></div>
                     <div className='h-0 lg:h-1/3 scale-75 md:scale-100'>
                       <TechstackSlider cardDetails={cardDetailsTop} />
                     </div>
@@ -113,12 +113,12 @@ const BentoGrid: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className='dark:bg-gray-900 flex-col bg-gray-200 relative group overflow-hidden border dark:border-text-light/15 border-text-dark/30 flex lg:flex-col w-full md:w-1/2 lg:w-2/3 lg:mt-0 md:mt-0 h-[250px] md:h-[350px] items-center justify-center p-4 rounded-xl shadow-lg'>
+              <div className='dark:bg-gray-900 -z-10 flex-col bg-gray-200 relative group overflow-hidden border dark:border-text-light/15 border-text-dark/30 flex lg:flex-col w-full md:w-1/2 lg:w-2/3 lg:mt-0 md:mt-0 h-[250px] md:h-[350px] items-center justify-center p-4 rounded-xl shadow-lg'>
                 <div className='flex flex-col w-[100%]  h-full'>
                     <h2 className=" text-center pt-4 text-text-dark dark:text-text-light text-md md:text-lg lg:text-xl font-bold z-20">
                       Momentálně vytvářím vlastní CMS pro tvorbu webových stránek
                     </h2>
-                    <Image src="/mockups/app.svg" width={800} height={600} alt='Code snippet' className='z-20 w-full translate-y-8 h-auto mx-auto'/> 
+                    <Image src="/mockups/app.svg" width={800} height={600} alt='Code snippet' className='w-full translate-y-8 h-auto mx-auto'/> 
                 </div>
               </div>
             </section>
