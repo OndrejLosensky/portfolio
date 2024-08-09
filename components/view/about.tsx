@@ -7,7 +7,7 @@ import Image from "next/image";
 import { CiCircleCheck } from "react-icons/ci";
 import { IoMdPin } from "react-icons/io";
 import Link from "next/link";
-
+import { WorkExpirience } from "../layout/work-expirience";
 interface Skill {
   name: string;
   level: string;
@@ -92,7 +92,9 @@ export default function AboutSection() {
           Zároveň se můžeme domluvit na vytvoření webové stránky na míru nebo nějakého projektu. Pro více se podívejte do sekce <strong><Link href="/tvorba-webu">Tvorba webu</Link></strong></p>
         </div>     
       </section>
-
+      
+      <WorkExpirience />
+      {/* 
       <h2 className="pt-24 text-md md:text-lg lg:text-xl">Technologie, které znám</h2>
       <ul className="grid grid-cols-4 lg:flex lg:flex-wrap gap-4">
         {skills.map((skill, index) => (
@@ -132,6 +134,7 @@ export default function AboutSection() {
           </motion.li>
         ))}
       </ul>
+      */}
     </div>
   )
 }

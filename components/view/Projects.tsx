@@ -25,7 +25,7 @@ export default function ProjectsSection() {
       </div>
       <div className="w-full flex items-center">
         <Link href="/dalsi-projekty" className="mt-12 mx-auto active:scale-90 duration-200" > 
-          <Button  size="custom" variant="outline"  className="flex flex-row gap-x-3 items-center" >
+          <Button size="custom" variant="outline"  className="flex flex-row gap-x-3 items-center" >
               <FaLaptopCode className="w-5 h-5"/> 
               <span>Další projekty...</span>
           </Button> 

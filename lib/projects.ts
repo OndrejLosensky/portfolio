@@ -1,6 +1,6 @@
 import datadepot from "@/public/mockups/datadepot.png";
-import kl from "@/public/mockups/KL.png";
-import codecommerce from "@/public/app.webp";
+import kralovskalevandule from "@/public/mockups/kralovska-levandule.png";
+import codecommerce from "@/public/mockups/codecommerce.png";
 
 export const projectsData = [
   { 
@@ -8,7 +8,7 @@ export const projectsData = [
     description:
       "První reálný projekt, který již 2 rokem běží on-line na adrese www.kralovskalevandule.cz.",
     tags: ["Wordpress", "Figma", "PHP"],
-    imageUrl: kl,
+    imageUrl: kralovskalevandule,
     githubLink: undefined, 
     websiteLink: "https://www.kralovskalevandule.cz",
     gradient: 'from-violet-200 via-sky-300 to-purple-400', 

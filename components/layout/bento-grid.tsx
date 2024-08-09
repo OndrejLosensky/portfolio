@@ -1,4 +1,4 @@
-import useIntersectionObserver from '@/lib/lazy-loading';
+import { useSectionInView } from "@/lib/hooks";
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { Button } from '../ui/button';
@@ -11,7 +11,7 @@ import { cardDetailsTop, cardDetailsMiddle, cardDetailsBottom } from '../action/
 import TechstackCarouselReversed from '../action/carousel/techstack-carousel-reversed';
 
 const BentoGrid: React.FC = () => {
-  const [ref, isVisible] = useIntersectionObserver();
+  const { ref } = useSectionInView("Přehled", 0.5);
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = () => {
@@ -27,8 +27,8 @@ const BentoGrid: React.FC = () => {
   };
 
   return (
-    <section id='prehled' ref={ref as any}>
-        <div className="-z-10 relative flex h-full w-full flex-col items-center justify-center my-16 ">
+    <section id='prehled' ref={ref}>
+        <div className="relative flex h-full w-full flex-col items-center justify-center my-16 ">
           <span className="relative text-2xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-bermuda-300  to-bermuda-500 text-center drop-shadow-glow">
             Přehled
           </span>
@@ -66,13 +66,13 @@ const BentoGrid: React.FC = () => {
                     </Link>
                   </div>
                   <div className='w-[70%] lg:w-[75%]'>
-                    <Image src="/mockups/kl-full.png" width={500} height={400} alt='Project image' className='md:w-96 lg:w-full lg:h-full md:translate-x-0 lg:translate-x-32 rounded-t-xl h-40 w-72 group-hover:-rotate-3 group-hover:scale-[1.04] duration-300 absolute md:-bottom-12 md:-right-0 lg:-bottom-16 lg:-right-20 -bottom-16 -right-20'/>
+                    <Image src="/mockups/kralovska-levandule.png" width={500} height={400} alt='Project image' className='md:w-96 lg:w-full lg:h-full md:translate-x-0 lg:translate-x-32 rounded-t-xl h-40 w-72 group-hover:-rotate-3 group-hover:scale-[1.04] duration-300 absolute md:-bottom-12 md:-right-0 lg:-bottom-16 lg:-right-20 -bottom-16 -right-20'/>
                   </div>
                   <div className='absolute inset-0 bg-gradient-to-br dark:from-transparent from-transparent to-gray-100 dark:to-gray-900 opacity-55 rounded-lg'></div>
                 </div>
                 <div className='dark:bg-gray-900 bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex flex-row items-center justify-center p-4 rounded-lg shadow-lg overflow-hidden'>
                   <div className='w-[95%] md:w-[70%] h-full flex flex-col mx-auto overflow-hidden relative'>
-                    <div className='absolute inset-0 bg-gradient-to-l w-full -z-1 from-gray-200 via-transparent to-gray-200 dark:from-gray-900 dark:via-transparent dark:to-gray-900 opacity-100'></div>
+                    <div className='absolute inset-0 bg-gradient-to-l w-full z-10 from-gray-200 via-transparent to-gray-200 dark:from-gray-900 dark:via-transparent dark:to-gray-900 opacity-100'></div>
                     <div className='h-0 lg:h-1/3 scale-75 md:scale-100'>
                       <TechstackSlider cardDetails={cardDetailsTop} />
                     </div>
@@ -118,7 +118,8 @@ const BentoGrid: React.FC = () => {
                     <h2 className=" text-center pt-4 text-text-dark dark:text-text-light text-md md:text-lg lg:text-xl font-bold z-20">
                       Momentálně vytvářím vlastní CMS pro tvorbu webových stránek
                     </h2>
-                    <Image src="/mockups/app.svg" width={800} height={600} alt='Code snippet' className='w-full translate-y-8 h-auto mx-auto'/> 
+                    <div className='absolute inset-0 bg-gradient-to-b from-transparent to-main/30 dark:from-transparent z-10 dark:to-main/80 opacity-100 rounded-lg'></div>
+                    <Image src="/mockups/codecommerce.png" width={800} height={600} alt='Code snippet' className='w-full translate-y-8 rounded-xl border h-auto mx-auto'/> 
                 </div>
               </div>
             </section>
