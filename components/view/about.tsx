@@ -83,7 +83,7 @@ export default function AboutSection() {
             <p className="text-[0.6rem] md:text-lg text-green-500 font-medium flex flex-row items-center lg:pb-0 pr-4"> <CiCircleCheck className="mr-2 w-4 h-4 md:w-6 md:h-6"/> <span>Jsem otevřen pracovním příležitostem</span></p>
             <p className="text-[0.6rem] md:text-lg text-text-dark dark:text-text-light font-medium flex flex-row items-center"> <IoMdPin className="text-red-500 mr-2 w-4 h-4 md:w-6 md:h-6"/> <span>Praha</span></p> */}
           </div>
-          <div className="flex flex-row items-center gap-x-2 mt-4">
+          <div className="flex flex-row items-center gap-x-2 mt-4 text-xs md:text-bermuda-50  ">
             <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Programátor </p>
             <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Web designer </p>
             <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Administrátor</p>
@@ -94,7 +94,7 @@ export default function AboutSection() {
           </p>
         </div>    
 
-        <div className="w-full lg:w-1/3 relative lg:mt-0">
+        <div className="w-full lg:w-1/3 relative mt-8 lg:mt-0">
             <div className="bg-[#3c8d77] absolute top-[-2rem] -z-20 left-[0rem] md:left-[-2rem] lg:left-[-5rem] -rotate-45 opacity-30 h-[10rem] md:h-[30rem] lg:w-[35rem] w-[20rem] rounded-full blur-[2em] dark:bg-[#82e8cfee]"></div>
             <Image src="/profile_pic.png" height={800} width={800} quality={100} alt="My personal photo" className="w-2/3 z-10 lg:w-full drop-shadow-lg rounded-full bg-gray-100 dark:bg-main/60 " />
         </div>      
