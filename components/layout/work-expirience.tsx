@@ -3,7 +3,6 @@ import { useState } from "react";
 
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-
 interface Work {
     name: string,
     description: string,
@@ -56,46 +55,47 @@ export function WorkExpirience() {
     }
 
     return (
-        <div className="w-full pt-32">
-            <h2 className="text-3xl font-semibold">Pracovní zkušenosti</h2>
+        <div className="relative w-full pt-16 sm:pt-32">
+            <h2 className="text-2xl sm:text-3xl font-semibold">Pracovní zkušenosti</h2>
             <div>
                 {works.map((work, index) => (
                     <div 
                         key={index} 
-                        className="my-4 py-2 flex flex-col w-full group"
+                        className="my-4 py-2 flex border-b border-black/40 dark:border-white/30 md:border-black/0 md:dark:border-white/0 flex-col w-full group"
                     >
                         <div 
-                            className="flex flex-row justify-between items-center cursor-pointer" 
+                            className="flex flex-col sm:flex-row justify-between items-start sm:items-center cursor-pointer gap-4 sm:gap-0" 
                             onClick={() => handleRowClick(index)}
                         >
                             <div className="flex flex-row items-center gap-x-4">
-                                <span className={`w-16 h-16 flex rounded-full relative ${work.color}`}>
+                                <span className={`w-12 h-12 sm:w-16 sm:h-16 flex rounded-full relative ${work.color}`}>
                                     <Image src={work.icon} width={32} height={32} className="w-full scale-90" alt={work.name} />
                                 </span>
                                 <div className="flex flex-col">
-                                    <h2 className="text-2xl font-bold flex items-center">
+                                    <h2 className="text-xl sm:text-2xl font-bold flex items-center">
                                         {work.name}
                                         <span 
-                                            className={`ml-2 transition-opacity duration-300 opacity-0 group-hover:opacity-100 ${expandedIndex === index ? 'opacity-100 rotate-90' : ''}`}
+                                            className={`ml-2 transition-transform duration-300 opacity-0 group-hover:opacity-100 ${expandedIndex === index ? 'opacity-100 rotate-90' : ''}`}
                                         >
-                                            <MdKeyboardArrowRight/>
+                                            <MdKeyboardArrowRight />
                                         </span>
                                     </h2>
-                                    <p className="text-md font-light">{work.description}</p>
+                                    <p className="text-sm sm:text-md font-light">{work.description}</p>
                                 </div>                                            
                             </div>
-                            <p className="text-md font-regular text-black/55 dark:text-white/60"> {work.date} </p>
+                            <p className="text-sm sm:text-md font-regular text-black/55 dark:text-white/60"> {work.date} </p>
                         </div>
                         <div 
                             className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedIndex === index ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'}`}
                         >
-                            <div className="mt-2 p-4 bg-transparent  rounded-md dark:bg-transparent">
-                                <p className="text-md font-regular">{work.fullDescription}</p>
+                            <div className="mt-2 p-4 bg-transparent rounded-md dark:bg-transparent">
+                                <p className="text-sm sm:text-md font-regular">{work.fullDescription}</p>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
+            <div className="bg-[#3c8d77] absolute bottom-[-12rem] -z-20 left-[-4rem] md:left-[-8rem] lg:left-[-18rem]  opacity-30 h-[10rem] md:h-[20rem] lg:w-[35rem] w-[20rem] rounded-full blur-[3em] dark:bg-[#6bf7d4]"></div>
         </div>
     )
 }

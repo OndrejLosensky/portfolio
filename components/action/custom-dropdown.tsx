@@ -48,7 +48,7 @@ const CustomDropdown: FC = () => {
           />
         </button>
         {isOpen && (
-          <div className="absolute mt-1 w-full bg-transparent dark:bg-transparent border border-text-dark dark:border-text-light shadow-lg z-10 rounded-md">
+          <div className="absolute mt-4 w-full bg-main dark:bg-main dark:bg-transparent border border-text-dark dark:border-text-light shadow-lg z-10 rounded-md">
             {languages.map((lang) => (
               <button
                 key={lang.value}

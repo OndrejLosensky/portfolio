@@ -8,6 +8,8 @@ import { CiCircleCheck } from "react-icons/ci";
 import { IoMdPin } from "react-icons/io";
 import Link from "next/link";
 import { WorkExpirience } from "../layout/work-expirience";
+import { Button } from "../ui/button";
+import { DownloadCV } from "../action/download-cv";
 interface Skill {
   name: string;
   level: string;
@@ -68,29 +70,34 @@ export default function AboutSection() {
   return (
     <div ref={ref} id="o-mne" className="min-h-screen max-w-screen w-[100%] z-10 mb-64 relative mx-auto flex flex-col space-y-4">
       
-      <section className="flex flex-col lg:flex-row lg:gap-x-6 lg:items-center">
-        <div className="w-full lg:w-1/3 relative lg:mt-12">
-            <div className="bg-[#3c8d77] absolute top-[-2rem] -z-20 left-[-1rem] md:left-[0rem] lg:left-[-5rem] -rotate-45 opacity-30 h-[10rem] md:h-[30rem] lg:w-[35rem] w-[20rem] rounded-full blur-[2em] dark:bg-[#82e8cfee]"></div>
-            <Image src="/pf.webp" height={200} width={200} alt="My personal photo" className="w-2/3 lg:w-full rounded-xl border border-text-dark dark:border-text-light shadow-lg" />
-        </div>
-        <div className="w-full lg:ml-20 mt-16 lg:w-2/3">
+      <section className="flex flex-col mx-auto lg:flex-row lg:gap-x-6 lg:items-center">        
+        <div className="w-full mt-16 lg:w-2/3">
           <SectionTitle heading="O mě" subHeading="Kdo jsem?" />
-          <h2 className="md:text-4xl pt-2 lg:text-5xl text-3xl flex flex-col mb-1 font-bold bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50">
-              <span>Ondřej Losenský</span>
-          </h2>
+          <div className="flex flex-row gap-x-4 items-center mt-2">
+            <h2 className="md:text-4xl lg:text-5xl text-3xl flex flex-col mb-1 font-bold bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50">
+              <span>Ondřej Losenský</span>                      
+            </h2>
+          </div>
           <div className="flex flex-row gap-x-4 my-3">
-            <p className="text-[0.6rem] md:text-lg text-green-500 font-medium flex flex-row items-center lg:pb-0 border-r border-text-dark/60 dark:border-text-light/60 pr-4"> <CiCircleCheck className="mr-2 w-4 h-4 md:w-6 md:h-6"/> <span>Jsem otevřen pracovním příležitostem</span></p>
-            <p className="text-[0.6rem] md:text-lg text-text-dark dark:text-text-light font-medium flex flex-row items-center"> <IoMdPin className="text-red-500 mr-2 w-4 h-4 md:w-6 md:h-6"/> <span>Praha</span></p>
+            {/* 
+            <p className="text-[0.6rem] md:text-lg text-green-500 font-medium flex flex-row items-center lg:pb-0 pr-4"> <CiCircleCheck className="mr-2 w-4 h-4 md:w-6 md:h-6"/> <span>Jsem otevřen pracovním příležitostem</span></p>
+            <p className="text-[0.6rem] md:text-lg text-text-dark dark:text-text-light font-medium flex flex-row items-center"> <IoMdPin className="text-red-500 mr-2 w-4 h-4 md:w-6 md:h-6"/> <span>Praha</span></p> */}
           </div>
           <div className="flex flex-row items-center gap-x-2 mt-4">
             <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Programátor </p>
-            <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Kóder </p>
+            <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Web designer </p>
             <p className="px-2 py-1 bg-black/10 hover:bg-black/20 dark:bg-white/10 rounded-md dark:hover:bg-white/20 duration-200">Administrátor</p>
           </div>
-          <p className="mt-4 text-sm text-shark-500 dark:text-shark-200">
-          Jmenuji se Ondřej Losenský, je mi 19 let a jsem z Prahy. Právě jsem dokončil střední průmyslovou školu v oboru IT. Věnuji se programování webových aplikací, správě systémů a dalším technologickým zájmům. Na mém portfoliu najdete mé kontaktní údaje, projekty a životopis ve formátu PDF ve více jazycích.
-          Zároveň se můžeme domluvit na vytvoření webové stránky na míru nebo nějakého projektu. Pro více se podívejte do sekce <strong><Link href="/tvorba-webu">Tvorba webu</Link></strong></p>
-        </div>     
+          <p className="mt-4 w-3/4 text-sm text-shark-500 dark:text-shark-200">
+            Jmenuji se Ondřej Losenský, je mi 19 let a jsem z Prahy. Právě jsem dokončil střední průmyslovou školu v oboru IT. Věnuji se programování webových aplikací, správě systémů a dalším technologickým zájmům. Na mém portfoliu najdete mé kontaktní údaje, projekty a životopis ve formátu PDF ve více jazycích.
+            Zároveň se můžeme domluvit na vytvoření webové stránky na míru nebo nějakého projektu. Pro více se podívejte do sekce <strong><Link href="/tvorba-webu">Tvorba webu</Link></strong>
+          </p>
+        </div>    
+
+        <div className="w-full lg:w-1/3 relative lg:mt-0">
+            <div className="bg-[#3c8d77] absolute top-[-2rem] -z-20 left-[0rem] md:left-[-2rem] lg:left-[-5rem] -rotate-45 opacity-30 h-[10rem] md:h-[30rem] lg:w-[35rem] w-[20rem] rounded-full blur-[2em] dark:bg-[#82e8cfee]"></div>
+            <Image src="/profile_pic.png" height={800} width={800} quality={100} alt="My personal photo" className="w-2/3 z-10 lg:w-full drop-shadow-lg rounded-full bg-gray-100 dark:bg-main/60 " />
+        </div>      
       </section>
       
       <WorkExpirience />

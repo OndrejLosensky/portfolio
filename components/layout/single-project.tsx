@@ -55,7 +55,7 @@ export default function Project({
                 <Button 
                   variant="ghost" 
                   disabled
-                  className="opacity-50 cursor-not-allowed"
+                  className="hidden opacity-50 cursor-not-allowed"
                 >
                   <span className="flex flex-row items-center space-x-2">
                     <CiGlobe className="w-5 h-5" /> <span>Website</span>
@@ -65,7 +65,7 @@ export default function Project({
 
               {githubLink ? (
                 <Button variant="ghost">
-                  <Link href={githubLink} className="flex flex-row items-center space-x-2">
+                  <Link href={githubLink} className="hidden flex-row items-center space-x-2">
                     <FaGithub className="w-5 h-5" /> <span>Github</span>
                   </Link>
                 </Button>
@@ -73,7 +73,7 @@ export default function Project({
                 <Button 
                   variant="ghost" 
                   disabled
-                  className="opacity-50 cursor-not-allowed"
+                  className="hidden opacity-50 cursor-not-allowed"
                 >
                   <span className="flex flex-row items-center gap-x-2">
                     <FaGithub className="w-5 h-5" /> <span>Github</span>

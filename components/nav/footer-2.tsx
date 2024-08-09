@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer() {
   const currentYear = GetCurrentYear();
   return (
-    <div className='w-[80%] mx-auto border-t dark:border-shark-800 bg-transparent h-14 gap-x-3 pb-1 rounded-t-xl md:rounded-t-3xl flex flex-col md:flex-row items-center justify-between px-6 border-shark-300/80 '>
+    <div className='w-[80%] py-4 pb-4 mx-auto border-t dark:border-shark-800 bg-transparent h-14 gap-x-3 rounded-t-xl md:rounded-t-3xl flex flex-col md:flex-row items-center justify-between px-6 border-shark-300/80 '>
           <Link href="/" className="flex flex-row group items-center gap-x-2 my-3 md:my-0">
             <Image src="/logo.svg" height={30} width={30} alt="Logo"/>
             <span className="text-sm pt-1"> © {currentYear} <strong>Losenský </strong></span>
