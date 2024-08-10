@@ -13,7 +13,7 @@ export default function ExperienceSection() {
 
   return (
     <section id="work" className="scroll-mt-28 mb-28">
-      <SectionTitle heading='Práce' subHeading='Zkrácená historie mého vzdělání, pracovních pozic nebo vetších projektů na kterých sem se podílel' />
+      <SectionTitle heading='Práce' className="" subHeading='Zkrácená historie mého vzdělání, pracovních pozic nebo vetších projektů na kterých sem se podílel' />
       <VerticalTimelineElement/>
     </section>
   );
