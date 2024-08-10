@@ -11,9 +11,9 @@ interface LanguageOption {
 }
 
 const languages: LanguageOption[] = [
-  { value: 'cz', label: 'Čeština', icon: '/additional-icons/cz.svg' },
-  { value: 'en', label: 'English', icon: '/additional-icons/en.svg', disabled: true},
-  { value: 'de', label: 'German', icon: '/additional-icons/de.svg', disabled: true }
+  { value: 'cz', label: '', icon: '/additional-icons/cz.svg' },
+  { value: 'en', label: '', icon: '/additional-icons/en.svg', disabled: true},
+  { value: 'de', label: '', icon: '/additional-icons/de.svg', disabled: true }
 ];
 
 const CustomDropdown: FC = () => {
@@ -42,13 +42,13 @@ const CustomDropdown: FC = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           <Image src={selectedLanguage.icon} width={24} height={24} alt={`${selectedLanguage.label} flag icon`} />
-          <span className="ml-2">{selectedLanguage.label}</span>
+          <span className="ml-2"></span>
           <FaChevronDown
             className={`ml-2 h-4 w-4  transform transition-transform duration-300 ${isOpen ? '-rotate-180' : ''}`}
           />
         </button>
         {isOpen && (
-          <div className="absolute mt-4 w-full bg-main dark:bg-main dark:bg-transparent border border-text-dark dark:border-text-light shadow-lg z-10 rounded-md">
+          <div className="absolute mt-4 w-full bg-main dark:bg-main dark:bg-transparent border border-text-dark dark:border-text-light shadow-lg rounded-md">
             {languages.map((lang) => (
               <button
                 key={lang.value}
@@ -59,7 +59,7 @@ const CustomDropdown: FC = () => {
                     setIsOpen(false);
                   }
                 }}
-                className={`flex items-center px-2 py-1 w-full text-left ${lang.disabled ? 'opacity-50 cursor-not-allowed' : 'hover:bg-main/20 dark:hover:bg-main/40'}`}
+                className={`flex items-center bg-main rounded-md px-2 py-1 w-full text-left ${lang.disabled ? 'bg-gray-700 cursor-not-allowed' : 'hover:bg-bermuda-400 dark:hover:bg-main/40'}`}
               >
                 <Image src={lang.icon} width={24} height={24} alt={`${lang.label} flag icon`} />
                 <span className="ml-2">{lang.label}</span>

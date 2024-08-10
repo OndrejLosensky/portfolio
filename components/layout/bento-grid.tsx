@@ -20,7 +20,7 @@ const BentoGrid: React.FC = () => {
       setCopied(true);
       setTimeout(() => {
         setCopied(false);
-      }, 3000); // Delayed the change of text when copying e-mail from button
+      }, 3000); 
     }).catch(err => {
       console.error('Failed to copy: ', err);
     });
@@ -56,20 +56,41 @@ const BentoGrid: React.FC = () => {
                 </div>
               </div>
               <div className='grid grid-rows-2 w-full min-h-64 mt-4 lg:mt-0 lg:w-1/2 gap-y-4'>
-                <div className='dark:bg-gray-900 group relative bg-gray-200 border w-full overflow-hidden dark:border-text-light/15 border-text-dark/30 h-full flex items-center justify-center p-4 rounded-lg shadow-lg'>
-                  <div className='flex flex-col z-10 md:ml-20 lg:ml-2 w-[30%] lg:w-[25%] '>
-                    <h3 className="text-text-dark dark:text-text-light text-xs md:text-md lg:text-lg font-semibold ">Poslední projekt</h3>
+              
+              <div className="relative group w-full flex items-center justify-between rounded-lg shadow-lg overflow-hidden bg-gradient-to-r from-indigo-500 to-purple-600">
+                  <div className="absolute inset-0 z-10 bg-gradient-to-br from-black/50 to-transparent"></div>
+                  
+                  <div className="relative z-20 p-6 flex flex-col justify-between w-full lg:w-2/3 h-full">
+                    <div>
+                      <span className="inline-block bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+                        Nejnovější projekt
+                      </span>
+                      <h3 className="mt-4 text-white text-2xl w-full lg:text-3xl font-bold leading-tight">
+                        Královská levandule
+                      </h3>
+                      <p className="mt-2 text-gray-200 md:w-full w-1/2 text-sm lg:text-base">
+                        Web pro rodinnou levandulovou farmu v Novém Kníně
+                      </p>
+                    </div>
                     <Link href="/kralovska-levandule">
-                      <button className="mt-2 scale-100 lg:scale-100 text-text-dark dark:text-text-light bg-primary dark:bg-primary hover:bg-primary-hover dark:hover:bg-primary-hover duration-200  px-[8px] py-[4px] text-xs md:text-md md:px-4 md:py-2 rounded-md shadow-md active:bg-primary-active active:scale-[0.65] lg:active:scale-75">
+                      <button className="mt-6 bg-white text-indigo-600 hover:bg-gray-200 active:bg-gray-300 text-sm lg:text-base font-semibold px-5 py-3 rounded-lg shadow-md transition-all duration-300">
                         Podívat se
                       </button>
                     </Link>
                   </div>
-                  <div className='w-[70%] lg:w-[75%]'>
-                    <Image src="/mockups/kralovska-levandule.png" width={500} height={400} alt='Project image' className='md:w-96 lg:w-full lg:h-full md:translate-x-0 lg:translate-x-32 rounded-t-xl h-40 w-72 group-hover:-rotate-3 group-hover:scale-[1.04] duration-300 absolute md:-bottom-12 md:-right-0 lg:-bottom-16 lg:-right-20 -bottom-16 -right-20'/>
+
+                  <div className="absolute right-0 bottom-0 w-[50%] h-full transform rotate-6 translate-x-20 translate-y-28 md:translate-x-24 md:translate-y-8">
+                    <Image
+                      src="/mockups/kralovska-levandule.png"
+                      width={500}
+                      height={400}
+                      alt="Project image"
+                      className="object-cover rounded-lg shadow-lg transition-transform duration-300 ease-out scale-110 group-hover:scale-105"
+                    />
                   </div>
-                  <div className='absolute inset-0 bg-gradient-to-br dark:from-transparent from-transparent to-gray-100 dark:to-gray-900 opacity-55 rounded-lg'></div>
                 </div>
+
+
                 <div className='dark:bg-gray-900 bg-gray-200 border dark:border-text-light/15 border-text-dark/30 h-full flex flex-row items-center justify-center p-4 rounded-lg shadow-lg overflow-hidden'>
                   <div className='w-[95%] md:w-[70%] h-full flex flex-col mx-auto overflow-hidden relative'>
                     <div className='absolute inset-0 bg-gradient-to-l w-full z-10 from-gray-200 via-transparent to-gray-200 dark:from-gray-900 dark:via-transparent dark:to-gray-900 opacity-100'></div>

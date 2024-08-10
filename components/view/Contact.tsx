@@ -58,7 +58,7 @@ export default function ContactSection() {
   return (
     <ToastProvider>
       <div id="kontakt" ref={ref} className="relative min-h-screen max-h-screen w-full lg:w-2/3 mx-auto z-10">
-        <SectionTitle heading="Kontakt" subHeading="Kontaktujte mě během pár kliknutí" />
+        <SectionTitle heading="Kontakt" className="" subHeading="Kontaktujte mě během pár kliknutí" />
         <span className="text-sm font-light text-shark-300"> Chcete mi něco sdělit, něco nabídnout nebo se jen zeptat? Stačí vyplnit tento formulář <br />Běžně odpovídám do 2 pracovních dní </span>        
         <div className="bg-[#8af8eb] absolute top-[2rem] -z-10 right-[0rem] lg:right-[-5rem] dark:bg-opacity-75 h-[31.25rem] w-[31.25rem] md:w-[60rem] rounded-full blur-[15rem] ] dark:bg-[#56b595]"></div>
         

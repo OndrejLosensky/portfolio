@@ -14,9 +14,9 @@ export default function ProjectsSection() {
   const { ref } = useSectionInView("Projekty", 0.5);
 
   return (
-    <section ref={ref} id="projekty" className="scroll-mt-28 w-full md:w-2/3 mx-auto mt-32 mb-28">
-      <SectionTitle heading='Projekty' subHeading='Zde se nachází přehled nějakých mých projektů, které lze najít většinou najít i na mém GitHubu' />
-      <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 mt-8">
+    <section ref={ref} id="projekty" className="scroll-mt-28 w-full mx-auto mt-48 mb-28">
+      <SectionTitle heading='Projekty' className="" subHeading='Zde se nachází přehled nějakých mých projektů, které lze najít většinou najít i na mém GitHubu' />
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
             <Project {...project} />
