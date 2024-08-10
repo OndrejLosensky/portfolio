@@ -48,7 +48,7 @@ export default function Project({
               {websiteLink ? (
                 <Button variant="ghost">
                   <Link href={websiteLink} className="flex flex-row items-center space-x-2">
-                    <CiGlobe className="w-5 h-5" /> <span>Website</span>
+                    <CiGlobe className="w-5 h-5" /> <span>Web</span>
                   </Link>
                 </Button>
               ) : (

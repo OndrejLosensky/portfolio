@@ -14,6 +14,8 @@ import Image from "next/image";
 
 import { socialLinks, SocialLink } from '../../lib/socials';
 
+import { Data } from "@/lib/data"
+
 export default function HeroSection() {
   const handleClick = (url: string) => {
     window.open(url, '_blank');
@@ -51,7 +53,7 @@ export default function HeroSection() {
               <div className='w-full items-center justify-center mb-8 flex flex-col'>
                   <h1 className='text-md lg:text-xl mb-2 font-sora font-light flex flex-row'> Ahoj <Image src="/additional-icons/wave.svg" width={24} height={24} className="mx-1" alt="Wave emoji" />, jmenuji se </h1>
                   <h2 className="md:text-4xl lg:text-5xl text-3xl flex flex-col mb-1 font-bold text-center bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50">
-                    <span>Ondřej Losenský</span>
+                    <span> {Data.name} </span>
                   </h2>
                   <p className='text-shark-500 dark:text-shark-50 font-light text-wrap w-3/4 lg:w-1/2 text-xs md:text-lg mt-2 mb-6'> Vítejte na mém portfoliu! Jsem full-stack softwarový vývojář z Prahy📍 a absolvent střední školy. Specializuji se na tvorbu moderních a responzivních webů a vysoce efektivních řešení pomocí nejnovějších technologií. Také se zajímám o veškeré dění v oblastech AI a dalších odvětvích</p>
                   <div className='flex flex-row gap-x-4 items-center mx-auto'>
