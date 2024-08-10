@@ -22,9 +22,9 @@ export default function MoreProjectsPage () {
                 </div>
                 <div className="mx-auto mb-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
                     {projectsDataAll.map((project, index) => (
-                    <React.Fragment key={index}>
-                        <Project {...project} />
-                    </React.Fragment>
+                        <React.Fragment key={index}>
+                            <Project {...project} />
+                        </React.Fragment>
                     ))}              
                 </div>
             </div>    

@@ -56,7 +56,7 @@ export const projectsDataAll = [
       "Jednoduchá aplikace pro správu hesel, poznámek a code snippets vše společně s přehlednou stránkou na statistiky a plně funkční registrací",
     tags: ["Next.js", "JavaScript", "Firebase", "Sqlite", "TailwindCSS"],
     imageUrl: datadepot,
-    githubLink: undefined, 
+    githubLink: 'https://github.com/OndrejLosensky/DataDepot', 
     websiteLink: undefined,
     gradient: 'from-yellow-400 via-red-500 to-pink-500', 
     otherLink: undefined,
@@ -67,44 +67,9 @@ export const projectsDataAll = [
       "Webová aplikace pro správu jednoduchého e-shopu pomocí administrátorského panelu",
     tags: ["Next.js", "TypeScript", "TailwindCSS", "ClerkAuth", "Prisma"],
     imageUrl: codecommerce,
-    githubLink: undefined,
+    githubLink: 'https://github.com/OndrejLosensky/code-commerce',
     websiteLink: undefined,
     gradient: 'from-green-400 via-blue-500 to-purple-600', 
     otherLink: undefined,
   }, 
-  /*
-  {
-    title: "DevDocs",
-    description:
-      "Webová aplikace pro správu jednoduchého e-shopu pomocí administrátorského panelu",
-    tags: ["Next.js", "TypeScript", "TailwindCSS", "ClerkAuth", "Prisma"],
-    imageUrl: codecommerce,
-    githubLink: undefined,
-    websiteLink: undefined,
-    gradient: 'from-green-400 via-blue-500 to-purple-600', 
-    otherLink: undefined,
-  }, 
-  {
-    title: "Démonická",
-    description:
-      "Webová aplikace pro správu jednoduchého e-shopu pomocí administrátorského panelu",
-    tags: ["Next.js", "TypeScript", "TailwindCSS", "ClerkAuth", "Prisma"],
-    imageUrl: codecommerce,
-    githubLink: undefined,
-    websiteLink: undefined,
-    gradient: 'from-green-400 via-blue-500 to-purple-600', 
-    otherLink: undefined,
-  }, 
-  {
-    title: "BuildBoxUI",
-    description:
-      "Webová aplikace pro správu jednoduchého e-shopu pomocí administrátorského panelu",
-    tags: ["Next.js", "TypeScript", "TailwindCSS", "ClerkAuth", "Prisma"],
-    imageUrl: codecommerce,
-    githubLink: undefined,
-    websiteLink: undefined,
-    gradient: 'from-green-400 via-blue-500 to-purple-600', 
-    otherLink: undefined,
-  }, 
-  */
 ] as const;

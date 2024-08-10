@@ -45,53 +45,27 @@ export default function Project({
               ))}
             </ul>
             <div className="grid grid-cols-2 xl:grid-cols-3 gap-2">
-              {websiteLink ? (
+              {websiteLink && (
                 <Button variant="ghost">
                   <Link href={websiteLink} className="flex flex-row items-center space-x-2">
                     <CiGlobe className="w-5 h-5" /> <span>Web</span>
                   </Link>
                 </Button>
-              ) : (
-                <Button 
-                  variant="ghost" 
-                  disabled
-                  className="hidden opacity-50 cursor-not-allowed"
-                >
-                  <span className="flex flex-row items-center space-x-2">
-                    <CiGlobe className="w-5 h-5" /> <span>Website</span>
-                  </span>
-                </Button>
-              )}              
+              )}
 
-              {githubLink ? (
+              {githubLink && (
                 <Button variant="ghost">
-                  <Link href={githubLink} className="hidden flex-row items-center space-x-2">
+                  <Link href={githubLink} className="flex flex-row items-center space-x-2">
                     <FaGithub className="w-5 h-5" /> <span>Github</span>
                   </Link>
                 </Button>
-              ) : (
-                <Button 
-                  variant="ghost" 
-                  disabled
-                  className="hidden opacity-50 cursor-not-allowed"
-                >
-                  <span className="flex flex-row items-center gap-x-2">
-                    <FaGithub className="w-5 h-5" /> <span>Github</span>
-                  </span>
-                </Button>
               )}
 
-              {otherLink ? (
-                    <Button variant="ghost">
-                      <Link href={otherLink} className="flex flex-row items-center gap-x-2">
-                        <FaShoppingBasket className="w-5 h-5" /> <span>Eshop</span>
-                      </Link>
-                    </Button>
-              ) : (
-                <Button className="hidden"> 
-                    <div>
-                        Ostatní  
-                    </div>  
+              {otherLink && (
+                <Button variant="ghost">
+                  <Link href={otherLink} className="flex flex-row items-center gap-x-2">
+                    <FaShoppingBasket className="w-5 h-5" /> <span>Eshop</span>
+                  </Link>
                 </Button>
               )}
             </div>
