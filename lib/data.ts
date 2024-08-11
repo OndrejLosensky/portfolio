@@ -27,27 +27,30 @@ export const Data_de = {
 }
 
 export const links = {
-    cz: [
-      { id: "home", name: "Úvod", hash: "#uvod" },
-      { id: "about", name: "O mně", hash: "#o-mne" },
-      { id: "overview", name: "Přehled", hash: "#prehled" },
-      { id: "projects", name: "Projekty", hash: "#projekty" },
-      { id: "contact", name: "Kontakt", hash: "#kontakt" },
-    ],
-    en: [
-      { id: "home", name: "Home", hash: "#uvod" },
-      { id: "about", name: "About Me", hash: "#o-mne" },
-      { id: "overview", name: "Overview", hash: "#prehled" },
-      { id: "projects", name: "Projects", hash: "#projekty" },
-      { id: "contact", name: "Contact", hash: "#kontakt" },
-    ],
-    de: [
-      { id: "home", name: "Startseite", hash: "#uvod" },
-      { id: "about", name: "Über mich", hash: "#o-mne" },
-      { id: "overview", name: "Überblick", hash: "#prehled" },
-      { id: "projects", name: "Projekte", hash: "#projekty" },
-      { id: "contact", name: "Kontakt", hash: "#kontakt" },
-    ],
-} as const;
+   cz: [
+    { name: 'Úvod', hash: '#uvod' },
+    { name: 'O mně', hash: '#o-mne' },
+    { name: 'Přehled', hash: '#prehled' },
+    { name: 'Projekty', hash: '#projekty' },
+    { name: 'Kontakt', hash: '#kontakt' },
+  ],
+  en: [
+    { name: 'Home', hash: '#uvod' },
+    { name: 'About Me', hash: '#o-mne' },
+    { name: 'Overview', hash: '#prehled' },
+    { name: 'Projects', hash: '#projekty' },
+    { name: 'Contact', hash: '#kontakt' },
+  ],    
+  de: [
+    { name: 'Home', hash: '#uvod' },
+    { name: 'About Me', hash: '#o-mne' },
+    { name: 'Overview', hash: '#prehled' },
+    { name: 'Projects', hash: '#projekty' },
+    { name: 'Contact', hash: '#kontakt' },
+  ],    
+};
+
+export type SectionName = (typeof links[keyof typeof links])[number]['name'];
+
   
 

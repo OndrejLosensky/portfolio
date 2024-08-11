@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import type { SectionName } from "@/lib/types";
 import React, { useState, createContext, useContext } from "react";
@@ -14,13 +14,12 @@ type ActiveSectionContextType = {
   setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
 };
 
-export const ActiveSectionContext =
-  createContext<ActiveSectionContextType | null>(null);
+export const ActiveSectionContext = createContext<ActiveSectionContextType | null>(null);
 
 export default function ActiveSectionContextProvider({
   children,
 }: ActiveSectionContextProviderProps) {
-  const [activeSection, setActiveSection] = useState<SectionName>("home"); // Use an identifier like "home"
+  const [activeSection, setActiveSection] = useState<SectionName>("home"); // Ensure "home" is a valid SectionName
   const [timeOfLastClick, setTimeOfLastClick] = useState(0);
 
   return (

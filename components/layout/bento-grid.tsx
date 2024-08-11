@@ -11,7 +11,7 @@ import { cardDetailsTop, cardDetailsMiddle, cardDetailsBottom } from '../action/
 import TechstackCarouselReversed from '../action/carousel/techstack-carousel-reversed';
 
 const BentoGrid: React.FC = () => {
-  const { ref } = useSectionInView("overview", 0.5);
+  const { ref } = useSectionInView("Přehled", 0.5);
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = () => {

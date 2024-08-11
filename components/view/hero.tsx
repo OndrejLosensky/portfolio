@@ -21,7 +21,7 @@ export default function HeroSection() {
     window.open(url, '_blank');
   };
 
-  const { ref } = useSectionInView("home");
+  const { ref } = useSectionInView("Úvod" || "Home" || "Startseite");
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
