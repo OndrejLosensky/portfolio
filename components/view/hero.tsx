@@ -1,8 +1,6 @@
 "use client";
 
 import ScrollToTopButton from "../action/scroll-to-top";
-import { FaGithub, FaLinkedin, FaInstagram,FaFacebookF } from "react-icons/fa";
-import { MdOutlineMailOutline } from "react-icons/md";
 import { useSectionInView } from "@/lib/hooks";
 
 import { motion } from "framer-motion";
@@ -14,14 +12,16 @@ import Image from "next/image";
 
 import { socialLinks, SocialLink } from '../../lib/socials';
 
-import { Data } from "@/lib/data"
+import { useLanguage } from '@/context/language-context';
 
 export default function HeroSection() {
+  const { data } = useLanguage();
+
   const handleClick = (url: string) => {
     window.open(url, '_blank');
   };
 
-  const { ref } = useSectionInView("Úvod");
+  const { ref } = useSectionInView("home");
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -34,7 +34,7 @@ export default function HeroSection() {
   return (
     <div ref={ref} id="uvod" className='w-[100%] max-h-screen h-screen flex flex-col justify-center items-center text-center mx-auto'>
         <div className="bg-[#8af8eb] absolute top-[0rem] md:top-[-12rem] -z-10  right-[2rem] md:right-[8rem] h-[25rem] md:h-[31.25rem] w-[20rem] md:w-[61.25rem] rounded-full blur-[12rem] dark:bg-[#56b595]"></div>
-              
+        
         <motion.div 
             initial={{ opacity: 1, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -48,17 +48,17 @@ export default function HeroSection() {
                 <kbd className="px-[8px] py-[2px] scale-75 dark:bg-shark-700 bg-shark-300 text-shark-600 dark:text-shark-100 rounded-md">CTRL</kbd>
                 <span className="dark:text-shark-100 text-shark-600"> + </span>
                 <kbd className="px-[8px] py-[2px] scale-75 mr-2 dark:bg-shark-700 bg-shark-300 text-shark-600 dark:text-shark-100 rounded-md">H</kbd>
-                <span className="font-light dark:text-shark-100 text-shark-600"> pro zapnutí světlého režimu  </span>
+                <span className="font-light dark:text-shark-100 text-shark-600"> {data.themeToggleText} </span>
               </p> 
               <div className='w-full items-center justify-center mb-8 flex flex-col'>
-                  <h1 className='text-md lg:text-xl mb-2 font-sora font-light flex flex-row'> Ahoj <Image src="/additional-icons/wave.svg" width={24} height={24} className="mx-1" alt="Wave emoji" />, jmenuji se </h1>
+                  <h1 className='text-md lg:text-xl mb-2 font-sora font-light flex flex-row'> {data.hello} <Image src="/additional-icons/wave.svg" width={24} height={24} className="mx-1" alt="Wave emoji" />, {data.myNameIs} </h1>
                   <h2 className="md:text-4xl lg:text-5xl text-3xl flex flex-col mb-1 font-bold text-center bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50">
-                    <span> {Data.name} </span>
+                    <span> {data.name} </span>
                   </h2>
-                  <p className='text-shark-500 dark:text-shark-50 font-light text-wrap w-3/4 lg:w-1/2 text-xs md:text-lg mt-2 mb-6'> Vítejte na mém portfoliu! Jsem full-stack softwarový vývojář z Prahy📍 a absolvent střední školy. Specializuji se na tvorbu moderních a responzivních webů a vysoce efektivních řešení pomocí nejnovějších technologií. Také se zajímám o veškeré dění v oblastech AI a dalších odvětvích</p>
+                  <p className='text-shark-500 dark:text-shark-50 font-light text-wrap w-3/4 lg:w-1/2 text-xs md:text-lg mt-2 mb-6'> {data.heroDescription} </p>
                   <div className='flex flex-row gap-x-4 items-center mx-auto'>
                     <Button onClick={() => scrollToSection('o-mne')} className='dark:bg-bermuda-500 dark:hover:bg-bermuda-600 bg-bermuda-500 text-shark-100 px-4 py-2 rounded-md hover:bg-bermuda-600 active:bg-bermuda-700 active:scale-90 duration-200'> 
-                        Pokračovat 
+                        {data.continueBtn}
                     </Button>
                     <DownloadCV/>                
                   </div>

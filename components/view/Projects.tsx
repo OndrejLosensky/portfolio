@@ -11,7 +11,7 @@ import { FaLaptopCode } from "react-icons/fa";
 import Link from "next/link";
 
 export default function ProjectsSection() {
-  const { ref } = useSectionInView("Projekty", 0.5);
+  const { ref } = useSectionInView("projects", 0.5);
 
   return (
     <section ref={ref} id="projekty" className="scroll-mt-28 w-full mx-auto mt-48 mb-28">

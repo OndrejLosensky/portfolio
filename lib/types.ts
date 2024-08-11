@@ -1,3 +1,3 @@
-import { links } from '../lib/navData';
+import { links } from '../lib/data';
 
 export type SectionName = (typeof links)[number]["name"];

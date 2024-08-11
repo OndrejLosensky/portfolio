@@ -5,6 +5,7 @@ import "../app/globals.css";
 import ThemeContextProvider from "@/context/theme-provider";
 import ActiveSectionContextProvider from "@/context/active-section";
 import ClientLoader from "@/components/loaders/client-loader";
+import { LanguageProvider } from "@/context/language-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,9 @@ export default function RootLayout({
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <ClientLoader>
-              {children}
+              <LanguageProvider>
+                {children}
+              </LanguageProvider>
             </ClientLoader>
           </ActiveSectionContextProvider>
         </ThemeContextProvider>

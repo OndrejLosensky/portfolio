@@ -15,7 +15,7 @@ import {
 } from '@/components/ui/toast';
 
 export default function ContactSection() {
-  const { ref } = useSectionInView("Kontakt", 0.5);
+  const { ref } = useSectionInView("contact", 0.5);
   const [isSent, setIsSent] = useState(false);
   const [showSuccessToast, setShowSuccessToast] = useState(false);
   const [showErrorToast, setShowErrorToast] = useState(false);

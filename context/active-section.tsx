@@ -20,8 +20,8 @@ export const ActiveSectionContext =
 export default function ActiveSectionContextProvider({
   children,
 }: ActiveSectionContextProviderProps) {
-  const [activeSection, setActiveSection] = useState<SectionName>("Úvod");
-  const [timeOfLastClick, setTimeOfLastClick] = useState(0); 
+  const [activeSection, setActiveSection] = useState<SectionName>("home"); // Use an identifier like "home"
+  const [timeOfLastClick, setTimeOfLastClick] = useState(0);
 
   return (
     <ActiveSectionContext.Provider

@@ -11,7 +11,7 @@ import { cardDetailsTop, cardDetailsMiddle, cardDetailsBottom } from '../action/
 import TechstackCarouselReversed from '../action/carousel/techstack-carousel-reversed';
 
 const BentoGrid: React.FC = () => {
-  const { ref } = useSectionInView("Přehled", 0.5);
+  const { ref } = useSectionInView("overview", 0.5);
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = () => {
@@ -71,12 +71,7 @@ const BentoGrid: React.FC = () => {
                       <p className="mt-2 text-gray-200 md:w-full w-1/2 text-sm lg:text-base">
                         Web pro rodinnou levandulovou farmu v Novém Kníně
                       </p>
-                    </div>
-                    <Link href="/kralovska-levandule">
-                      <button className="mt-6 bg-white text-indigo-600 hover:bg-gray-200 active:bg-gray-300 text-sm lg:text-base font-semibold px-5 py-3 rounded-lg shadow-md transition-all duration-300">
-                        Podívat se
-                      </button>
-                    </Link>
+                    </div>                   
                   </div>
 
                   <div className="absolute right-0 bottom-0 w-[50%] h-full transform rotate-6 translate-x-20 translate-y-28 md:translate-x-24 md:translate-y-8">

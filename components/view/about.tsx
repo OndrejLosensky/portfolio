@@ -11,7 +11,7 @@ import Link from "next/link";
 import { WorkExpirience } from "../layout/work-expirience";
 
 export default function AboutSection() {
-  const { ref } = useSectionInView("O mně");
+  const { ref } = useSectionInView("about");
 
   interface Skill {
     name: string;
