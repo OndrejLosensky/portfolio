@@ -16,19 +16,7 @@ import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import React, { useState } from 'react';
 
 // Extract the section names type from links
-type SectionName = (typeof links)[number]['name'];
-
-export default function HeaderLinksCopy() {
-  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-  const isScrolled = useIsScrolled();
-
-  // Create typed refs for each section
-  const sectionRefs = useRef<Record<SectionName, HTMLLIElement | null>>(
-    links.reduce((acc, link) => {
-      acc[link.name] = null;
-      return acc;
-    }, {} as Record<SectionName, HTMLLIElement | null>)
-  );
+export default function HeaderLinksCopy() { 
 
   const isMobile = useMedia("(max-width: 1280px)", false);
   const [isOpen, setIsOpen] = useState(false);
@@ -58,7 +46,6 @@ export default function HeaderLinksCopy() {
                         href={"/#uvod"}
                         onClick={(e) => {
                           e.preventDefault();
-                          setTimeOfLastClick(Date.now());
                           setIsOpen(false);
                         }}
                       >
@@ -76,7 +63,6 @@ export default function HeaderLinksCopy() {
                         href={"/#o-mne"}
                         onClick={(e) => {
                           e.preventDefault();
-                          setTimeOfLastClick(Date.now());
                           setIsOpen(false);
                         }}
                       >
@@ -94,7 +80,6 @@ export default function HeaderLinksCopy() {
                         href={"/#prehled"}
                         onClick={(e) => {
                           e.preventDefault();
-                          setTimeOfLastClick(Date.now());
                           setIsOpen(false);
                         }}
                       >
@@ -112,7 +97,6 @@ export default function HeaderLinksCopy() {
                         href={"/#projekty"}
                         onClick={(e) => {
                           e.preventDefault();
-                          setTimeOfLastClick(Date.now());
                           setIsOpen(false);
                         }}
                       >
@@ -130,7 +114,6 @@ export default function HeaderLinksCopy() {
                         href={"/#kontakt"}
                         onClick={(e) => {
                           e.preventDefault();
-                          setTimeOfLastClick(Date.now());
                           setIsOpen(false);
                         }}
                       >
