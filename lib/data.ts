@@ -2,6 +2,115 @@ import datadepot from "@/public/mockups/datadepot.png";
 import kralovskalevandule from "@/public/mockups/kralovska-levandule.png";
 import codecommerce from "@/public/mockups/codecommerce.png";
 
+interface WorkEntry {
+  name: string;
+  description: string;
+  date: string;
+  icon: string;
+  color: string;
+  fullDescription: string;
+}
+
+interface ProjectEntry {
+  title: string;
+  description: string;
+  tags: string[];
+  imageUrl: string;
+  githubLink?: string;
+  websiteLink?: string;
+  gradient: string;
+  otherLink?: string;
+}
+
+interface CMSOption {
+  title: string;
+  description: string;
+  features: string[];
+  pricing: string;
+}
+
+interface FrameworkOption {
+  title: string;
+  description: string;
+  features: string[];
+  pricing: string;
+}
+
+interface GraphicsOption {
+  title: string;
+  description: string;
+  features: string[];
+  pricing: string;
+}
+
+interface Texts {
+  hello: string;
+  myNameIs: string;
+  name: string;
+  themeToggleText: string;
+  heroDescription: string;
+  continueBtn: string;
+  AboutMeTitle: string;
+  AboutMeDesc: string;
+  showCV: string;
+  scrollToTop: string;
+  tags: string[];
+  AboutDesc: string;
+  TechnologiesTitle: string;
+  workTitle: string;
+  work: WorkEntry[];
+  OverviewTitle: string;
+  OverviewDescription: string;
+  webCreation: string;
+  webCreationDesc: string;
+  webBtn: string;
+  newestProject: string;
+  projectImagePath: string;
+  projectTitle: string;
+  projectDescription: string;
+  anotherGridTile: string;
+  contactTile: string;
+  emailCopy: string;
+  emailCopied: string;
+  currentlyWorkingOn: string;
+  projectsTitle: string;
+  projectsDescription: string;
+  MoreProjectsBtn: string;
+  projectsData: ProjectEntry[];
+  contactTitle: string;
+  contactDescription: string;
+  contactSmallText1: string;
+  contactSmallText2: string;
+  contactFormName: string;
+  contactFormNamePlaceholder: string;
+  contactFormEmailPlaceholder: string;
+  contactFormMessage: string;
+  contactFormMessagePlaceholder: string;
+  contactFormSendBtn: string;
+  contactToastSuccess: string;
+  contactToastSuccessDesc: string;
+  contactToastError: string;
+  contactToastErrorDesc: string;
+  cookiesFormText: string;
+  cookiesBtn1: string;
+  cookiesBtn2: string;
+  cookiesBtn3: string;
+  cookiesBtn4: string;
+  footerAllRightsReserved: string;
+  cmsOption: CMSOption[];
+  frameworkOptions: FrameworkOption[];
+  graphicsOptions: GraphicsOption[];
+  webTitle: string;
+  webDescription: string;
+  cmsTitle: string;
+  handMadeTitle: string;
+  graphicsTitle: string;
+  comingSoonText: string;
+  additionalText: string;
+  backToHomepage: string;
+}
+
+
 export const Data_cz = {
     hello: "Ahoj",
     myNameIs: "jmenuji se",
