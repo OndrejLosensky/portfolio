@@ -38,7 +38,7 @@ export default function CookiesForm() {
           <span>{data.cookiesFormText}</span>
         </p>
         <div className='flex flex-col lg:flex-row gap-x-2 items-center'>
-          <Link href="/cookies" className='dark:text-bermuda-400 text-bermuda-600 mr-0 mt-2 lg:mt-0 lg:mr-2 text-xs underline underline-offset-2 font-semibold'>
+          <Link href="/" className='dark:text-bermuda-400 text-bermuda-600 mr-0 mt-2 lg:mt-0 lg:mr-2 text-xs underline underline-offset-2 font-semibold'>
             {data.cookiesBtn1}
           </Link>
           <div className='my-2 lg:my-0 lg:mt-0 lg:space-x-2 mt-4 space-x-4'>

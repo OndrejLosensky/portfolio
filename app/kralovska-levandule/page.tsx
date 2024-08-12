@@ -8,7 +8,7 @@ import Link from 'next/link';
 import React from 'react';
 
 import { IoMdHome } from "react-icons/io";
-import CookiesForm from '../cookies/CookiesForm';
+import CookiesForm from '../(cookies)/CookiesForm';
 
 export default function KLPage() {
   return (

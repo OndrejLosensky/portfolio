@@ -7,7 +7,7 @@ import { DynamicDialog } from "@/components/action/dynamic-dialog";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { IoMdHome } from "react-icons/io";
-import CookiesForm from "../cookies/CookiesForm";
+import CookiesForm from "../(cookies)/CookiesForm";
 
 import { useLanguage } from '@/context/language-context';
 

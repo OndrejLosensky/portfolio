@@ -13,12 +13,7 @@ export default function Footer() {
             <Image src="/logo.svg" height={30} width={30} alt="Logo"/>
             <span className="text-sm pt-1"> © {currentYear} <strong>{data.name} </strong></span>
           </Link>
-          
-          <div className="hidden lg:flex opacity-80">
-            <Link href="/cookies" className="hover:text-text-dark dark:hover:text-text-light text-text-dark/60 dark:text-text-light/60 duration-200"> Cookies</Link>
-            <span className="opacity-40 px-2"> | </span>
-            <Link href="/gdpr" className="hover:text-text-dark dark:hover:text-text-light text-text-dark/60 dark:text-text-light/60 duration-200"> G.D.P.R</Link>
-          </div>
+               
 
           <p className="text-xs md:text-sm hidden md:flex font-thin"> {data.footerAllRightsReserved}  </p>
 
@@ -26,8 +21,6 @@ export default function Footer() {
           <div className="md:hidden flex flex-row w-full justify-between mt-2 md:mt-0 md:pb-0 pb-8">
             <p className="text-xs md:text-sm font-thin"> {data.footerAllRightsReserved}  </p>
             <div className="flex flex-row ">
-              <Link href="/cookies" className="px-0 hover:text-text-dark text-xs dark:hover:text-text-light text-text-dark/60 border-r border-text-dark/70 dark:border-text-light/70 pr-2 dark:text-text-light/60 duration-200"> Cookies</Link>
-              <Link href="/gdpr" className="pl-2 hover:text-text-dark dark:hover:text-text-light text-xs text-text-dark/60 dark:text-text-light/60 duration-200"> G.D.P.R</Link>
             </div>
           </div>
     </div>
