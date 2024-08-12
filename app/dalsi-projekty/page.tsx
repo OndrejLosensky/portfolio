@@ -1,7 +1,7 @@
 import Header from "@/components/nav/header-copy";
 
 import React from "react";
-import { projectsDataAll } from "@/lib/projects";
+import { projectsData } from "@/lib/projects";
 import Project from "@/components/layout/single-project";
 import Footer from "@/components/nav/footer-2";
 import Link from "next/link";
@@ -21,7 +21,7 @@ export default function MoreProjectsPage () {
                     </span>
                 </div>
                 <div className="mx-auto mb-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-                    {projectsDataAll.map((project, index) => (
+                    {projectsData.map((project, index) => (
                         <React.Fragment key={index}>
                             <Project {...project} />
                         </React.Fragment>

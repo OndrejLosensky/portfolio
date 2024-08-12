@@ -1,53 +1,12 @@
 import Image from "next/image";
 import { useState } from "react";
-
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-interface Work {
-    name: string,
-    description: string,
-    date: string,
-    icon: string,
-    color: string,
-    fullDescription?: string
-}
+import { useLanguage } from '@/context/language-context';
 
-const works: Work[] = [
-    { 
-        name: 'Havel&Partners', 
-        description: 'IT Support', 
-        date: 'Červenec 2023 - Srpen 2023', 
-        icon: '/logos/hp.svg', 
-        color: 'bg-white',
-        fullDescription: 'Instalace nových telefonů, kontrola zasedacích místností, reinstalace PC, práce v Excelu, kontrola tiskáren (výměna tonerů, waste kontejnerů)'
-    },
-    { 
-        name: 'Česká spořitelna - II. stáž', 
-        description: 'Stážista', 
-        date: 'Druhá polovina května 2023', 
-        icon: '/logos/csas.svg',
-        color: "bg-[#2970ed]",
-        fullDescription: 'Tvorba python scriptu pro dohledávání veřejných smluv. Práce s excelem a CSV soubory'
-    },
-    { 
-        name: 'Královská levandule', 
-        description: 'Web developer, administrátor', 
-        date: '2022 - 2024', 
-        icon: '/logos/kl.svg', 
-        color: 'bg-white',
-        fullDescription: 'Vytvořil jsem stránku Královské levandule společně s jejím e-shopem'
-    },
-    { 
-        name: 'Česká spořitelna - I. stáž', 
-        description: 'Stážista', 
-        date: 'Druhá polovina května 2022', 
-        icon: '/logos/csas.svg', 
-        color: "bg-[#2970ed]",
-        fullDescription: 'Práce s SSRS, tvorba ikon pro reporty pomocí Adobe Illustrator, práce v Excelu'
-    },
-]
 
 export function WorkExpirience() {
+    const { data } = useLanguage();
     const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
     const handleRowClick = (index: number) => {
@@ -56,9 +15,9 @@ export function WorkExpirience() {
 
     return (
         <div className="relative w-full pt-16 sm:pt-32">
-            <h2 className="text-2xl sm:text-3xl font-semibold">Pracovní zkušenosti</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold">{data.workTitle}</h2>
             <div>
-                {works.map((work, index) => (
+                {data.work.map((work, index) => (
                     <div 
                         key={index} 
                         className="my-4 py-2 flex border-b border-black/40 dark:border-white/30 md:border-black/0 md:dark:border-white/0 flex-col w-full group"

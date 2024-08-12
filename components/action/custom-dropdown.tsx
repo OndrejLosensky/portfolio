@@ -38,7 +38,7 @@ const CustomDropdown: FC = () => {
   }, []);
 
   return (
-    <div className='hidden xl:flex flex-row items-center justify-center gap-x-4'>
+    <div className='flex flex-row items-center justify-center gap-x-4'>
       <div className="relative" ref={dropdownRef}>
         <button
           className="flex items-center px-2 py-1 rounded-md border border-text-dark/60 dark:border-text-light/60 bg-transparent"
@@ -51,7 +51,7 @@ const CustomDropdown: FC = () => {
           />
         </button>
         {isOpen && (
-          <div className="absolute mt-4 w-full mx-auto bg-main dark:bg-main dark:bg-transparent border border-text-dark dark:border-text-light shadow-lg">
+          <div className="absolute mt-4 w-full mx-auto bg-gray-100 dark:bg-main border border-text-dark/30 rounded-md dark:rounded-md dark:border-text-light shadow-lg">
             {languages.map((lang) => (
               <button
                 key={lang.value}
@@ -62,7 +62,7 @@ const CustomDropdown: FC = () => {
                     setIsOpen(false);
                   }
                 }}
-                className={`flex items-center bg-main/50 px-2 py-1 w-full text-left ${lang.disabled ? 'bg-gray-700 cursor-not-allowed' : 'hover:bg-bermuda-400 dark:hover:bg-main'}`}
+                className={`flex items-center dark:bg-main/50 px-2 py-1 w-full rounded-sm text-left ${lang.disabled ? 'bg-gray-700 cursor-not-allowed' : 'hover:bg-bermuda-400 dark:hover:bg-bermuda-400'}`}
               >
                 <Image src={lang.icon} width={24} height={24} alt={`${lang.label} flag icon`} />
                 <span className="ml-2">{lang.label}</span>

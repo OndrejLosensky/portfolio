@@ -4,38 +4,18 @@ import SectionTitleCenter from "../layout/section-title-center";
 import SectionTitle from "../layout/section-title";
 import { useSectionInView } from "../../lib/hooks";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { CiCircleCheck } from "react-icons/ci";
-import { IoMdPin } from "react-icons/io";
+import Image from "next/image";;
 import Link from "next/link";
 import { WorkExpirience } from "../layout/work-expirience";
 
+import { useLanguage } from '@/context/language-context';
+import { skills } from "@/lib/data";
+
 export default function AboutSection() {
+  const { data } = useLanguage();
   const { ref } = useSectionInView("O mně");
 
-  interface Skill {
-    name: string;
-    level: string;
-    icon: string;
-  }
-
-  const skills: Skill[] = [
-    { name: 'React', level: '95%', icon: "/icons/react.svg" },
-    { name: 'Next.js', level: '90%', icon: "/icons/next.js.svg" },
-    { name: 'Python', level: '65%', icon: "/icons/py.svg" },
-    { name: 'Swift', level: '15%', icon: "/icons/swift.svg" },
-    { name: 'TypeScript', level: '40%', icon: "/icons/ts.svg" },
-    { name: 'CSS', level: '95%', icon: "/icons/css.svg" },
-    { name: 'JavaScript', level: '80%', icon: "/icons/js.svg" },
-    { name: 'HTML', level: '100%', icon: "/icons/html.svg" },
-    { name: 'Sqlite', level: '80%', icon: "/icons/sqlite.svg" },
-    { name: 'MongoDB', level: '10%', icon: "/icons/mongo.png" },
-    { name: 'TailwindCSS', level: '85%', icon: "/icons/tailwind.svg" },
-    { name: 'Wordpress', level: '90%', icon: "/icons/wordpress.svg" },
-    { name: 'PHP', level: '90%', icon: "/icons/php.svg" },
-    { name: 'C#', level: '90%', icon: "/icons/cs.svg" },
-    { name: 'Godot', level: '90%', icon: "/icons/godot2.svg" },
-  ];
+  
 
   const fadeInAnimationVariants = {
     initial: {
@@ -60,34 +40,24 @@ export default function AboutSection() {
     >
       <div className="flex flex-col lg:flex-row">        
         <div className="lg:w-2/3 w-full text-center lg:text-left">
-          <SectionTitle heading="O mě" subHeading="Kdo jsem?" className="hidden md:flex" />
+          <SectionTitle heading={data.AboutMeTitle} subHeading={data.AboutMeDesc} className="hidden md:flex" />
           <SectionTitleCenter heading="O mě" subHeading="Kdo jsem?" />
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50 mb-4">
-            Ondřej Losenský
+           {data.name}
           </h2>
           <div className="flex flex-wrap justify-center lg:justify-start gap-2 mt-4 text-xs md:text-sm">
-            <span className="px-3 py-1 bg-black/10 dark:bg-white/10 rounded-md">
-              Programátor
-            </span>
-            <span className="px-3 py-1 bg-black/10 dark:bg-white/10 rounded-md">
-              Web designer
-            </span>
-            <span className="px-3 py-1 bg-black/10 dark:bg-white/10 rounded-md">
-              Administrátor
-            </span>
+            {data.tags.map((tag, index) => (
+              <span key={index} className="px-3 py-1 bg-black/10 dark:bg-white/10 rounded-md">
+                {tag}
+              </span>
+            ))}
           </div>
           <p className="mt-6 w-full md:w-3/4 text-sm text-shark-500 dark:text-shark-200 mx-auto lg:mx-0">
-            Jmenuji se Ondřej Losenský, je mi 19 let a jsem z Prahy. Právě jsem
-            dokončil střední průmyslovou školu v oboru IT. Věnuji se programování
-            webových aplikací, správě systémů a dalším technologickým zájmům. Na
-            mém portfoliu najdete mé kontaktní údaje, projekty a životopis ve
-            formátu PDF ve více jazycích. Zároveň se můžeme domluvit na vytvoření
-            webové stránky na míru nebo nějakého projektu. Pro více se podívejte do
-            sekce <strong><Link href="/tvorba-webu">Tvorba webu</Link></strong>.
+            {data.AboutDesc}
           </p>
 
           <div>
-            <h2 className="text-2xl font-semibold py-2 pt-8"> Technologie </h2>
+            <h2 className="text-2xl font-semibold py-2 pt-8"> {data.TechnologiesTitle} </h2>
             <ul className="grid grid-cols-8 mt-2 lg:flex lg:flex-wrap gap-4">
               {skills.map((skill, index) => (
                 <motion.li

@@ -27,7 +27,9 @@ export default function Header() {
             <span className="font-bold text-bermuda-400"> Losenský</span>Ondřej
           </Link>
           <HeaderLinks />
-          <CustomDropdown/>
+          <div className="hidden xl:flex">
+            <CustomDropdown/>                      
+          </div>
         </nav>
       </motion.header>      
     </div>
