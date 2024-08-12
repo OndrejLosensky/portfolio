@@ -3,7 +3,7 @@ import { useLanguage } from '@/context/language-context';
 import { db, doc, getDoc, setDoc } from '../../../firebaseConfig';
 
 type Texts = {
-  [key: string]: string;
+  [key: string]: string | string[]; 
 };
 
 const ContentTab: React.FC = () => {
@@ -35,7 +35,7 @@ const ContentTab: React.FC = () => {
   const handleKeyChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const key = event.target.value;
     setSelectedKey(key);
-    setNewValue(texts[key] || '');
+    setNewValue(typeof texts[key] === 'string' ? texts[key] : ''); // Ensuring the value is a string
   };
 
   const handleValueChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
@@ -52,9 +52,10 @@ const ContentTab: React.FC = () => {
     setShowOnlyNull(!showOnlyNull);
   };
 
+  // Filter keys that are strings, excluding arrays
   const filteredKeys = showOnlyNull
-    ? Object.keys(texts).filter((key) => !texts[key])
-    : Object.keys(texts);
+    ? Object.keys(texts).filter((key) => typeof texts[key] === 'string' && !texts[key])
+    : Object.keys(texts).filter((key) => typeof texts[key] === 'string');
 
   return (
     <div>

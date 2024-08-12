@@ -3,8 +3,7 @@ import { useState } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 import { useTexts } from '@/context/texts-context';
-
-
+import { Data_cz } from "@/lib/data";
 
 export function WorkExpirience() {
     const { texts } = useTexts();
@@ -17,9 +16,8 @@ export function WorkExpirience() {
     return (
         <div className="relative w-full pt-16 sm:pt-32">
             <h2 className="text-2xl sm:text-3xl font-semibold">{texts['workTitle']}</h2>
-            <div>
-                {/* 
-                {data.work.map((work, index) => (
+            <div>                
+                {Data_cz.work.map((work, index) => (
                     <div 
                         key={index} 
                         className="my-4 py-2 flex border-b border-black/40 dark:border-white/30 md:border-black/0 md:dark:border-white/0 flex-col w-full group"
@@ -54,8 +52,7 @@ export function WorkExpirience() {
                             </div>
                         </div>
                     </div>
-                ))}
-                    */}
+                ))}                    
             </div>
         </div>
     )

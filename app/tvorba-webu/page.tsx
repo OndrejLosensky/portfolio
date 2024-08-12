@@ -10,6 +10,7 @@ import { IoMdHome } from "react-icons/io";
 import CookiesForm from "../(cookies)/CookiesForm";
 
 import { useTexts } from '@/context/texts-context';
+import { Data_cz } from "@/lib/data";
 
 export default function WebDevelopmentPage() {
   const { texts } = useTexts();
@@ -29,24 +30,18 @@ export default function WebDevelopmentPage() {
         <div className="mt-24">
           <h2 className="font-semibold text-xl md:text-2xl lg:text-3xl text-text-dark/70 dark:text-text-light/70 pb-4">{texts['cmsTitle']}</h2>
           <div className="grid grid-cols-1  lg:grid-cols-2 gap-6">
-            <p> {texts['comingSoonText']}</p>
-            {/* 
-            {data.cmsOption.map((option, index) => (
+            {Data_cz.cmsOption.map((option, index) => (
               <DynamicDialog key={index} option={option} />
-            ))}
-              */}
+            ))}            
           </div>
         </div>
 
         <div className="mt-24">
           <h2 className="font-semibold text-xl md:text-2xl lg:text-3xl text-text-dark/70 dark:text-text-light/70 pb-4">{texts['handMadeTitle']}</h2>
           <div className="grid grid-cols-1  lg:grid-cols-2 gap-6">
-            <p> {texts['comingSoonText']}</p>
-            {/* 
-            {data.frameworkOptions.map((option, index) => (
+            {Data_cz.frameworkOptions.map((option, index) => (
               <DynamicDialog key={index} option={option} />
             ))}
-              */}
           </div>
         </div>
 
@@ -54,8 +49,8 @@ export default function WebDevelopmentPage() {
           <h2 className="font-semibold text-xl md:text-2xl lg:text-3xl text-text-dark/70 dark:text-text-light/70 pb-4">{texts['graphicsTitle']}</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <p> {texts['comingSoonText']}</p>
-            {/* 
-            {graphicsOptions.map((option, index) => (
+            {/* 
+            {Data_cz.graphicsOptions.map((option, index) => (
               <DynamicDialog key={index} option={option} />
             ))}
               */}

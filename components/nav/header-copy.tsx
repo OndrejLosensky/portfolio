@@ -26,8 +26,11 @@ export default function HeaderCopy() {
             <span className="font-bold text-bermuda-400"> Losenský</span>Ondřej
           </Link>
           <HeaderLinksCopy />
-          <CustomDropdown/>
-          <ThemeSwitch light="" dark="" />
+          <div className="flex flex-row items-center ">
+            <CustomDropdown/>
+            <span className="opacity-30 px-4"> | </span>
+            <ThemeSwitch light="" dark="" />
+          </div>        
         </nav>
       </motion.header>      
     </div>
