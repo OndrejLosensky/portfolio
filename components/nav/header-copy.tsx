@@ -9,6 +9,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTheme } from "@/context/theme-provider"; 
 import CustomDropdown from "../action/custom-dropdown";
+import ThemeSwitch from "@/context/theme-switcher";
 
 export default function HeaderCopy() {
   const { theme } = useTheme(); 
@@ -26,6 +27,7 @@ export default function HeaderCopy() {
           </Link>
           <HeaderLinksCopy />
           <CustomDropdown/>
+          <ThemeSwitch light="" dark="" />
         </nav>
       </motion.header>      
     </div>

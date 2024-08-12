@@ -2,11 +2,12 @@ import Image from "next/image";
 import { useState } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-import { useLanguage } from '@/context/language-context';
+import { useTexts } from '@/context/texts-context';
+
 
 
 export function WorkExpirience() {
-    const { data } = useLanguage();
+    const { texts } = useTexts();
     const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
     const handleRowClick = (index: number) => {
@@ -15,8 +16,9 @@ export function WorkExpirience() {
 
     return (
         <div className="relative w-full pt-16 sm:pt-32">
-            <h2 className="text-2xl sm:text-3xl font-semibold">{data.workTitle}</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold">{texts['workTitle']}</h2>
             <div>
+                {/* 
                 {data.work.map((work, index) => (
                     <div 
                         key={index} 
@@ -53,6 +55,7 @@ export function WorkExpirience() {
                         </div>
                     </div>
                 ))}
+                    */}
             </div>
         </div>
     )

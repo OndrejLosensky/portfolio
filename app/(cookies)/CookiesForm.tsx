@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { IoIosArrowBack } from "react-icons/io";
 import Image from 'next/image';
 
-import { useLanguage } from '@/context/language-context';
+import { useTexts } from '@/context/texts-context';
 
 export default function CookiesForm() {
-  const { data } = useLanguage();
+  const { texts } = useTexts();
   const [isClosed, setIsClosed] = useState(false);
 
   useEffect(() => {
@@ -35,18 +35,18 @@ export default function CookiesForm() {
       <div className={`fixed bottom-2 overflow-hidden left-1/2 z-30 transform -translate-x-1/2 p-2 rounded-lg lg:rounded-full flex-col w-[90%] lg:w-[80%] bg-gray-200 dark:bg-gray-900 border border-gray-500 text-center flex lg:flex-row items-center justify-between transition-transform duration-500 ${isClosed ? 'translate-y-full' : ''}`} style={{ right: isClosed ? '100%' : 'auto' }}>
         <p className='pl-2 text-xs flex flex-col space-y-2 lg:space-y-0 lg:flex-row items-center gap-x-4 text-gray-600 dark:text-gray-200'>
           <Image src="/icons/cookies.png" alt='icon' width={24} height={24}/>
-          <span>{data.cookiesFormText}</span>
+          <span>{texts['cookiesFormText']}</span>
         </p>
         <div className='flex flex-col lg:flex-row gap-x-2 items-center'>
           <Link href="/" className='dark:text-bermuda-400 text-bermuda-600 mr-0 mt-2 lg:mt-0 lg:mr-2 text-xs underline underline-offset-2 font-semibold'>
-            {data.cookiesBtn1}
+            {texts['cookiesBtn1']}
           </Link>
           <div className='my-2 lg:my-0 lg:mt-0 lg:space-x-2 mt-4 space-x-4'>
             <button onClick={handleAccept} className='bg-bermuda-500 hover:bg-bermuda-600 transition duration-300 text-white rounded-full py-0.5 px-4'>
-              {data.cookiesBtn2}
+              {texts['cookiesBtn2']}
             </button>
             <button onClick={handleNecessary} className='bg-bermuda-500 hover:bg-bermuda-600 transition duration-300 text-white rounded-full py-0.5 px-4'>
-             {data.cookiesBtn3}
+            {texts['cookiesBtn3']}
             </button>       
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function CookiesForm() {
             <div className='group relative'>
                 <IoIosArrowBack className='text-white rotate-90 mt-1' />
                 <span className="absolute -top-8 ml-1 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-300">
-                    {data.cookiesBtn4}
+                {texts['cookiesBtn4']}
                 </span>
             </div>
         </div>

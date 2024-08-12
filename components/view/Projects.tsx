@@ -10,15 +10,15 @@ import { Button } from "../ui/button";
 import { FaLaptopCode } from "react-icons/fa";
 import Link from "next/link";
 
-import { useLanguage } from '@/context/language-context';
+import { useTexts } from '@/context/texts-context';
 
 export default function ProjectsSection() {
-  const { data } = useLanguage();
+  const { texts } = useTexts();
   const { ref } = useSectionInView("Projekty", 0.5);
 
   return (
     <section ref={ref} id="projekty" className="scroll-mt-28 w-full mx-auto mt-48 mb-28">
-      <SectionTitle heading={data.projectsTitle} className="" subHeading={data.projectsDescription} />
+      <SectionTitle heading={texts['projectsTitle']} className="" subHeading={texts['projectsDescription']} />
       <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
@@ -30,7 +30,7 @@ export default function ProjectsSection() {
         <Link href="/dalsi-projekty" className="mt-12 mx-auto active:scale-90 duration-200" > 
           <Button size="custom" variant="outline"  className="flex flex-row gap-x-3 items-center" >
               <FaLaptopCode className="w-5 h-5"/> 
-              <span>{data.MoreProjectsBtn}</span>
+              <span>{texts['moreProjectsBtn']}</span>
           </Button> 
         </Link>              
       </div>

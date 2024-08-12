@@ -27,9 +27,12 @@ export default function Header() {
             <span className="font-bold text-bermuda-400"> Losenský</span>Ondřej
           </Link>
           <HeaderLinks />
-          <div className="hidden xl:flex">
-            <CustomDropdown/>                      
+          <div className="hidden xl:flex items-center">
+            <CustomDropdown/>        
+            <span className="opacity-30 px-4">|</span>
+            <ThemeSwitch light="" dark=""/>              
           </div>
+         
         </nav>
       </motion.header>      
     </div>

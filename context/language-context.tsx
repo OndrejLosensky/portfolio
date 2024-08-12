@@ -1,23 +1,19 @@
 "use client"
 
-import React, { createContext, useContext, useState, FC, ReactNode } from 'react';
-import { Data_cz, Data_en, Data_de } from '@/lib/data';
+import React, { createContext, useState, useContext, FC } from 'react';
 
 interface LanguageContextType {
   language: string;
   setLanguage: (lang: string) => void;
-  data: typeof Data_cz | typeof Data_en | typeof Data_de;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider: FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<string>('cz');
-
-  const data = language === 'cz' ? Data_cz : language === 'en' ? Data_en : Data_de;
+export const LanguageProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [language, setLanguage] = useState('cz'); 
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, data }}>
+    <LanguageContext.Provider value={{ language, setLanguage }}>
       {children}
     </LanguageContext.Provider>
   );

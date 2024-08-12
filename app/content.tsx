@@ -32,14 +32,19 @@ export default function Content() {
   return (
     <main className="flex flex-col mx-auto">
       <HeroSection/>
+
       <AboutSection/>
       <BentoGrid/>
       <ProjectsSection/>
+      
       {/* 
       <ExperienceSection/>      
       <NewsletterForm/>
-      */}
+        */}
+        
       <ContactSection/>
+
+          
 
       {/* 
       <h2 className={`dark:text-shark-200 text-shark-600 pb-2 text-center text-sm font-light`}> Tento web byl vytvořen pomocí těchto technologií </h2>

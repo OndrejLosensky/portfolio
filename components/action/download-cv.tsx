@@ -10,11 +10,11 @@ import { MdArrowRightAlt } from "react-icons/md";
 import { Button } from "../ui/button";
 import Image from "next/image";
 
-import { useLanguage } from '@/context/language-context';
+import { useTexts } from '@/context/texts-context';
 
 
 export const DownloadCV = () => {
-    const { data } = useLanguage();
+    const { texts } = useTexts();
 
     const openCVInNewTab = (lang: string) => {
         const url = `/CV/cv_${lang}.pdf`;
@@ -24,7 +24,7 @@ export const DownloadCV = () => {
     return (
         <Dialog>
             <DialogTrigger className="flex flex-row items-center group">
-                <span>{data.showCV}</span>
+                <span>{texts[`showCV`]}</span>
                 <MdArrowRightAlt className='ml-2 w-6 h-7 text-shark-600 dark:text-shark-100 transform group-hover:translate-x-1 transition-transform duration-200' />
             </DialogTrigger>
             <DialogContent>

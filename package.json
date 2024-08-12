@@ -10,6 +10,7 @@
     "email": "email dev --dir app/emails"
   },
   "dependencies": {
+    "@firebase/app": "^0.10.8",
     "@formspree/react": "^2.5.1",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-dialog": "^1.0.5",
@@ -20,6 +21,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "csv-writer": "^1.6.0",
+    "firebase": "^10.12.5",
     "framer-motion": "^11.3.24",
     "ldrs": "^1.0.2",
     "lucide-react": "^0.395.0",

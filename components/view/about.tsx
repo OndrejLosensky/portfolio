@@ -8,11 +8,12 @@ import Image from "next/image";;
 import Link from "next/link";
 import { WorkExpirience } from "../layout/work-expirience";
 
-import { useLanguage } from '@/context/language-context';
+import { useTexts } from '@/context/texts-context';
 import { skills } from "@/lib/data";
 
 export default function AboutSection() {
-  const { data } = useLanguage();
+  const { texts } = useTexts();
+
   const { ref } = useSectionInView("O mně");
 
   
@@ -30,7 +31,7 @@ export default function AboutSection() {
       },
     }),
   };
-  
+
 
   return (
     <div
@@ -40,24 +41,29 @@ export default function AboutSection() {
     >
       <div className="flex flex-col lg:flex-row">        
         <div className="lg:w-2/3 w-full text-center lg:text-left">
-          <SectionTitle heading={data.AboutMeTitle} subHeading={data.AboutMeDesc} className="hidden md:flex" />
+          <SectionTitle heading={texts['aboutMeTitle']} subHeading={texts['aboutMeDesc']} className="hidden md:flex" />
           <SectionTitleCenter heading="O mě" subHeading="Kdo jsem?" />
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50 mb-4">
-           {data.name}
+           {texts['name']}
           </h2>
-          <div className="flex flex-wrap justify-center lg:justify-start gap-2 mt-4 text-xs md:text-sm">
-            {data.tags.map((tag, index) => (
+          <div className="flex flex-wrap justify-center lg:justify-start gap-2 mt-4 text-xs md:text-sm">            
+            {Array.isArray(texts['tags']) ? texts['tags'].map((tag, index) => (
               <span key={index} className="px-3 py-1 bg-black/10 dark:bg-white/10 rounded-md">
                 {tag}
               </span>
+            )) : texts['tags'].split(',').map((tag, index) => (
+              <span key={index} className="px-3 py-1 bg-black/10 dark:bg-white/10 rounded-md">
+                {tag.trim()}
+              </span>
             ))}
           </div>
+
           <p className="mt-6 w-full md:w-3/4 text-sm text-shark-500 dark:text-shark-200 mx-auto lg:mx-0">
-            {data.AboutDesc}
+            {texts[`aboutDesc`]}
           </p>
 
           <div>
-            <h2 className="text-2xl font-semibold py-2 pt-8"> {data.TechnologiesTitle} </h2>
+            <h2 className="text-2xl font-semibold py-2 pt-8"> {texts['technologiesTitlw']} </h2>
             <ul className="grid grid-cols-8 mt-2 lg:flex lg:flex-wrap gap-4">
               {skills.map((skill, index) => (
                 <motion.li

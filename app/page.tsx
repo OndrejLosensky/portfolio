@@ -20,12 +20,11 @@ export default function Home() {
       </div>
       */}
  
-        <div className="min-h-screen flex flex-col justify-between w-[80%] mx-auto">
+        <div className="min-h-screen flex flex-col justify-between w-[80%] mx-auto">       
           <Header />
           <Content />
           <Footer />
           <CookiesForm/>
-
            {/*  
           <EmailTicket/>
           */}

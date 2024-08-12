@@ -6,7 +6,7 @@ import ThemeContextProvider from "@/context/theme-provider";
 import ActiveSectionContextProvider from "@/context/active-section";
 import ClientLoader from "@/components/loaders/client-loader";
 import { LanguageProvider } from "@/context/language-context";
-
+import { TextsProvider } from "@/context/texts-context";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -26,7 +26,9 @@ export default function RootLayout({
           <ActiveSectionContextProvider>
             <ClientLoader>
               <LanguageProvider>
-                {children}
+                <TextsProvider>
+                  {children}
+                </TextsProvider>
               </LanguageProvider>
             </ClientLoader>
           </ActiveSectionContextProvider>

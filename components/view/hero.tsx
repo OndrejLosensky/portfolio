@@ -12,10 +12,10 @@ import Image from "next/image";
 
 import { socialLinks, SocialLink } from '../../lib/socials';
 
-import { useLanguage } from '@/context/language-context';
+import { useTexts } from '@/context/texts-context';
 
 export default function HeroSection() {
-  const { data } = useLanguage();
+  const { texts } = useTexts();
 
   const handleClick = (url: string) => {
     window.open(url, '_blank');
@@ -48,19 +48,19 @@ export default function HeroSection() {
                 <kbd className="px-[8px] py-[2px] scale-75 dark:bg-shark-700 bg-shark-300 text-shark-600 dark:text-shark-100 rounded-md">CTRL</kbd>
                 <span className="dark:text-shark-100 text-shark-600"> + </span>
                 <kbd className="px-[8px] py-[2px] scale-75 mr-2 dark:bg-shark-700 bg-shark-300 text-shark-600 dark:text-shark-100 rounded-md">H</kbd>
-                <span className="font-light dark:text-shark-100 text-shark-600"> {data.themeToggleText} </span>
+                <span className="font-light dark:text-shark-100 text-shark-600">{texts['themeToggleText']}</span>
               </p> 
               <div className='w-full items-center justify-center mb-8 flex flex-col'>
-                  <h1 className='text-md lg:text-xl mb-2 font-sora font-light flex flex-row'> {data.hello} <Image src="/additional-icons/wave.svg" width={24} height={24} className="mx-1" alt="Wave emoji" />, {data.myNameIs} </h1>
+                  <h1 className='text-md lg:text-xl mb-2 font-sora font-light flex flex-row'> {texts['hello']} <Image src="/additional-icons/wave.svg" width={24} height={24} className="mx-1" alt="Wave emoji" />,{texts['myNameIs']}</h1>
                   <h2 className="md:text-4xl lg:text-5xl text-3xl flex flex-col mb-1 font-bold text-center bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50">
-                    <span> {data.name} </span>
+                    <span>{texts['name']} </span>
                   </h2>
-                  <p className='text-shark-500 dark:text-shark-50 font-light text-wrap w-3/4 lg:w-1/2 text-xs md:text-lg mt-2 mb-6'> {data.heroDescription} </p>
+                  <p className='text-shark-500 dark:text-shark-50 font-light text-wrap w-3/4 lg:w-1/2 text-xs md:text-lg mt-2 mb-6'> {texts['heroDescription']} </p>
                   <div className='flex flex-row gap-x-4 items-center mx-auto'>
                     <Button onClick={() => scrollToSection('o-mne')} className='dark:bg-bermuda-500 dark:hover:bg-bermuda-600 bg-bermuda-500 text-shark-100 px-4 py-2 rounded-md hover:bg-bermuda-600 active:bg-bermuda-700 active:scale-90 duration-200'> 
-                        {data.continueBtn}
+                        {texts['continueBtn']}
                     </Button>
-                    <DownloadCV/>                
+                    <DownloadCV/>               
                   </div>
 
                   <div className="mt-8 flex flex-row items-center gap-x-4">

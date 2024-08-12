@@ -1,7 +1,7 @@
+// CustomDropdown.tsx
 import { useState, useRef, useEffect, FC } from 'react';
 import Image from 'next/image';
 import { FaChevronDown } from 'react-icons/fa';
-import ThemeSwitch from '@/context/theme-switcher';
 import { useLanguage } from '@/context/language-context';
 
 interface LanguageOption {
@@ -13,8 +13,10 @@ interface LanguageOption {
 
 const languages: LanguageOption[] = [
   { value: 'cz', label: 'Čeština', icon: '/additional-icons/cz.svg' },
+  /*
   { value: 'en', label: 'English', icon: '/additional-icons/en.svg' },
   { value: 'de', label: 'German', icon: '/additional-icons/de.svg' }
+   */
 ];
 
 const CustomDropdown: FC = () => {
@@ -71,8 +73,6 @@ const CustomDropdown: FC = () => {
           </div>
         )}
       </div>
-      <span className="opacity-30">|</span>
-      <ThemeSwitch light="" dark="" />
     </div>
   );
 };
