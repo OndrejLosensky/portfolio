@@ -59,51 +59,52 @@ const ContentTab: React.FC = () => {
 
   return (
     <div>
-      <h2 className="text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-8">Editace Textu</h2>
+      <h2 className="text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-8">Editace obsahu</h2>
 
-      <div className="mb-6">
-        <label htmlFor="language-select" className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
-          Vyber Jazyk Stránky
-        </label>
-        <select
-          id="language-select"
-          value={language}
-          onChange={handleLanguageChange}
-          className="block w-full p-3 border border-gray-300 dark:bg-gray-600 bg-gray-300 rounded-md shadow-sm"
-        >
-          <option value="cz">Čeština</option>
-          <option value="en">Angličtina</option>
-          <option value="de">Němčina</option>
-        </select>
+      <div className='flex justify-between w-full gap-x-4 mb-4'>
+        <div className="w-1/3">
+          <label htmlFor="language-select" className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
+            Vyber Jazyk Stránky
+          </label>
+          <select
+            id="language-select"
+            value={language}
+            onChange={handleLanguageChange}
+            className="block w-full p-3 border border-gray-300 dark:bg-gray-600 bg-gray-300 rounded-md shadow-sm"
+          >
+            <option value="cz">🇨🇿 Čeština</option>
+            <option value="en">🇬🇧 Angličtina</option>
+            <option value="de">🇩🇪 Němčina</option>
+          </select>
+        </div>
+
+        <div className="w-2/3">
+          <label htmlFor="key-select" className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
+            Vyber Klíč
+          </label>
+          <select
+            id="key-select"
+            value={selectedKey}
+            onChange={handleKeyChange}
+            className="block w-full p-3 border dark:bg-gray-600 bg-gray-300 border-gray-300 rounded-md shadow-sm"
+          >
+            <option value="">-- Vyber --</option>
+            {filteredKeys.map((key) => (
+              <option key={key} value={key}>
+                {key}
+              </option>
+            ))}
+          </select>
+        </div>        
       </div>
-
       <div className="mb-6">
-        <label htmlFor="key-select" className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
-          Vyber Klíč
-        </label>
-        <select
-          id="key-select"
-          value={selectedKey}
-          onChange={handleKeyChange}
-          className="block w-full p-3 border dark:bg-gray-600 bg-gray-300 border-gray-300 rounded-md shadow-sm"
-        >
-          <option value="">-- Vyber --</option>
-          {filteredKeys.map((key) => (
-            <option key={key} value={key}>
-              {key}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <div className="mb-6">
-        <label htmlFor="show-only-null" className="inline-flex items-center text-lg text-gray-700 dark:text-gray-300">
+        <label htmlFor="show-only-null" className="inline-flex items-center text-md text-gray-700 dark:text-gray-300">
           <input
             type="checkbox"
             id="show-only-null"
             checked={showOnlyNull}
             onChange={handleCheckboxChange}
-            className="form-checkbox h-5 w-5 text-blue-600 dark:bg-gray-600 bg-gray-300"
+            className="form-checkbox h-4 w-4 text-blue-600 dark:bg-gray-600 bg-gray-300"
           />
           <span className="ml-2">Zobrazit pouze klíče s prázdnou hodnotou</span>
         </label>

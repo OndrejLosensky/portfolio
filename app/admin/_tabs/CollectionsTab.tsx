@@ -68,13 +68,13 @@ const CollectionTab: React.FC = () => {
 
   return (
     <div>
-      <h2 className="text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-8">Editace Datových sad</h2>
+      <h2 className="text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-8">Editace datových sad</h2>
 
       <div className="flex justify-between mb-6 gap-x-4">
         {/* Language Selector */}
         <div className="w-1/3">
           <label htmlFor="language-select" className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Vyber Jazyk Stránky
+            Vyber jazyk Stránky
           </label>
           <select
             id="language-select"
@@ -82,9 +82,9 @@ const CollectionTab: React.FC = () => {
             onChange={handleLanguageChange}
             className="block w-full p-3 border dark:bg-gray-600 bg-gray-300 border-gray-300 rounded-md shadow-sm"
           >
-            <option value="cz">Čeština</option>
-            <option value="en">Angličtina</option>
-            <option value="de">Němčina</option>
+            <option value="cz">🇨🇿 Čeština</option>
+            <option value="en">🇬🇧 Angličtina</option>
+            <option value="de">🇩🇪 Němčina</option>
           </select>
         </div>
 
@@ -108,6 +108,7 @@ const CollectionTab: React.FC = () => {
           </select>
         </div>
       </div>
+
 
       {selectedKey && (
         <div className="mb-8">
