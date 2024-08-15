@@ -42,21 +42,22 @@ export default function AboutSection() {
       <div className="flex flex-col lg:flex-row">        
         <div className="lg:w-2/3 w-full text-center lg:text-left">
           <SectionTitle heading={texts['aboutMeTitle']} subHeading={texts['aboutMeDesc']} className="hidden md:flex" />
-          <SectionTitleCenter heading="O mě" subHeading="Kdo jsem?" />
+          <SectionTitleCenter heading={texts['aboutMeTitle']} subHeading={texts['aboutMeDesc']} />
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50 mb-4">
            {texts['name']}
           </h2>
-          <div className="flex flex-wrap justify-center lg:justify-start gap-2 mt-4 text-xs md:text-sm">            
-            {Array.isArray(texts['tags']) ? texts['tags'].map((tag, index) => (
+          <div className="flex flex-wrap justify-center lg:justify-start gap-2 mt-4 text-xs md:text-sm">
+          {Array.isArray(texts['tags']) ? (
+            texts['tags'].map((tag, index) => (
               <span key={index} className="px-3 py-1 bg-black/10 dark:bg-white/10 rounded-md">
                 {tag}
               </span>
-            )) : texts['tags'].split(',').map((tag, index) => (
-              <span key={index} className="px-3 py-1 bg-black/10 dark:bg-white/10 rounded-md">
-                {tag.trim()}
-              </span>
-            ))}
-          </div>
+            ))
+          ) : (
+            <p>No tags found</p>
+          )}
+        </div>
+
 
           <p className="mt-6 w-full md:w-3/4 text-sm text-shark-500 dark:text-shark-200 mx-auto lg:mx-0">
             {texts[`aboutDesc`]}

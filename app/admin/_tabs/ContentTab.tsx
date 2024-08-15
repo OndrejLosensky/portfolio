@@ -3,7 +3,7 @@ import { useLanguage } from '@/context/language-context';
 import { db, doc, getDoc, setDoc } from '../../../firebaseConfig';
 
 type Texts = {
-  [key: string]: string | string[]; 
+  [key: string]: string | string[];
 };
 
 const ContentTab: React.FC = () => {
@@ -12,6 +12,7 @@ const ContentTab: React.FC = () => {
   const [selectedKey, setSelectedKey] = useState<string>('');
   const [newValue, setNewValue] = useState<string>('');
   const [showOnlyNull, setShowOnlyNull] = useState<boolean>(false);
+  const [buttonText, setButtonText] = useState<string>('Uložit');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -43,16 +44,19 @@ const ContentTab: React.FC = () => {
   };
 
   const handleSave = async () => {
+    setButtonText('SAVING...');
     const updatedTexts = { ...texts, [selectedKey]: newValue };
     setTexts(updatedTexts);
     await setDoc(doc(db, 'texts', language), updatedTexts);
+    setTimeout(() => {
+      setButtonText('Uložit');
+    }, 500); // Display "SAVING..." for 500ms
   };
 
   const handleCheckboxChange = () => {
     setShowOnlyNull(!showOnlyNull);
   };
 
-  // Filter keys that are strings, excluding arrays
   const filteredKeys = showOnlyNull
     ? Object.keys(texts).filter((key) => typeof texts[key] === 'string' && !texts[key])
     : Object.keys(texts).filter((key) => typeof texts[key] === 'string');
@@ -61,7 +65,7 @@ const ContentTab: React.FC = () => {
     <div>
       <h2 className="text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-8">Editace obsahu</h2>
 
-      <div className='flex justify-between w-full gap-x-4 mb-4'>
+      <div className="flex justify-between w-full gap-x-4 mb-4">
         <div className="w-1/3">
           <label htmlFor="language-select" className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
             Vyber Jazyk Stránky
@@ -95,8 +99,9 @@ const ContentTab: React.FC = () => {
               </option>
             ))}
           </select>
-        </div>        
+        </div>
       </div>
+
       <div className="mb-6">
         <label htmlFor="show-only-null" className="inline-flex items-center text-md text-gray-700 dark:text-gray-300">
           <input
@@ -110,26 +115,36 @@ const ContentTab: React.FC = () => {
         </label>
       </div>
 
-      {selectedKey && (
-        <div className="mb-8">
-          <label htmlFor="value-input" className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Hodnota
-          </label>
-          <textarea
-            id="value-input"
-            value={newValue}
-            onChange={handleValueChange}
-            rows={4}
-            className="block w-full p-3 border border-gray-300 dark:bg-gray-600 bg-gray-300 rounded-md shadow-sm"
-          />
-          <button
-            onClick={handleSave}
-            className="mt-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded-md shadow-sm hover:bg-blue-700 focus:outline-none"
-          >
-            Uložit
-          </button>
-        </div>
-      )}
+      <div className="mb-8">
+        <label htmlFor="value-input" className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
+          Hodnota
+        </label>
+        <textarea
+          id="value-input"
+          value={newValue}
+          onChange={handleValueChange}
+          rows={4}
+          className="block w-full p-3 border border-gray-300 dark:bg-gray-600 bg-gray-300 rounded-md shadow-sm"
+        />
+        <button
+          onClick={handleSave}
+          className="mt-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded-md shadow-sm hover:bg-blue-700 focus:outline-none"
+        >
+          {buttonText}
+        </button>
+      </div>
+
+      <div className="mt-8">
+        <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-4">Obsah</h3>
+        <ul className="space-y-4">
+          {Object.entries(texts).map(([key, value]) => (
+            <li key={key} className="flex justify-between items-center p-4 bg-gray-100 dark:bg-gray-700 rounded-md shadow-sm">
+              <span className="font-medium text-gray-700 dark:text-gray-300">{key}</span>
+              <span className="text-gray-600 dark:text-gray-400">{typeof value === 'string' ? value : ''}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

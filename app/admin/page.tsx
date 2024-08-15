@@ -14,34 +14,36 @@ const AdminPage: React.FC = () => {
 
   return (
     <div className="flex min-h-screen">
-      <div className="w-1/6 bg-gray-800 text-white flex flex-col justify-between p-6">
+      <div className="w-1/6 m-4 rounded-lg border dark:border-gray-200/50 border-gray-600/60 bg-gray-800 text-white flex flex-col justify-between p-4">
         <nav className="flex flex-col gap-4">
-          <h2 className="text-3xl font-semibold mb-6">Menu</h2>
+          <h2 className="text-2xl font-semibold mb-2 font-mono">Menu</h2>
           <button
             onClick={() => setActiveTab('content')}
-            className={`p-3 rounded-md text-left ${activeTab === 'content' ? 'bg-gray-700' : 'bg-gray-600'} hover:bg-gray-700`}
+            className={`p-3 rounded-md text-left ${activeTab === 'content' ? 'text-bermuda-600 bg-bermuda-200' : 'bg-gray-600'} hover:bg-bermuda-300 hover:text-bermuda-600`}
           >
             Obsah
           </button>
+          {/* 
           <button
             onClick={() => setActiveTab('collections')}
-            className={`p-3 rounded-md text-left ${activeTab === 'collections' ? 'bg-gray-700' : 'bg-gray-600'} hover:bg-gray-700`}
+            className={`p-3 rounded-md text-left ${activeTab === 'collections' ? 'text-bermuda-600 bg-bermuda-200' : 'bg-gray-600'} hover:bg-bermuda-600 hover:text-bermuda-200`}
           >
             Datové sady
           </button>
           <button
             onClick={() => setActiveTab('projects')}
-            className={`p-3 rounded-md text-left ${activeTab === 'projects' ? 'bg-gray-700' : 'bg-gray-600'} hover:bg-gray-700`}
+            className={`p-3 rounded-md text-left ${activeTab === 'projects' ? 'text-bermuda-600 bg-bermuda-200' : 'bg-gray-600'} hover:bg-bermuda-600 hover:text-bermuda-200`}
           >
             Projekty
           </button>
 
           <button
             onClick={() => setActiveTab('navigation')}
-            className={`p-3 rounded-md text-left ${activeTab === 'navigation' ? 'bg-gray-700' : 'bg-gray-600'} hover:bg-gray-700`}
+            className={`p-3 rounded-md text-left ${activeTab === 'navigation' ? 'text-bermuda-600 bg-bermuda-200' : 'bg-gray-600'} hover:bg-bermuda-600 hover:text-bermuda-200`}
           >
             Navigace
           </button>
+          */}
         </nav>
         <Button className="active:scale-90 dark:hover:bg-bermuda-500 duration-300">
             <Link href="/" className="flex flex-row items-center gap-x-2"> 
@@ -51,7 +53,7 @@ const AdminPage: React.FC = () => {
         </Button>
       </div>
 
-      <div className="flex-1 p-10 bg-gray-100 dark:bg-gray-700">
+      <div className="flex-1 p-10">
         {activeTab === 'content' && <ContentTab />}
         {activeTab === 'collections' && <CollectionsTab />}
         {activeTab === 'projects' && <ProjectsTab />}

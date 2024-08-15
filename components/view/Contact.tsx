@@ -1,6 +1,5 @@
 "use client";
 
-import SectionTitle from "../layout/section-title";
 import { useSectionInView } from "@/lib/hooks";
 import { useForm, ValidationError } from '@formspree/react';
 import { IoIosSend } from "react-icons/io";
@@ -15,6 +14,8 @@ import {
 } from '@/components/ui/toast';
 
 import { useTexts } from '@/context/texts-context';
+import SectionTitleCenter from "../layout/section-title-center";
+import SectionTitle from "../layout/section-title";
 
 
 export default function ContactSection() {
@@ -61,12 +62,15 @@ export default function ContactSection() {
 
   return (
     <ToastProvider>
-      <div id="kontakt" ref={ref} className="relative min-h-screen max-h-screen w-full lg:w-2/3 mx-auto z-10">
-        <SectionTitle heading={texts['contactTitle']} className="" subHeading={texts['contactDescription']} />
-        <span className="text-sm font-light text-shark-300"> {texts['contactSmallText1']} <br />{texts['contactSmallText2']} </span>        
+      <div id="kontakt" ref={ref} className="relative min-h-screen max-h-screen w-full lg:w-2/3 mx-auto pt-32 z-10">
+        <SectionTitle heading={texts['contactTitle']} subHeading="" className="flex items-center justify-center" />
+        <h2 className="text-center text-xl md:text-3xl font-bold"> Zajímá vás něco? Napište mi! </h2>
+    
+        <span className="justify-center text-md text-center w-2/3 pt-4 mx-auto flex font-light text-shark-300"> <span> {texts['contactSmallText1']}. {texts['contactSmallText2']}. Můj email je: <span className="font-semibold text-sky-300 underline underline-offset-1"> losenskyondrej@gmail.com </span> </span> </span>        
         <div className="bg-[#8af8eb] absolute top-[2rem] -z-10 right-[0rem] lg:right-[-5rem] dark:bg-opacity-75 h-[31.25rem] w-[31.25rem] md:w-[60rem] rounded-full blur-[15rem] ] dark:bg-[#56b595]"></div>
         
-        <div>
+        {/* 
+        <div>        
           <form onSubmit={handleSubmit} className="relative bg-text-light/70 mt-8 z-20 px-4 sm:px-8 py-6 dark:hover:border-shark-300 hover:border-shark-900 border border-shark-400 duration-300 dark:bg-main/60 rounded-md mx-auto w-full">
             <div className="mb-4">
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-shark-100">
@@ -132,6 +136,7 @@ export default function ContactSection() {
             </div>
           </form>
         </div>
+        */}
 
         {showSuccessToast && (
           <Toast className="border-0 border-transparent">
