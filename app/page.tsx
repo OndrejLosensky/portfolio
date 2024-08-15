@@ -24,7 +24,9 @@ export default function Home() {
           <Header />
           <Content />
           <Footer />
+          {/* 
           <CookiesForm/>
+          */}
            {/*  
           <EmailTicket/>
           */}
