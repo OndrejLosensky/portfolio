@@ -54,7 +54,7 @@ export default function AboutSection() {
               </span>
             ))
           ) : (
-            <p>No tags found</p>
+            <p>{texts['noTagsFound']}</p>
           )}
         </div>
 

@@ -44,13 +44,13 @@ const ContentTab: React.FC = () => {
   };
 
   const handleSave = async () => {
-    setButtonText('SAVING...');
+    setButtonText('Ukládám...');
     const updatedTexts = { ...texts, [selectedKey]: newValue };
     setTexts(updatedTexts);
     await setDoc(doc(db, 'texts', language), updatedTexts);
     setTimeout(() => {
       setButtonText('Uložit');
-    }, 500); // Display "SAVING..." for 500ms
+    }, 400);
   };
 
   const handleCheckboxChange = () => {
@@ -67,14 +67,14 @@ const ContentTab: React.FC = () => {
 
       <div className="flex justify-between w-full gap-x-4 mb-4">
         <div className="w-1/3">
-          <label htmlFor="language-select" className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="language-select" className="block text-sm md:text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
             Vyber Jazyk Stránky
           </label>
           <select
             id="language-select"
             value={language}
             onChange={handleLanguageChange}
-            className="block w-full p-3 border border-gray-300 dark:bg-gray-600 bg-gray-300 rounded-md shadow-sm"
+            className="block w-full p-2 md:p-3 border border-gray-300 dark:bg-gray-600 bg-gray-300 rounded-md shadow-sm"
           >
             <option value="cz">🇨🇿 Čeština</option>
             <option value="en">🇬🇧 Angličtina</option>
@@ -83,14 +83,14 @@ const ContentTab: React.FC = () => {
         </div>
 
         <div className="w-2/3">
-          <label htmlFor="key-select" className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label htmlFor="key-select" className="block text-sm md:text-xlfont-medium text-gray-700 dark:text-gray-300 mb-2">
             Vyber Klíč
           </label>
           <select
             id="key-select"
             value={selectedKey}
             onChange={handleKeyChange}
-            className="block w-full p-3 border dark:bg-gray-600 bg-gray-300 border-gray-300 rounded-md shadow-sm"
+            className="block w-full p-2 md:p-3 border dark:bg-gray-600 bg-gray-300 border-gray-300 rounded-md shadow-sm"
           >
             <option value="">-- Vyber --</option>
             {filteredKeys.map((key) => (
@@ -134,7 +134,7 @@ const ContentTab: React.FC = () => {
         </button>
       </div>
 
-      <div className="mt-8">
+      <div className="mt-16">
         <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-4">Obsah</h3>
         <ul className="space-y-4">
           {Object.entries(texts).map(([key, value]) => (

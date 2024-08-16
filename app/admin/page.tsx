@@ -13,8 +13,8 @@ const AdminPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'content' | 'collections' | 'projects'| 'navigation' >('content');
 
   return (
-    <div className="flex min-h-screen">
-      <div className="w-1/6 m-4 rounded-lg border dark:border-gray-200/50 border-gray-600/60 bg-gray-800 text-white flex flex-col justify-between p-4">
+    <div className="flex max-h-screen">
+      <div className="w-1/6 m-4 sticky top-0 rounded-lg border dark:border-gray-200/50 border-gray-600/60 bg-gray-800 text-white flex flex-col justify-between p-4">
         <nav className="flex flex-col gap-4">
           <h2 className="text-2xl font-semibold mb-2 font-mono">Menu</h2>
           <button
@@ -53,7 +53,7 @@ const AdminPage: React.FC = () => {
         </Button>
       </div>
 
-      <div className="flex-1 p-10">
+      <div className="h-screen overflow-auto flex-1 p-10">
         {activeTab === 'content' && <ContentTab />}
         {activeTab === 'collections' && <CollectionsTab />}
         {activeTab === 'projects' && <ProjectsTab />}

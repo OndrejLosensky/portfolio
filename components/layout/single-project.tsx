@@ -24,7 +24,7 @@ export default function Project({
   return (
     <div className="bg-gray-200 border border-black/30 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-auto flex flex-col justify-between h-full">
       <section className="flex flex-col flex-grow">
-        <div className={`w-full ${gradient}`}>
+        <div className={`w-full bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 dark:from-green-400 dark:via-blue-400 dark:to-purple-500 ${gradient}`}>
           <Image
             src={imageUrl}
             alt={title} 

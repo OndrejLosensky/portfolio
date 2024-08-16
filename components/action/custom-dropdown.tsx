@@ -13,8 +13,8 @@ interface LanguageOption {
 
 const languages: LanguageOption[] = [
   { value: 'cz', label: 'Čeština', icon: '/additional-icons/cz.svg' },
-  /*
   { value: 'en', label: 'English', icon: '/additional-icons/en.svg' },
+  /*
   { value: 'de', label: 'German', icon: '/additional-icons/de.svg' }
    */
 ];

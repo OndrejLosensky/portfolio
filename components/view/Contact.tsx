@@ -62,11 +62,11 @@ export default function ContactSection() {
 
   return (
     <ToastProvider>
-      <div id="kontakt" ref={ref} className="relative min-h-screen max-h-screen w-full lg:w-2/3 mx-auto pt-32 z-10">
+      <div id="kontakt" ref={ref} className="relative w-full lg:w-2/3 mx-auto py-32 my-20 z-10">
         <SectionTitle heading={texts['contactTitle']} subHeading="" className="flex items-center justify-center" />
-        <h2 className="text-center text-xl md:text-3xl font-bold"> Zajímá vás něco? Napište mi! </h2>
+        <h2 className="text-center text-xl md:text-3xl font-bold"> {texts['contactHeading']} </h2>
     
-        <span className="justify-center text-md text-center w-2/3 pt-4 mx-auto flex font-light text-shark-300"> <span> {texts['contactSmallText1']}. {texts['contactSmallText2']}. Můj email je: <span className="font-semibold text-sky-300 underline underline-offset-1"> losenskyondrej@gmail.com </span> </span> </span>        
+        <span className="justify-center text-md text-center w-2/3 pt-4 mx-auto flex font-light text-shark-300"> <span> {texts['contactSmallText1']}. {texts['contactSmallText2']}. {texts['myEmailIs']} <span className="font-semibold text-sky-300 underline underline-offset-1"> {texts['email']} </span> </span> </span>        
         <div className="bg-[#8af8eb] absolute top-[2rem] -z-10 right-[0rem] lg:right-[-5rem] dark:bg-opacity-75 h-[31.25rem] w-[31.25rem] md:w-[60rem] rounded-full blur-[15rem] ] dark:bg-[#56b595]"></div>
         
         {/* 
@@ -137,6 +137,7 @@ export default function ContactSection() {
           </form>
         </div>
         */}
+      
 
         {showSuccessToast && (
           <Toast className="border-0 border-transparent">

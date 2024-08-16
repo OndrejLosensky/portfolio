@@ -67,7 +67,7 @@ const BentoGrid: React.FC = () => {
                   <div className="relative z-20 p-6 flex flex-col justify-between w-full items-center lg:w-2/3 h-full">
                     <div>
                       <span className="inline-block bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
-                        {texts['newest project']}                      
+                        {texts['newest project']}    {texts['newestProject']}                 
                       </span>
                       <h3 className="mt-4 text-white text-2xl w-full lg:text-3xl font-bold leading-tight">
                         {texts['projecttitle']}
