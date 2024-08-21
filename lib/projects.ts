@@ -1,7 +1,7 @@
 import datadepot from "@/public/mockups/datadepot.png";
-import kralovskalevandule from "@/public/mockups/kralovska-levandule.png";
+import kralovskalevandule from "@/public/mockups/kl.png";
 import codecommerce from "@/public/mockups/codecommerce.png";
-import demonicka from "@/public/mockups/demonicka2.png";
+import demonicka from "@/public/mockups/demonicka.png";
 import soon from "@/public/soon.png";
 
 export const projectsData = [
