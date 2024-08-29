@@ -65,7 +65,7 @@ export default function AboutSection() {
 
           <div>
             <h2 className="text-2xl font-semibold py-2 pt-8"> {texts['technologiesTitlw']} </h2>
-            <ul className="grid grid-cols-8 mt-2 lg:flex lg:flex-wrap gap-4">
+            <ul className="grid grid-cols-5 mt-2 lg:flex lg:flex-wrap gap-4">
               {skills.map((skill, index) => (
                 <motion.li
                   key={index}
