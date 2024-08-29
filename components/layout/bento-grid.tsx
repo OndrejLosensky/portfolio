@@ -78,7 +78,7 @@ const BentoGrid: React.FC = () => {
                     </div>                   
                   </div>
 
-                  <div className="absolute right-0 bottom-0 w-[50%] h-full transform rotate-6 translate-x-20 translate-y-28 md:translate-x-24 md:translate-y-8">
+                  <div className="absolute right-0 bottom-0 w-[50%] h-full transform rotate-6 translate-x-20 translate-y-12 lg:translate-y-28 md:translate-x-24 md:translate-y-8">
                     <Image
                       src="/mockups/kralovska-levandule.png"
                       width={500}

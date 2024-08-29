@@ -87,7 +87,7 @@ export default function AboutSection() {
         </div>
     
         <div className="lg:w-1/3 w-2/3 relative mx-auto mt-12 lg:mt-0">
-          <div className="bg-[#3c8d77] absolute top-[-2rem] left-[-2rem] -rotate-45 opacity-30 h-[20rem] w-[20rem] rounded-full blur-[2em] dark:bg-[#82e8cf]"></div>
+          <div className="bg-[#3c8d77] absolute top-[-2rem] left-[-4rem] -rotate-45 opacity-30 h-[20rem] w-[20rem] rounded-full blur-[2em] dark:bg-[#82e8cf]"></div>
           <Image
             src="/profile_pic.png"
             height={800}
