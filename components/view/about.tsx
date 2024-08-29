@@ -87,7 +87,6 @@ export default function AboutSection() {
         </div>
     
         <div className="lg:w-1/3 w-2/3 relative mx-auto mt-12 lg:mt-0">
-          <div className="bg-[#3c8d77] absolute top-[-2rem] left-[-4rem] -rotate-45 opacity-30 h-[20rem] w-[20rem] rounded-full blur-[2em] dark:bg-[#82e8cf]"></div>
           <Image
             src="/profile_pic.png"
             height={800}
@@ -101,7 +100,6 @@ export default function AboutSection() {
   
       <WorkExpirience />
   
-      <div className="bg-[#3c8d77] absolute bottom-[-12rem] -z-20 left-[-4rem] md:left-[-8rem] lg:left-[-18rem] opacity-30 h-[10rem] md:h-[20rem] lg:w-[35rem] w-[20rem] rounded-full blur-[3em] dark:bg-[#6bf7d4]"></div>
     </div>
   );
   
