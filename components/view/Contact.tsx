@@ -69,9 +69,9 @@ export default function ContactSection() {
   return (
     <ToastProvider>
       <div id="kontakt" ref={ref} className="relative w-full lg:w-full mx-auto py-32 my-20 z-10">
-        {/*}
-          <div className="bg-[#8af8eb] absolute top-[2rem] -z-10 right-[0rem] lg:right-[-5rem] dark:bg-opacity-75 h-[31.25rem] w-[31.25rem] md:w-[60rem] rounded-full blur-[15rem] ] dark:bg-[#56b595]"></div>
-        */}
+
+          <div className="bg-[#8af8eb] absolute top-[2rem] -z-10 right-[0rem] lg:right-[-5rem] dark:bg-opacity-75 h-[0rem] md:h-[32rem] w-[0rem] md:w-[60rem] rounded-full blur-[15rem] ] dark:bg-[#56b595]"></div>
+
 
       {/* 
         <div className="w-full z-10 p-8 rounded-2xl  shadow-lg bg-gradient-to-br min-h-[150px] flex flex-row items-center justify-between from-bermuda-400 to-bermuda-600">
