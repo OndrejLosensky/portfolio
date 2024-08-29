@@ -62,7 +62,6 @@ export default function HeroSection() {
                   <div className='flex flex-row gap-x-4 items-center mx-auto'>
                     <Button onClick={() => scrollToSection('o-mne')} className='dark:bg-bermuda-500 dark:hover:bg-bermuda-600 bg-bermuda-500 text-shark-100 flex flex-row items-center gap-x-2 px-4 py-2 rounded-md hover:bg-bermuda-600 active:bg-bermuda-700 active:scale-90 duration-200'> 
                         <span>{texts['continueBtn']}</span>
-                        <IoIosArrowRoundDown className="w-6 h-6"/>
                     </Button>
                     <DownloadCV/>               
                   </div>
