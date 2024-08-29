@@ -7,6 +7,9 @@ import { motion } from "framer-motion";
 import { DownloadCV } from "../action/download-cv";
 import { Button } from "../ui/button";
 
+import { IoIosArrowRoundDown } from "react-icons/io";
+
+
 import '../../styles/arrow.css';
 import Image from "next/image";
 
@@ -57,8 +60,9 @@ export default function HeroSection() {
                   </h2>
                   <p className='text-shark-500 dark:text-shark-50 font-light text-wrap w-3/4 lg:w-1/2 text-xs md:text-lg mt-2 mb-6'> {texts['heroDescription']} </p>
                   <div className='flex flex-row gap-x-4 items-center mx-auto'>
-                    <Button onClick={() => scrollToSection('o-mne')} className='dark:bg-bermuda-500 dark:hover:bg-bermuda-600 bg-bermuda-500 text-shark-100 px-4 py-2 rounded-md hover:bg-bermuda-600 active:bg-bermuda-700 active:scale-90 duration-200'> 
-                        {texts['continueBtn']}
+                    <Button onClick={() => scrollToSection('o-mne')} className='dark:bg-bermuda-500 dark:hover:bg-bermuda-600 bg-bermuda-500 text-shark-100 flex flex-row items-center gap-x-2 px-4 py-2 rounded-md hover:bg-bermuda-600 active:bg-bermuda-700 active:scale-90 duration-200'> 
+                        <span>{texts['continueBtn']}</span>
+                        <IoIosArrowRoundDown className="w-6 h-6"/>
                     </Button>
                     <DownloadCV/>               
                   </div>

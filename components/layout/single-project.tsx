@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { CiGlobe } from "react-icons/ci";
 import { FaGithub, FaShoppingBasket } from "react-icons/fa";
-import { projectsData } from "@/lib/projects";
+import { projectsData, sideProjectsData } from "@/lib/projects";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -22,7 +22,7 @@ export default function Project({
   return (
     <div className={`bg-gray-200 border border-black/30 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-auto flex flex-col justify-between h-full`}>
       <section className={`flex flex-col flex-grow ${disabled ? 'grayscale' : ''}`}>
-        <div className={`w-full ${disabled ? 'bg-gray-500' : gradient}`}>
+        <div className={`w-full ${disabled ? 'bg-gray-500' : 'bg-gradient-to-br from-green-500 via-malibu-500 to-rose-500'}`}>
           <Image
             src={imageUrl}
             alt={title}

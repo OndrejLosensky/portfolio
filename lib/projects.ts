@@ -26,7 +26,22 @@ export const projectsData = [
     gradient: 'bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 dark:from-green-300 dark:via-teal-500 dark:to-indigo-600', 
     otherLink: undefined,
     disabled: false, 
+  },  
+  {
+    title: "CodeCommerce",
+    description: "Webová aplikace pro správu jednoduchého e-shopu pomocí administrátorského panelu",
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "ClerkAuth", "Prisma"],
+    imageUrl: soon,
+    githubLink: 'https://github.com/OndrejLosensky/code-commerce',
+    websiteLink: undefined,
+    gradient: 'bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 dark:from-green-300 dark:via-teal-500 dark:to-indigo-600', 
+    otherLink: undefined,
+    disabled: true,
   }, 
+] as const;
+
+
+export const sideProjectsData = [
   {
     title: "DataDepot",
     description: "Jednoduchá aplikace pro správu hesel, poznámek a code snippets vše společně s přehlednou stránkou na statistiky a plně funkční registrací",
@@ -48,27 +63,16 @@ export const projectsData = [
     gradient: 'bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 dark:from-green-300 dark:via-teal-500 dark:to-indigo-600', 
     otherLink: undefined,
     disabled: false,
-  }, 
+  },     
   {
-    title: "CodeCommerce",
+    title: "TaskBoard",
     description: "Webová aplikace pro správu jednoduchého e-shopu pomocí administrátorského panelu",
     tags: ["Next.js", "TypeScript", "TailwindCSS", "ClerkAuth", "Prisma"],
-    imageUrl: soon,
+    imageUrl: codecommerce,
     githubLink: 'https://github.com/OndrejLosensky/code-commerce',
     websiteLink: undefined,
     gradient: 'bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 dark:from-green-300 dark:via-teal-500 dark:to-indigo-600', 
     otherLink: undefined,
-    disabled: true,
-  }, 
-  {
-    title: "CodeCommerce",
-    description: "Webová aplikace pro správu jednoduchého e-shopu pomocí administrátorského panelu",
-    tags: ["Next.js", "TypeScript", "TailwindCSS", "ClerkAuth", "Prisma"],
-    imageUrl: soon,
-    githubLink: 'https://github.com/OndrejLosensky/code-commerce',
-    websiteLink: undefined,
-    gradient: 'bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 dark:from-green-300 dark:via-teal-500 dark:to-indigo-600', 
-    otherLink: undefined,
-    disabled: true,
-  },   
+    disabled: false,
+  },     
 ] as const;

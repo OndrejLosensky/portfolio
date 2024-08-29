@@ -4,6 +4,11 @@ import { useSectionInView } from "@/lib/hooks";
 import { useForm, ValidationError } from '@formspree/react';
 import { IoIosSend } from "react-icons/io";
 import { useState, useEffect, ChangeEvent } from "react";
+
+import { MdAlternateEmail } from "react-icons/md";
+import { RxArrowTopRight } from "react-icons/rx";
+import { FaPhoneAlt } from "react-icons/fa";
+
 import {
   ToastProvider,
   Toast,
@@ -16,6 +21,7 @@ import {
 import { useTexts } from '@/context/texts-context';
 import SectionTitleCenter from "../layout/section-title-center";
 import SectionTitle from "../layout/section-title";
+import { Button } from "../ui/button";
 
 
 export default function ContactSection() {
@@ -62,13 +68,38 @@ export default function ContactSection() {
 
   return (
     <ToastProvider>
-      <div id="kontakt" ref={ref} className="relative w-full lg:w-2/3 mx-auto py-32 my-20 z-10">
+      <div id="kontakt" ref={ref} className="relative w-full lg:w-full mx-auto py-32 my-20 z-10">
+        <div className="bg-[#8af8eb] absolute top-[2rem] -z-10 right-[0rem] lg:right-[-5rem] dark:bg-opacity-75 h-[31.25rem] w-[31.25rem] md:w-[60rem] rounded-full blur-[15rem] ] dark:bg-[#56b595]"></div>
+
+      {/* 
+        <div className="w-full z-10 p-8 rounded-2xl  shadow-lg bg-gradient-to-br min-h-[150px] flex flex-row items-center justify-between from-bermuda-400 to-bermuda-600">
+              <div className="">
+                <h2 className="text-3xl pb-2 font-semibold"> Chcete se poradit? Kontaktujte mě </h2>
+                <p> Váháte o tvorbě vašeho projektu, chcete se na něco zeptat, nebo spolupracovat? Pojďme se spojit a vše vyřešit </p>
+                <p className="mt-12 flex flex-row items-center gap-x-8"> 
+                  <span className="flex flex-row gap-x-2 items-center">
+                    <MdAlternateEmail className="w-6 h-6"/> 
+                    <a className="text-malibu-900 dark:hover:text-malibu-700 duration-200 cursor-pointer underline underline-offset-1">losenskyondrej@gmail.com</a> 
+                  </span>
+                  <span className="flex flex-row gap-x-2 items-center">
+                    <FaPhoneAlt className="w-6 h-6"/> 
+                    <a className="text-malibu-900 dark:hover:text-malibu-700 duration-200 cursor-pointer underline underline-offset-1">losenskyondrej@gmail.com</a> 
+                  </span>
+                </p>
+              </div>
+              <Button size="lg"  className="px-8 dark:bg-black flex flex-row items-center gap-x-2 mr-4">
+                  <span> Kontakt</span>
+                  <RxArrowTopRight/>
+              </Button>
+        </div>
+
+        */}
+        
+      
         <SectionTitle heading={texts['contactTitle']} subHeading="" className="flex items-center justify-center" />
         <h2 className="text-center text-xl md:text-3xl font-bold"> {texts['contactHeading']} </h2>
     
         <span className="justify-center text-md text-center w-2/3 pt-4 mx-auto flex font-light text-shark-300"> <span> {texts['contactSmallText1']}. {texts['contactSmallText2']}. {texts['myEmailIs']} <span className="font-semibold text-sky-300 underline underline-offset-1"> {texts['email']} </span> </span> </span>        
-        <div className="bg-[#8af8eb] absolute top-[2rem] -z-10 right-[0rem] lg:right-[-5rem] dark:bg-opacity-75 h-[31.25rem] w-[31.25rem] md:w-[60rem] rounded-full blur-[15rem] ] dark:bg-[#56b595]"></div>
-        
         {/* 
         <div>        
           <form onSubmit={handleSubmit} className="relative bg-text-light/70 mt-8 z-20 px-4 sm:px-8 py-6 dark:hover:border-shark-300 hover:border-shark-900 border border-shark-400 duration-300 dark:bg-main/60 rounded-md mx-auto w-full">

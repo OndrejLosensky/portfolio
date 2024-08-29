@@ -19,7 +19,7 @@ export default function Footer() {
 
 
           <div className="md:hidden flex flex-row w-full justify-between mt-2 md:mt-0 md:pb-0 pb-8">
-            <p className="text-xs md:text-sm font-thin"> {texts['footerAllRightReserved']}  </p>
+            <p className="text-xs md:text-sm font-thin text-center mx-auto"> {texts['footerAllRightReserved']}  </p>
             <div className="flex flex-row ">
             </div>
           </div>
