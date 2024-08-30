@@ -3,6 +3,7 @@ import kralovskalevandule from "@/public/mockups/kl.png";
 import codecommerce from "@/public/mockups/codecommerce.png";
 import demonicka from "@/public/mockups/demonicka.png";
 import taskboard from "@/public/mockups/taskboard.png";
+import qabot from "@/public/mockups/qabot.png";
 
 export const projectsData = [
   { 
@@ -41,7 +42,18 @@ export const sideProjectsData = [
     gradient: 'bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 dark:from-green-300 dark:via-teal-500 dark:to-indigo-600', 
     otherLink: undefined,
     disabled: false,
-  },  
+  }, 
+  {
+    title: "Q&A Bot",
+    description: "Jednoduchý chatbot s předem definovanými otázkami a odpovědmi, ready na implementaci do vašeho osobního portfólia nebo kamkoliv vás napadne",
+    tags: ["React", "TypeScript", "TailwindCSS", "Framer motion"],
+    imageUrl: qabot,
+    githubLink: 'https://github.com/OndrejLosensky/Q-A-Bot',
+    websiteLink: undefined,
+    gradient: 'bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 dark:from-green-300 dark:via-teal-500 dark:to-indigo-600', 
+    otherLink: undefined,
+    disabled: false,
+  },   
   {
     title: "CodeCommerce",
     description: "Webová aplikace pro správu jednoduchého e-shopu pomocí administrátorského panelu",
