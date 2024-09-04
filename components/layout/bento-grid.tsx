@@ -52,7 +52,7 @@ const BentoGrid: React.FC = () => {
                     <span>{texts['webCreation']}</span>
                   </h2>
                   <p className='text-text-light dark:text-text-light/70'> {texts['webCreationDes']} </p>
-                  <Link href="#contact">
+                  <Link href="#kontakt">
                     <Button className='mt-2 text-text-light bg-primary dark:bg-primary hover:bg-primary-hover dark:hover:bg-primary-hover active:bg-primary-active active:scale-90 duration-200'>
                      {texts['webBtn']}
                     </Button>
