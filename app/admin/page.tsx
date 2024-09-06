@@ -2,16 +2,16 @@
 
 import React, { useState } from "react";
 import ContentTab from "../admin/_tabs/ContentTab";
-import CollectionsTab from "../admin/_tabs/CollectionsTab";
 import ProjectsTab from "./_tabs/ProjectsTab";
 import NavigationTab from "./_tabs/NavigationTab";
+import WorkExpirienceTab from "./_tabs/WorkExpirienceTab";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { CiGlobe } from "react-icons/ci";
 
 const AdminPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<
-    "content" | "collections" | "projects" | "navigation"
+    "content" | "projects" | "navigation" | "work-expirience"
   >("content");
 
   return (
@@ -29,6 +29,36 @@ const AdminPage: React.FC = () => {
           >
             Obsah
           </button>
+          <button
+            onClick={() => setActiveTab("projects")}
+            className={`p-3 rounded-md text-left ${
+              activeTab === "projects"
+                ? "text-bermuda-600 bg-bermuda-200"
+                : "bg-gray-600"
+            } hover:bg-bermuda-300 hover:text-bermuda-600`}
+          >
+            Projekty
+          </button>
+          <button
+            onClick={() => setActiveTab("navigation")}
+            className={`p-3 rounded-md text-left ${
+              activeTab === "navigation"
+                ? "text-bermuda-600 bg-bermuda-200"
+                : "bg-gray-600"
+            } hover:bg-bermuda-300 hover:text-bermuda-600`}
+          >
+            Odkazy
+          </button>
+          <button
+            onClick={() => setActiveTab("work-expirience")}
+            className={`p-3 rounded-md text-left ${
+              activeTab === "work-expirience"
+                ? "text-bermuda-600 bg-bermuda-200"
+                : "bg-gray-600"
+            } hover:bg-bermuda-300 hover:text-bermuda-600`}
+          >
+            Pracovní zkušenosti
+          </button>
         </nav>
         <Button className="active:scale-90 dark:hover:bg-bermuda-500 duration-300">
           <Link href="/" className="flex flex-row items-center gap-x-2">
@@ -40,9 +70,9 @@ const AdminPage: React.FC = () => {
 
       <div className="h-screen overflow-auto flex-1 p-10">
         {activeTab === "content" && <ContentTab />}
-        {activeTab === "collections" && <CollectionsTab />}
         {activeTab === "projects" && <ProjectsTab />}
         {activeTab === "navigation" && <NavigationTab />}
+        {activeTab === "work-expirience" && <WorkExpirienceTab />}
       </div>
     </div>
   );
