@@ -40,7 +40,7 @@ export default function AboutSection() {
           <SectionTitle
             heading={texts["aboutMeTitle"]}
             subHeading={texts["aboutMeDesc"]}
-            className="hidden md:flex"
+            className="hidden lg:flex"
           />
           <SectionTitleCenter
             heading={texts["aboutMeTitle"]}

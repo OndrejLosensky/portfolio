@@ -4,7 +4,7 @@ type Props = {
 };
 export const SectionTitleCenter = ({ heading, subHeading }: Props) => {
   return (
-    <div className="z-20 mx-auto flex md:hidden">
+    <div className="z-20 mx-auto flex lg:hidden">
       <p className="text-sm  text-bermuda-600 mx-auto bg-bermuda-200 px-4 py-2 rounded-md shadow-md w-24 mb-4 font-normal pb-2 text-center">
         {" "}
         {heading}{" "}

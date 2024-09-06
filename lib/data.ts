@@ -648,7 +648,6 @@ export const skills: Skill[] = [
   { name: 'React', level: '95%', icon: "/icons/react.svg" },
   { name: 'Next.js', level: '90%', icon: "/icons/next.js.svg" },
   { name: 'Python', level: '65%', icon: "/icons/py.svg" },
-  { name: 'Swift', level: '15%', icon: "/icons/swift.svg" },
   { name: 'TypeScript', level: '40%', icon: "/icons/ts.svg" },
   { name: 'CSS', level: '95%', icon: "/icons/css.svg" },
   { name: 'JavaScript', level: '80%', icon: "/icons/js.svg" },
