@@ -36,7 +36,7 @@ export default function HeroSection() {
 
   return (
     <div ref={ref} id="uvod" className='w-[100%] max-h-screen h-screen flex flex-col justify-center items-center text-center mx-auto'>
-        <div className="bg-[#8af8eb] absolute top-[0rem] md:top-[-12rem] -z-10  right-[2rem] md:right-[8rem] h-[25rem] md:h-[31.25rem] w-[20rem] md:w-[61.25rem] rounded-full blur-[12rem] dark:bg-[#56b595]"></div>
+        <div className="bg-[#8af8eb91] absolute top-[0rem] md:top-[-12rem] -z-10  right-[2rem] md:right-[8rem] h-[25rem] md:h-[31.25rem] w-[20rem] md:w-[61.25rem] rounded-full blur-[12rem] dark:bg-[#56b595]"></div>
         
         <motion.div 
             initial={{ opacity: 1, scale: 0 }}
