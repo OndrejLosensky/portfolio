@@ -46,7 +46,9 @@ const ProjectsTab: React.FC = () => {
     fetchProjects();
   }, [language]);
 
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setNewProject({ ...newProject, [name]: value });
   };
@@ -145,7 +147,9 @@ const ProjectsTab: React.FC = () => {
           <button
             onClick={() => setIsMainProject(true)}
             className={`${
-              isMainProject ? "bg-blue-600 text-white" : "bg-gray-300 dark:bg-gray-600"
+              isMainProject
+                ? "bg-blue-600 text-white"
+                : "bg-gray-300 dark:bg-gray-600"
             } px-4 py-2 rounded-md`}
           >
             Main Project
@@ -153,7 +157,9 @@ const ProjectsTab: React.FC = () => {
           <button
             onClick={() => setIsMainProject(false)}
             className={`${
-              !isMainProject ? "bg-blue-600 text-white" : "bg-gray-300 dark:bg-gray-600"
+              !isMainProject
+                ? "bg-blue-600 text-white"
+                : "bg-gray-300 dark:bg-gray-600"
             } px-4 py-2 rounded-md`}
           >
             Side Project
@@ -177,7 +183,10 @@ const ProjectsTab: React.FC = () => {
           <h4 className="font-semibold">Main Projects</h4>
           <ul>
             {mainProjects.map((project, index) => (
-              <li key={index} className="p-4 bg-gray-100 dark:bg-gray-700 rounded-md mb-2">
+              <li
+                key={index}
+                className="p-4 bg-gray-100 dark:bg-gray-700 rounded-md mb-2"
+              >
                 <strong>{project.title}</strong> - {project.year}
               </li>
             ))}
@@ -188,7 +197,10 @@ const ProjectsTab: React.FC = () => {
           <h4 className="font-semibold">Side Projects</h4>
           <ul>
             {sideProjects.map((project, index) => (
-              <li key={index} className="p-4 bg-gray-100 dark:bg-gray-700 rounded-md mb-2">
+              <li
+                key={index}
+                className="p-4 bg-gray-100 dark:bg-gray-700 rounded-md mb-2"
+              >
                 <strong>{project.title}</strong> - {project.year}
               </li>
             ))}

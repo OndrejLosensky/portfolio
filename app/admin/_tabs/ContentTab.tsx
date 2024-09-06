@@ -198,9 +198,9 @@ const ContentTab: React.FC = () => {
           */}
         </div>
       </div>
-      {/* Editable value input */}
+
       {selectedKey && (
-        <div className="mb-8">
+        <div className="my-6">
           <label
             htmlFor="value-input"
             className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2"

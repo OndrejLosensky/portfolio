@@ -29,7 +29,7 @@ const WorkExperienceTab: React.FC = () => {
 
   useEffect(() => {
     const fetchWorkExperiences = async () => {
-      const docRef = doc(db, "work-experience", language);
+      const docRef = doc(db, "work-expirience", language);
       const snapshot = await getDoc(docRef);
       if (snapshot.exists()) {
         const data = snapshot.data();
@@ -42,7 +42,9 @@ const WorkExperienceTab: React.FC = () => {
     fetchWorkExperiences();
   }, [language]);
 
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setNewJob({ ...newJob, [name]: value });
   };
@@ -144,9 +146,12 @@ const WorkExperienceTab: React.FC = () => {
         </h3>
         <ul>
           {workExperiences.map((job, index) => (
-            <li key={index} className="p-4 bg-gray-100 dark:bg-gray-700 rounded-md mb-2">
-              <strong>{job.job_name}</strong> - {job.position_name} ({job.date_from} to {job.date_to})
-              <p>{job.short_description}</p>
+            <li
+              key={index}
+              className="p-4 bg-gray-100 dark:bg-gray-700 rounded-md mb-2"
+            >
+              <strong>{job.job_name}</strong> - {job.position_name} (
+              {job.date_from} to {job.date_to})<p>{job.short_description}</p>
             </li>
           ))}
         </ul>
