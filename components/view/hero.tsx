@@ -13,6 +13,7 @@ import Image from "next/image";
 import { socialLinks, SocialLink } from "../../lib/socials";
 
 import { useTexts } from "@/context/texts-context";
+import Chatbot from "../chatbot/page";
 
 export default function HeroSection() {
   const { texts } = useTexts();
@@ -107,6 +108,9 @@ export default function HeroSection() {
         </div>
 
         <ScrollToTopButton />
+        {/* 
+        <Chatbot/>
+        */}
       </motion.div>
 
       <div
