@@ -1,8 +1,8 @@
 // components/ClientLoader.tsx
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Loader from '@/components/loaders/loader';
+import { useState, useEffect } from "react";
+import Loader from "@/components/loaders/loader";
 
 const ClientLoader = ({ children }: { children: React.ReactNode }) => {
   const [isLoading, setIsLoading] = useState(true);

@@ -11,7 +11,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ondřej Losenský",
-  description: "Ondřej Losenský - Vývojář webových stránek a dalších technologií",
+  description:
+    "Ondřej Losenský - Vývojář webových stránek a dalších technologií",
 };
 
 export default function RootLayout({
@@ -21,14 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} font-sora max-w-screen bg-shark-50 text-shark-950 dark:bg-shark-950 dark:text-shark-50`}>
+      <body
+        className={`${inter.className} font-sora max-w-screen bg-shark-50 text-shark-950 dark:bg-shark-950 dark:text-shark-50`}
+      >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <ClientLoader>
               <LanguageProvider>
-                <TextsProvider>
-                  {children}
-                </TextsProvider>
+                <TextsProvider>{children}</TextsProvider>
               </LanguageProvider>
             </ClientLoader>
           </ActiveSectionContextProvider>

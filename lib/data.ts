@@ -654,11 +654,13 @@ export const skills: Skill[] = [
   { name: 'JavaScript', level: '80%', icon: "/icons/js.svg" },
   { name: 'HTML', level: '100%', icon: "/icons/html.svg" },
   { name: 'Sqlite', level: '80%', icon: "/icons/sqlite.svg" },
-  { name: 'MongoDB', level: '10%', icon: "/icons/mongo.png" },
   { name: 'TailwindCSS', level: '85%', icon: "/icons/tailwind.svg" },
   { name: 'Wordpress', level: '90%', icon: "/icons/wordpress.svg" },
-  { name: 'PHP', level: '90%', icon: "/icons/php.svg" },
   { name: 'C#', level: '90%', icon: "/icons/cs.svg" },
-  { name: 'Godot', level: '90%', icon: "/icons/godot2.svg" },
+  { name: 'Figma', level: '90%', icon: "/icons/figma.svg" },
+  { name: 'Github', level: '90%', icon: "/icons/github.svg" },
+  { name: 'Prisma', level: '90%', icon: "/icons/prisma.svg" },
+  { name: 'Wordpress', level: '90%', icon: "/icons/wordpress.svg" },
+
 ];
 

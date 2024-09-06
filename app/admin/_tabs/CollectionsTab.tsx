@@ -1,20 +1,20 @@
-import React, { useState, useEffect, ChangeEvent } from 'react';
-import { useLanguage } from '@/context/language-context';
-import { db, doc, getDoc, setDoc } from '../../../firebaseConfig';
+import React, { useState, useEffect, ChangeEvent } from "react";
+import { useLanguage } from "@/context/language-context";
+import { db, doc, getDoc, setDoc } from "../../../firebaseConfig";
 
 type Texts = {
-  [key: string]: string | string[]; // Allow strings and arrays
+  [key: string]: string | string[]; 
 };
 
 const CollectionTab: React.FC = () => {
   const { language, setLanguage } = useLanguage();
   const [texts, setTexts] = useState<Texts>({});
-  const [selectedKey, setSelectedKey] = useState<string>('');
-  const [newItem, setNewItem] = useState<string>('');
+  const [selectedKey, setSelectedKey] = useState<string>("");
+  const [newItem, setNewItem] = useState<string>("");
 
   useEffect(() => {
     const fetchData = async () => {
-      const docRef = doc(db, 'texts', language);
+      const docRef = doc(db, "texts", language);
       const snapshot = await getDoc(docRef);
       if (snapshot.exists()) {
         setTexts(snapshot.data() as Texts);
@@ -47,7 +47,7 @@ const CollectionTab: React.FC = () => {
     if (newItem && Array.isArray(texts[selectedKey])) {
       const updatedArray = [...(texts[selectedKey] as string[]), newItem];
       setTexts({ ...texts, [selectedKey]: updatedArray });
-      setNewItem('');
+      setNewItem("");
     }
   };
 
@@ -60,20 +60,26 @@ const CollectionTab: React.FC = () => {
   };
 
   const handleSave = async () => {
-    await setDoc(doc(db, 'texts', language), texts);
+    await setDoc(doc(db, "texts", language), texts);
   };
 
-  // Filter keys that are arrays
-  const arrayKeys = Object.keys(texts).filter((key) => Array.isArray(texts[key]));
+  const arrayKeys = Object.keys(texts).filter((key) =>
+    Array.isArray(texts[key])
+  );
 
   return (
     <div>
-      <h2 className="text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-8">Editace datových sad</h2>
+      <h2 className="text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-8">
+        Editace datových sad
+      </h2>
 
       <div className="flex justify-between mb-6 gap-x-4">
         {/* Language Selector */}
         <div className="w-1/3">
-          <label htmlFor="language-select" className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label
+            htmlFor="language-select"
+            className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2"
+          >
             Vyber jazyk Stránky
           </label>
           <select
@@ -88,9 +94,11 @@ const CollectionTab: React.FC = () => {
           </select>
         </div>
 
-        {/* Collection Selector */}
         <div className="w-2/3">
-          <label htmlFor="key-select" className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label
+            htmlFor="key-select"
+            className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2"
+          >
             Vyber Kolekci
           </label>
           <select
@@ -108,7 +116,6 @@ const CollectionTab: React.FC = () => {
           </select>
         </div>
       </div>
-
 
       {selectedKey && (
         <div className="mb-8">

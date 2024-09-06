@@ -1,6 +1,6 @@
-import React, { useState, useEffect, ChangeEvent } from 'react';
-import { useLanguage } from '@/context/language-context';
-import { db, doc, getDoc, setDoc } from '../../../firebaseConfig';
+import React, { useState, useEffect, ChangeEvent } from "react";
+import { useLanguage } from "@/context/language-context";
+import { db, doc, getDoc, setDoc } from "../../../firebaseConfig";
 
 type Link = {
   name: string;
@@ -15,12 +15,12 @@ const NavigationTab: React.FC = () => {
   const { language, setLanguage } = useLanguage();
   const [links, setLinks] = useState<Link[]>([]);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [newName, setNewName] = useState<string>('');
-  const [newHash, setNewHash] = useState<string>('');
+  const [newName, setNewName] = useState<string>("");
+  const [newHash, setNewHash] = useState<string>("");
 
   useEffect(() => {
     const fetchData = async () => {
-      const docRef = doc(db, 'navigation', language);
+      const docRef = doc(db, "navigation", language);
       const snapshot = await getDoc(docRef);
       if (snapshot.exists()) {
         const data = snapshot.data();
@@ -38,11 +38,15 @@ const NavigationTab: React.FC = () => {
   };
 
   const handleSave = async () => {
-    const docRef = doc(db, 'navigation', language);
+    const docRef = doc(db, "navigation", language);
     await setDoc(docRef, { links });
   };
 
-  const handleEditChange = (index: number, field: 'name' | 'hash', value: string) => {
+  const handleEditChange = (
+    index: number,
+    field: "name" | "hash",
+    value: string
+  ) => {
     const updatedLinks = [...links];
     if (selectedIndex !== null) {
       updatedLinks[selectedIndex][field] = value;
@@ -53,8 +57,8 @@ const NavigationTab: React.FC = () => {
   const handleAddLink = () => {
     if (newName && newHash) {
       setLinks([...links, { name: newName, hash: newHash }]);
-      setNewName('');
-      setNewHash('');
+      setNewName("");
+      setNewHash("");
     }
   };
 
@@ -74,9 +78,11 @@ const NavigationTab: React.FC = () => {
   return (
     <div>
       <div className="flex justify-between mb-6">
-        {/* Language Selector */}
         <div className="w-1/3">
-          <label htmlFor="language-select" className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label
+            htmlFor="language-select"
+            className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2"
+          >
             Vyber Jazyk Stránky
           </label>
           <select
@@ -92,7 +98,9 @@ const NavigationTab: React.FC = () => {
         </div>
       </div>
 
-      <h2 className="text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-8">Editace Navigačních Odkazů</h2>
+      <h2 className="text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-8">
+        Editace Navigačních Odkazů
+      </h2>
 
       {links.length > 0 ? (
         <div className="space-y-4">
@@ -114,11 +122,15 @@ const NavigationTab: React.FC = () => {
           ))}
         </div>
       ) : (
-        <p className="text-gray-600 dark:text-gray-400">Žádné odkazy k zobrazení</p>
+        <p className="text-gray-600 dark:text-gray-400">
+          Žádné odkazy k zobrazení
+        </p>
       )}
 
       <div className="mt-6">
-        <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-300 mb-4">Přidat nebo Upravit Odkaz</h3>
+        <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-300 mb-4">
+          Přidat nebo Upravit Odkaz
+        </h3>
         <input
           type="text"
           value={newName}

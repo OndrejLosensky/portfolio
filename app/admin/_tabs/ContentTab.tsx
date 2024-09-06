@@ -1,6 +1,6 @@
-import React, { useState, useEffect, ChangeEvent } from 'react';
-import { useLanguage } from '@/context/language-context';
-import { db, doc, getDoc, setDoc } from '../../../firebaseConfig';
+import React, { useState, useEffect, ChangeEvent } from "react";
+import { useLanguage } from "@/context/language-context";
+import { db, doc, getDoc, setDoc } from "../../../firebaseConfig";
 
 type Texts = {
   [key: string]: string | string[];
@@ -9,14 +9,14 @@ type Texts = {
 const ContentTab: React.FC = () => {
   const { language, setLanguage } = useLanguage();
   const [texts, setTexts] = useState<Texts>({});
-  const [selectedKey, setSelectedKey] = useState<string>('');
-  const [newValue, setNewValue] = useState<string>('');
+  const [selectedKey, setSelectedKey] = useState<string>("");
+  const [newValue, setNewValue] = useState<string>("");
   const [showOnlyNull, setShowOnlyNull] = useState<boolean>(false);
-  const [buttonText, setButtonText] = useState<string>('Uložit');
+  const [buttonText, setButtonText] = useState<string>("Uložit");
 
   useEffect(() => {
     const fetchData = async () => {
-      const docRef = doc(db, 'texts', language);
+      const docRef = doc(db, "texts", language);
       const snapshot = await getDoc(docRef);
       if (snapshot.exists()) {
         setTexts(snapshot.data() as Texts);
@@ -36,7 +36,7 @@ const ContentTab: React.FC = () => {
   const handleKeyChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const key = event.target.value;
     setSelectedKey(key);
-    setNewValue(typeof texts[key] === 'string' ? texts[key] : ''); // Ensuring the value is a string
+    setNewValue(typeof texts[key] === "string" ? texts[key] : "");
   };
 
   const handleValueChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
@@ -44,12 +44,12 @@ const ContentTab: React.FC = () => {
   };
 
   const handleSave = async () => {
-    setButtonText('Ukládám...');
+    setButtonText("Ukládám...");
     const updatedTexts = { ...texts, [selectedKey]: newValue };
     setTexts(updatedTexts);
-    await setDoc(doc(db, 'texts', language), updatedTexts);
+    await setDoc(doc(db, "texts", language), updatedTexts);
     setTimeout(() => {
-      setButtonText('Uložit');
+      setButtonText("Uložit");
     }, 400);
   };
 
@@ -58,16 +58,23 @@ const ContentTab: React.FC = () => {
   };
 
   const filteredKeys = showOnlyNull
-    ? Object.keys(texts).filter((key) => typeof texts[key] === 'string' && !texts[key])
-    : Object.keys(texts).filter((key) => typeof texts[key] === 'string');
+    ? Object.keys(texts).filter(
+        (key) => typeof texts[key] === "string" && !texts[key]
+      )
+    : Object.keys(texts).filter((key) => typeof texts[key] === "string");
 
   return (
     <div>
-      <h2 className="text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-8">Editace obsahu</h2>
+      <h2 className="text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-8">
+        Editace obsahu
+      </h2>
 
       <div className="flex justify-between w-full gap-x-4 mb-4">
         <div className="w-1/3">
-          <label htmlFor="language-select" className="block text-sm md:text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label
+            htmlFor="language-select"
+            className="block text-sm md:text-xl font-medium text-gray-700 dark:text-gray-300 mb-2"
+          >
             Vyber Jazyk Stránky
           </label>
           <select
@@ -83,7 +90,10 @@ const ContentTab: React.FC = () => {
         </div>
 
         <div className="w-2/3">
-          <label htmlFor="key-select" className="block text-sm md:text-xlfont-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label
+            htmlFor="key-select"
+            className="block text-sm md:text-xlfont-medium text-gray-700 dark:text-gray-300 mb-2"
+          >
             Vyber Klíč
           </label>
           <select
@@ -103,7 +113,10 @@ const ContentTab: React.FC = () => {
       </div>
 
       <div className="mb-6">
-        <label htmlFor="show-only-null" className="inline-flex items-center text-md text-gray-700 dark:text-gray-300">
+        <label
+          htmlFor="show-only-null"
+          className="inline-flex items-center text-md text-gray-700 dark:text-gray-300"
+        >
           <input
             type="checkbox"
             id="show-only-null"
@@ -116,7 +129,10 @@ const ContentTab: React.FC = () => {
       </div>
 
       <div className="mb-8">
-        <label htmlFor="value-input" className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label
+          htmlFor="value-input"
+          className="block text-xl font-medium text-gray-700 dark:text-gray-300 mb-2"
+        >
           Hodnota
         </label>
         <textarea
@@ -135,12 +151,21 @@ const ContentTab: React.FC = () => {
       </div>
 
       <div className="mt-16">
-        <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-4">Obsah</h3>
+        <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-4">
+          Obsah
+        </h3>
         <ul className="space-y-4">
           {Object.entries(texts).map(([key, value]) => (
-            <li key={key} className="flex justify-between items-center p-4 bg-gray-100 dark:bg-gray-700 rounded-md shadow-sm">
-              <span className="font-medium text-gray-700 dark:text-gray-300">{key}</span>
-              <span className="text-gray-600 dark:text-gray-400">{typeof value === 'string' ? value : ''}</span>
+            <li
+              key={key}
+              className="flex justify-between items-center p-4 bg-gray-100 dark:bg-gray-700 rounded-md shadow-sm"
+            >
+              <span className="font-medium text-gray-700 dark:text-gray-300">
+                {key}
+              </span>
+              <span className="text-gray-600 dark:text-gray-400">
+                {typeof value === "string" ? value : ""}
+              </span>
             </li>
           ))}
         </ul>

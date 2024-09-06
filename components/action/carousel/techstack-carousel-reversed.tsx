@@ -7,25 +7,27 @@ interface TechstackCarouselProps {
   cardDetails: CardDetails;
 }
 
-const TechstackCarousel: React.FC<TechstackCarouselProps> = ({ cardDetails }) => {
+const TechstackCarousel: React.FC<TechstackCarouselProps> = ({
+  cardDetails,
+}) => {
   return (
     <div className="carousel-container-reversed">
       <div className="carousel-track-reversed">
         {Object.keys(cardDetails).map((detailKey) => {
-          const keyNum = parseInt(detailKey, 10); // Convert detailKey to number
+          const keyNum = parseInt(detailKey, 10); 
           return (
             <CarouselItem
-              key={keyNum} // Use keyNum as key prop
+              key={keyNum} 
               imgUrl={cardDetails[keyNum].imgUrl}
               imgTitle={cardDetails[keyNum].title}
             />
           );
         })}
-         {Object.keys(cardDetails).map((detailKey) => {
-          const keyNum = parseInt(detailKey, 10); // Convert detailKey to number
+        {Object.keys(cardDetails).map((detailKey) => {
+          const keyNum = parseInt(detailKey, 10); 
           return (
             <CarouselItem
-              key={keyNum} // Use keyNum as key prop
+              key={keyNum} 
               imgUrl={cardDetails[keyNum].imgUrl}
               imgTitle={cardDetails[keyNum].title}
             />
@@ -34,6 +36,6 @@ const TechstackCarousel: React.FC<TechstackCarouselProps> = ({ cardDetails }) =>
       </div>
     </div>
   );
-}
+};
 
 export default TechstackCarousel;
