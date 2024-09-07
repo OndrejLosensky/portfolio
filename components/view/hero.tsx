@@ -58,7 +58,7 @@ export default function HeroSection() {
             H
           </kbd>
           <span className="font-light dark:text-shark-100 text-shark-600">
-            {texts["themeToggleText"]}
+            {texts["hero_toggle-theme"]}
           </span>
         </p>
         <div className="w-full items-center justify-center mb-8 flex flex-col">

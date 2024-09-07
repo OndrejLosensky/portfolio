@@ -1,6 +1,7 @@
-import React, { useState, useEffect, ChangeEvent } from "react";
+import React, { useState, useEffect, useRef, ChangeEvent } from "react";
 import { useLanguage } from "@/context/language-context";
 import { db, doc, getDoc, setDoc } from "../../../firebaseConfig";
+import { FiMoreHorizontal } from "react-icons/fi"; // Importing icon for the 3 dots
 
 type Texts = {
   [key: string]: string | string[];
@@ -28,6 +29,9 @@ const ContentTab: React.FC = () => {
   const [newValue, setNewValue] = useState<string>("");
   const [showOnlyNull, setShowOnlyNull] = useState<boolean>(false);
   const [buttonText, setButtonText] = useState<string>("Uložit");
+  const [dropdownVisible, setDropdownVisible] = useState<boolean>(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [hiddenSections, setHiddenSections] = useState<string[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -58,8 +62,9 @@ const ContentTab: React.FC = () => {
       | "contact"
   ) => {
     setSelectedSection(section);
-    setSelectedKey(""); // Reset selected key when section changes
-    setNewValue(""); // Reset the value input
+    setSelectedKey("");
+    setNewValue("");
+    setDropdownVisible(false); 
   };
 
   const handleKeyChange = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -91,6 +96,29 @@ const ContentTab: React.FC = () => {
       key.startsWith(selectedSection) && (showOnlyNull ? !texts[key] : true)
   );
 
+  useEffect(() => {
+    const handleResize = () => {
+      const container = containerRef.current;
+      if (container) {
+        const containerWidth = container.offsetWidth;
+        let totalWidth = 0;
+        const sections: string[] = [];
+        for (let i = 0; i < container.children.length; i++) {
+          const child = container.children[i] as HTMLElement;
+          totalWidth += child.offsetWidth;
+          if (totalWidth > containerWidth) {
+            sections.push(child.dataset.section!);
+          }
+        }
+        setHiddenSections(sections);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); 
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div>
       <h2 className="text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
@@ -98,50 +126,110 @@ const ContentTab: React.FC = () => {
       </h2>
 
       {/* Tabs for Section Selection */}
-      <div className="flex justify-start mb-8 border-b border-white/20">
-        {Object.keys(sectionNames).map((section) => (
-          <button
-            key={section}
-            onClick={() =>
-              handleSectionChange(
-                section as
-                  | "hero"
-                  | "about"
-                  | "projects"
-                  | "preview"
-                  | "collaboration"
-                  | "contact"
-              )
-            }
-            className={`${
-              selectedSection === section
-                ? "border-b-2 border-blue-600 text-blue-600"
-                : "text-gray-600 hover:text-gray-400 duration-200"
-            } px-6 py-2 font-semibold focus:outline-none`}
-          >
-            {
-              sectionNames[
-                section as
-                  | "hero"
-                  | "about"
-                  | "projects"
-                  | "preview"
-                  | "collaboration"
-                  | "contact"
-              ]
-            }
-          </button>
-        ))}
+      <div className="relative flex items-center justify-start mb-8 border-b border-white/20">
+        {/* Visible tabs */}
+        <div
+          ref={containerRef}
+          className="flex gap-4 overflow-hidden flex-grow"
+        >
+          {Object.keys(sectionNames)
+            .filter((section) => !hiddenSections.includes(section))
+            .map((section) => (
+              <button
+                key={section}
+                data-section={section}
+                onClick={() =>
+                  handleSectionChange(
+                    section as
+                      | "hero"
+                      | "about"
+                      | "projects"
+                      | "preview"
+                      | "collaboration"
+                      | "contact"
+                  )
+                }
+                className={`${
+                  selectedSection === section
+                    ? "border-b-2 border-blue-600 text-blue-600"
+                    : "text-gray-600 hover:text-gray-400 duration-200"
+                } px-6 py-2 font-semibold focus:outline-none whitespace-nowrap`}
+              >
+                {
+                  sectionNames[
+                    section as
+                      | "hero"
+                      | "about"
+                      | "projects"
+                      | "preview"
+                      | "collaboration"
+                      | "contact"
+                  ]
+                }
+              </button>
+            ))}
+        </div>
+
+        {/* 3 Dots Button for Overflowed Tabs */}
+        {hiddenSections.length > 0 && (
+          <div className="relative">
+            <button
+              onClick={() => setDropdownVisible(!dropdownVisible)}
+              className="px-4 py-2 font-semibold text-gray-600 hover:text-gray-400 focus:outline-none"
+            >
+              <FiMoreHorizontal className="w-6 h-6" />
+            </button>
+
+            {dropdownVisible && (
+              <div className="absolute right-0 top-12 z-10 bg-white dark:bg-gray-800 shadow-lg rounded-lg py-2">
+                {hiddenSections.map((section) => (
+                  <button
+                    key={section}
+                    onClick={() =>
+                      handleSectionChange(
+                        section as
+                          | "hero"
+                          | "about"
+                          | "projects"
+                          | "preview"
+                          | "collaboration"
+                          | "contact"
+                      )
+                    }
+                    className={`block px-4 py-2 w-full text-left ${
+                      selectedSection === section
+                        ? "text-blue-600"
+                        : "text-gray-600"
+                    } hover:bg-gray-100 dark:hover:bg-gray-700`}
+                  >
+                    {
+                      sectionNames[
+                        section as
+                          | "hero"
+                          | "about"
+                          | "projects"
+                          | "preview"
+                          | "collaboration"
+                          | "contact"
+                      ]
+                    }
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
+      {/* Language and Key Selection */}
       <div className="flex flex-row items-center justify-between gap-x-4">
-        <div className="flex justify-between w-1/3 gap-x-4">
+        <div className="flex justify-between w-1/2 gap-x-4">
           <div className="w-full">
             <label
               htmlFor="language-select"
-              className="block text-sm md:text-xl font-medium text-gray-700 dark:text-gray-300 mb-2"
+              className="block text-sm lg:text-xl font-medium text-gray-700 dark:text-gray-300 mb-2"
             >
-              Vyber Jazyk Stránky
+              Vyber jazyk stránky
             </label>
             <select
               id="language-select"
@@ -155,13 +243,13 @@ const ContentTab: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col w-2/3">
+        <div className="flex flex-col w-1/2">
           <div className="">
             <label
               htmlFor="key-select"
-              className="block text-sm md:text-xl font-medium text-gray-700 dark:text-gray-300 mb-2"
+              className="block text-sm lg:text-xl font-medium text-gray-700 dark:text-gray-300 mb-2"
             >
-              Vyber Klíč ({sectionNames[selectedSection]})
+              Vyber klíč ({sectionNames[selectedSection]})
             </label>
             <select
               id="key-select"
@@ -177,26 +265,23 @@ const ContentTab: React.FC = () => {
               ))}
             </select>
           </div>
-          {/* 
-          <div className="">
-            <label
-              htmlFor="show-only-null"
-              className="inline-flex items-center text-md text-gray-700 dark:text-gray-300"
-            >
-              <input
-                type="checkbox"
-                id="show-only-null"
-                checked={showOnlyNull}
-                onChange={handleCheckboxChange}
-                className="form-checkbox h-4 w-4 text-blue-600 dark:bg-gray-600 bg-gray-300"
-              />
-              <span className="ml-2">
-                Zobrazit pouze klíče s prázdnou hodnotou
-              </span>
-            </label>
-          </div>
-          */}
         </div>
+      </div>
+
+      <div className="flex flex-row mt-2 justify-end">
+        <label
+          htmlFor="show-only-null"
+          className="inline-flex items-center text-md text-gray-700 dark:text-gray-300"
+        >
+          <input
+            type="checkbox"
+            id="show-only-null"
+            checked={showOnlyNull}
+            onChange={handleCheckboxChange}
+            className="form-checkbox h-4 w-4 text-blue-600 dark:bg-gray-600 bg-gray-300"
+          />
+          <span className="ml-2">Zobrazit pouze klíče s prázdnou hodnotou</span>
+        </label>
       </div>
 
       {selectedKey && (
