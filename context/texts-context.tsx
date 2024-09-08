@@ -1,8 +1,8 @@
 "use client"
 
 import React, { createContext, useContext, useEffect, useState, FC } from 'react';
-import { useLanguage } from './language-context'; // Adjust the path as necessary
-import { db, doc, getDoc } from '../firebaseConfig'; // Adjust the path as necessary
+import { useLanguage } from './language-context'; 
+import { db, doc, getDoc } from '../firebaseConfig'; 
 
 interface TextsContextType {
   texts: Record<string, string>;
