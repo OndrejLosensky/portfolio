@@ -4,7 +4,7 @@ import codecommerce from "@/public/mockups/codecommerce.png";
 import demonicka from "@/public/mockups/demonicka.png";
 import taskboard from "@/public/mockups/taskboard.png";
 import qabot from "@/public/mockups/qabot.png";
-
+import pal from "@/public/mockups/pal.png";
 export const projectsData = [
   { 
     title: "Královská levandule",
@@ -28,6 +28,19 @@ export const projectsData = [
     otherLink: undefined,
     disabled: false, 
   },  
+  /*
+  {
+    title: "Pavel Losenský",
+    description: "Statická webová stránka na platformě WordPress",
+    tags: ["WordPress"],
+    imageUrl: pal,
+    githubLink: undefined,
+    websiteLink: undefined,
+    gradient: 'bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 dark:from-green-300 dark:via-teal-500 dark:to-indigo-600', 
+    otherLink: undefined,
+    disabled: false, 
+  },  
+  */
 ] as const;
 
 
