@@ -23,17 +23,16 @@ export const DownloadCV = () => {
   return (
     <Dialog>
       <DialogTrigger className="flex flex-row items-center group">
-        <span>{texts[`showCV`]}</span>
+        <span>{texts[`hero_show_CV`]}</span>
         <MdArrowRightAlt className="ml-2 w-6 h-7 text-shark-600 dark:text-shark-100 transform group-hover:translate-x-1 transition-transform duration-200" />
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle className="font-bold text-2xl">
-            Vyberte jazyk mého CV
+            {texts[`hero_CV-language`]}
           </DialogTitle>
           <DialogDescription className="pt-4">
-            Po kliknutí na tlačítko stáhnout se soubor automaticky začne
-            stahovat. Pokud se tak nestane zkuste prosím obnovit prohlížeč
+            {texts[`hero_CV_description`]}
             <div className="flex flex-row mx-auto items-center justify-center mt-4 gap-x-4">
               <Button onClick={() => openCVInNewTab("cz")}>
                 <Image

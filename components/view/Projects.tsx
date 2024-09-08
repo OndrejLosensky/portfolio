@@ -9,9 +9,12 @@ import Link from "next/link";
 
 import Image from "next/image";
 import { RxArrowTopRight } from "react-icons/rx";
+import { useTexts } from "@/context/texts-context";
 
 export default function ProjectsSection() {
   const { ref } = useSectionInView("Projekty", 1);
+
+  const { texts } = useTexts();
 
   return (
     <section id="projekty" className="scroll-mt-28 w-full mx-auto mt-48 mb-28">
@@ -19,13 +22,12 @@ export default function ProjectsSection() {
         <div ref={ref} className="text-center mt-20 mb-16">
           <p className="uppercase text-xs lg:text-md font-medium pb-4">
             {" "}
-            Skutečné použití{" "}
+            {texts["projects_small-title"]}{" "}
           </p>
-          <h2 className="text-2xl lg:text-5xl  font-bold pb-2"> Projekty </h2>
+          <h2 className="text-2xl lg:text-5xl  font-bold pb-2"> {texts["projects_title"]} </h2>
           <p className="font-light text-black/70 dark:text-white/50">
             {" "}
-            Podívejte se na weby, které jsem vyvinul nebo se na nich z části
-            podílel{" "}
+            {texts["projects_description"]}{" "}
           </p>
         </div>
 
@@ -40,15 +42,15 @@ export default function ProjectsSection() {
         <div className="text-center mt-32">
           <p className="uppercase text-xs lg:text-md font-medium pb-4">
             {" "}
-            Pár příkladů{" "}
+            {texts["projects_side-description"]}{" "}
           </p>
           <h2 className="text-2xl lg:text-5xl font-bold pb-2">
             {" "}
-            Vedlejší projekty{" "}
+            {texts["projects_side-title"]}{" "}
           </h2>
           <p className="font-light text-black/70 dark:text-white/50">
             {" "}
-            Podívejte se na některé mé osobní projekty vytvořené ve volném čase{" "}
+            {texts["projects_side-description"]}{" "}
           </p>
         </div>
 

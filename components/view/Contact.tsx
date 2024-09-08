@@ -69,24 +69,23 @@ export default function ContactSection() {
       >
         <div className="bg-[#8af8ebb8] absolute top-[2rem] -z-10 right-[0rem] lg:right-[-5rem] dark:bg-opacity-75 h-[0rem] md:h-[32rem] w-[0rem] md:w-[60rem] rounded-full blur-[15rem] ] dark:bg-[#56b595]"></div>
         <SectionTitle
-          heading={texts["contactTitle"]}
+          heading={texts["contact_small-title"]}
           subHeading=""
           className="flex items-center justify-center"
         />
         <h2 className="text-center text-xl md:text-3xl font-bold">
           {" "}
-          {texts["contactHeading"]}{" "}
+          {texts["contact_title"]}{" "}
         </h2>
 
         <span className="justify-center text-md text-center w-2/3 pt-4 mx-auto flex font-light text-shark-300">
           {" "}
           <span>
             {" "}
-            {texts["contactSmallText1"]}. {texts["contactSmallText2"]}.{" "}
-            {texts["myEmailIs"]}{" "}
+            {texts["contact-description"]}            
             <span className="font-semibold text-sky-300 underline underline-offset-1">
               {" "}
-              {texts["email"]}{" "}
+              {texts["contact_email"]}{" "}
             </span>{" "}
           </span>{" "}
         </span>

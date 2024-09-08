@@ -38,18 +38,25 @@ export default function AboutSection() {
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-2/3 w-full text-center lg:text-left">
           <SectionTitle
-            heading={texts["aboutMeTitle"]}
-            subHeading={texts["aboutMeDesc"]}
+            heading={texts["about_title"]}
+            subHeading={texts["about_short-description"]}
             className="hidden lg:flex"
           />
           <SectionTitleCenter
-            heading={texts["aboutMeTitle"]}
+            heading={texts["about_title"]}
             subHeading={texts["aboutMeDesc"]}
           />
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50 mb-4">
-            {texts["name"]}
+            {texts["about_name"]}
           </h2>
           <div className="flex flex-wrap justify-center lg:justify-start gap-2 mt-4 text-xs md:text-sm">
+            
+            <span
+                  className="px-3 py-1 bg-black/10 dark:bg-white/10 rounded-md"
+                >
+                Programátor
+                </span>
+            {/* 
             {Array.isArray(texts["tags"]) ? (
               texts["tags"].map((tag, index) => (
                 <span
@@ -60,12 +67,13 @@ export default function AboutSection() {
                 </span>
               ))
             ) : (
-              <p>{texts["noTagsFound"]}</p>
+              <p>{texts["about_no-tags"]}</p>
             )}
+              */}
           </div>
 
           <p className="mt-6 w-full md:w-3/4 text-sm text-shark-500 dark:text-shark-200 mx-auto lg:mx-0">
-            {texts[`aboutDesc`]}
+            {texts[`about_description`]}
           </p>
 
           <div>

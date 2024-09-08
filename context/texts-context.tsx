@@ -16,7 +16,7 @@ export const TextsProvider: FC<{ children: React.ReactNode }> = ({ children }) =
 
   useEffect(() => {
     const fetchTexts = async () => {
-      const docRef = doc(db, 'texts', language);
+      const docRef = doc(db, 'data', language);
       const snapshot = await getDoc(docRef);
       if (snapshot.exists()) {
         setTexts(snapshot.data() as Record<string, string>);

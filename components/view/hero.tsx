@@ -64,7 +64,7 @@ export default function HeroSection() {
         <div className="w-full items-center justify-center mb-8 flex flex-col">
           <h1 className="text-md lg:text-xl mb-2 font-sora font-light flex flex-row">
             {" "}
-            {texts["hello"]}{" "}
+            {texts["hero_greetings"]}{" "}
             <Image
               src="/additional-icons/wave.svg"
               width={24}
@@ -72,21 +72,21 @@ export default function HeroSection() {
               className="mx-1"
               alt="Wave emoji"
             />
-            ,{texts["myNameIs"]}
+            ,{texts["hero_my-name-is"]}
           </h1>
           <h2 className="md:text-4xl lg:text-5xl text-3xl flex flex-col mb-1 font-bold text-center bg-clip-text text-transparent bg-gradient-to-br dark:from-neutral-50 dark:to-neutral-400 from-neutral-500/85 to-neutral-800 bg-opacity-50">
-            <span>{texts["name"]} </span>
+            <span>{texts["hero_name"]} </span>
           </h2>
           <p className="text-shark-500 dark:text-shark-50 font-light text-wrap w-3/4 lg:w-1/2 text-xs md:text-lg mt-2 mb-6">
             {" "}
-            {texts["heroDescription"]}{" "}
+            {texts["hero_description"]}{" "}
           </p>
           <div className="flex flex-row gap-x-4 items-center mx-auto">
             <Button
               onClick={() => scrollToSection("o-mne")}
               className="dark:bg-bermuda-500 dark:hover:bg-bermuda-600 bg-bermuda-500 text-shark-100 flex flex-row items-center gap-x-2 px-4 py-2 rounded-md hover:bg-bermuda-600 active:bg-bermuda-700 active:scale-90 duration-200"
             >
-              <span>{texts["continueBtn"]}</span>
+              <span>{texts["hero_continue-btn"]}</span>
             </Button>
             <DownloadCV />
           </div>

@@ -1,3 +1,5 @@
+import { useTexts } from "@/context/texts-context";
+
 export default function WorkWithMe() {
   const processSteps = [
     {
@@ -31,16 +33,19 @@ export default function WorkWithMe() {
     },
   ];
 
+  const { texts } = useTexts();
+
   return (
     <div className="w-full">
       <div className="text-center mt-32">
-        <p className="uppercase text-xs lg:text-md font-medium pb-4">Práce</p>
+        <p className="uppercase text-xs lg:text-md font-medium pb-4">
+          {texts["collaboration_small-title"]}
+        </p>
         <h2 className="text-2xl lg:text-5xl font-bold pb-2">
-          Jak probíhá spolupráce se mnou?
+          {texts["collaboration-title"]}
         </h2>
         <p className="font-light text-black/70 dark:text-white/50">
-          Zde je v jednoduchých bodech napsáno jak probíhá spolupráce se mnou
-          při tvorbě webových stránek
+          {texts["collaboration-description"]}
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-12">

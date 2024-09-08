@@ -72,7 +72,7 @@ const Chatbot: React.FC = () => {
   }, [messages, showButtons]);
 
   return (
-    <div className="fixed z-20 bottom-2 right-4 flex justify-center items-center">
+    <div className="hidden md:flex fixed z-20 bottom-2 right-4 justify-center items-center">
       <div className={`w-[400px] bg-white dark:bg-shark-800 rounded-xl shadow-lg ${isOpen ? 'h-[520px]' : 'h-[70px]'} transition-height duration-300`}>
         <div 
           className='w-full flex flex-row rounded-t-xl items-center justify-between bg-gradient-to-r from-[#57a77c] via-[#49d382] to-[#1ecf82] p-4 cursor-pointer'
