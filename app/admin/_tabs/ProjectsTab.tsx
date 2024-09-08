@@ -1,7 +1,7 @@
 import React, { useState, useEffect, ChangeEvent } from "react";
 import { db, doc, getDoc, setDoc } from "../../../firebaseConfig";
 import { useLanguage } from "@/context/language-context";
-import { FiEdit3 } from "react-icons/fi"; // Import an edit icon
+import { FiEdit3 } from "react-icons/fi"; 
 
 type Project = {
   title: string;
@@ -30,7 +30,7 @@ const ProjectsTab: React.FC = () => {
   const [newProject, setNewProject] = useState<Project>(defaultProject);
   const [isMainProject, setIsMainProject] = useState<boolean>(true);
   const [activeTab, setActiveTab] = useState<"view" | "add">("view");
-  const [editProject, setEditProject] = useState<Project | null>(null); // For editing
+  const [editProject, setEditProject] = useState<Project | null>(null);
 
   useEffect(() => {
     const fetchProjects = async () => {

@@ -108,9 +108,8 @@ export default function HeroSection() {
         </div>
 
         <ScrollToTopButton />
-        {/* 
         <Chatbot/>
-        */}
+        
       </motion.div>
 
       <div

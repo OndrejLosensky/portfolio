@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { IoMdClose } from "react-icons/io";
+import { Divide } from 'lucide-react';
 
 const Chatbot: React.FC = () => {
   const [messages, setMessages] = useState<{ text: string; isUser: boolean }[]>([
@@ -38,8 +39,10 @@ const Chatbot: React.FC = () => {
 
   const [currentOptionsIndex, setCurrentOptionsIndex] = useState(0);
   const [showButtons, setShowButtons] = useState(true);
-  const [isOpen, setIsOpen] = useState(false); // Chatbot open/close state
+  const [isOpen, setIsOpen] = useState(false);
   const chatContainerRef = useRef<HTMLDivElement>(null);
+  const lastMessageRef = useRef<HTMLDivElement>(null); 
+  const buttonContainerRef = useRef<HTMLDivElement>(null); 
 
   const handleOptionClick = (option: { text: string; response: string }) => {
     setMessages((prev) => [...prev, { text: option.text, isUser: true }]);
@@ -60,11 +63,17 @@ const Chatbot: React.FC = () => {
     if (chatContainerRef.current) {
       chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
     }
-  }, [messages]);
+    if (lastMessageRef.current) {
+      lastMessageRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (buttonContainerRef.current) {
+      buttonContainerRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages, showButtons]);
 
   return (
     <div className="fixed z-20 bottom-2 right-4 flex justify-center items-center">
-      <div className={`w-[400px] bg-white rounded-xl shadow-lg ${isOpen ? 'h-[500px]' : 'h-[70px]'} transition-height duration-300`}>
+      <div className={`w-[400px] bg-white dark:bg-shark-800 rounded-xl shadow-lg ${isOpen ? 'h-[520px]' : 'h-[70px]'} transition-height duration-300`}>
         <div 
           className='w-full flex flex-row rounded-t-xl items-center justify-between bg-gradient-to-r from-[#57a77c] via-[#49d382] to-[#1ecf82] p-4 cursor-pointer'
           onClick={() => setIsOpen(!isOpen)} 
@@ -73,30 +82,31 @@ const Chatbot: React.FC = () => {
             <h2 className='text-white font-semibold text-xl text-left'> Zeptejte se! </h2>
             <p className='text-gray-100 font-light'> Zjištěte odpověd na časté dotazy </p>
           </div>
-          <IoMdClose className='w-5 h-5 fill-white cursor-pointer hover:scale-110 duration-200' />
+          {isOpen ? (<IoMdClose className='w-5 h-5 fill-white cursor-pointer hover:scale-110 duration-200' />): (<IoMdClose className='hidden'/>)}
         </div>
 
         {isOpen && (
-          <div ref={chatContainerRef} className='p-4 max-h-[450px] bg-shark-100 dark:bg-shark-800 overflow-y-auto flex flex-col pb-4 space-y-2'>
+          <div ref={chatContainerRef} className='p-4 max-h-[450px] bg-neutral-100 dark:bg-shark-800 overflow-y-auto flex flex-col pb-4 space-y-2'>
             {messages.map((msg, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className={`max-w-max p-2 rounded-md shadow-sm text-black dark:text-white ${msg.isUser ? 'bg-gray-100 dark:bg-gray-600  self-end' : 'bg-neutral-100 dark:bg-neutral-700 self-start text-left'}`}
+                className={`max-w-max p-2 rounded-md shadow-sm text-black dark:text-white ${msg.isUser ? 'bg-gray-100 dark:bg-gray-600 self-end' : 'bg-neutral-200 dark:bg-neutral-700 self-start text-left'}`}
+                ref={index === messages.length - 1 ? lastMessageRef : null}
               >
                 {msg.text}
               </motion.div>
             ))}
             {showButtons && (
-              <div className="mt-4 space-y-2">
+              <div ref={buttonContainerRef} className="mt-4 space-y-2">
                 {allOptions[currentOptionsIndex]?.map((option, index) => (
                   <motion.button
                     key={index}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="block p-2 border border-green-500 text-green-500 rounded max-w-max"
+                    className="block p-2 border text-left border-green-500 text-green-500 rounded max-w-max"
                     onClick={() => handleOptionClick(option)}
                   >
                     {option.text}
