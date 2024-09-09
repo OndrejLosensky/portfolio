@@ -1,10 +1,12 @@
 import datadepot from "@/public/mockups/datadepot.png";
-import kralovskalevandule from "@/public/mockups/kl.png";
+import kralovskalevandule from "@/public/mockups/kl2.png";
 import codecommerce from "@/public/mockups/codecommerce.png";
 import demonicka from "@/public/mockups/demonicka.png";
 import taskboard from "@/public/mockups/taskboard.png";
 import qabot from "@/public/mockups/qabot.png";
 import pal from "@/public/mockups/pal.png";
+import cleannotes from "@/public/mockups/cleannotes.png";
+
 export const projectsData = [
   { 
     title: "Královská levandule",
@@ -18,6 +20,17 @@ export const projectsData = [
     disabled: false,
   },
   {
+    title: "Pavel Losenský",
+    description: "Statická webová stránka na platformě WordPress",
+    tags: ["WordPress"],
+    imageUrl: pal,
+    githubLink: undefined,
+    websiteLink: "https://www.losensky.cz",
+    gradient: 'bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 dark:from-green-300 dark:via-teal-500 dark:to-indigo-600', 
+    otherLink: undefined,
+    disabled: false, 
+  },  
+  {
     title: "Démonická",
     description: "Webová aplikace pro akci Démonická pro jednoduchou správu počtu vypitých piv narozdíl proti papírové podobě.",
     tags: ["Next.js", "TypeScript", "TailwindCSS", "ClerkAuth", "Firebase"],
@@ -27,20 +40,7 @@ export const projectsData = [
     gradient: 'bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 dark:from-green-300 dark:via-teal-500 dark:to-indigo-600', 
     otherLink: undefined,
     disabled: false, 
-  },  
-  /*
-  {
-    title: "Pavel Losenský",
-    description: "Statická webová stránka na platformě WordPress",
-    tags: ["WordPress"],
-    imageUrl: pal,
-    githubLink: undefined,
-    websiteLink: undefined,
-    gradient: 'bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 dark:from-green-300 dark:via-teal-500 dark:to-indigo-600', 
-    otherLink: undefined,
-    disabled: false, 
-  },  
-  */
+  }
 ] as const;
 
 
@@ -67,6 +67,17 @@ export const sideProjectsData = [
     otherLink: undefined,
     disabled: false,
   },   
+  {
+    title: "CleanNotes",
+    description: "Jednoduchá aplikaci pro zapisování poznámek s podporou Markdown. Možnost mazat, editovat a přidávat poznámky.Ukládané pouze",
+    tags: ["React", "TypeScript", "TailwindCSS", "LocalStorage"],
+    imageUrl: cleannotes,
+    githubLink: 'https://github.com/OndrejLosensky/CleanNotes',
+    websiteLink: undefined,
+    gradient: 'bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 dark:from-green-300 dark:via-teal-500 dark:to-indigo-600', 
+    otherLink: undefined,
+    disabled: false,
+  },
   {
     title: "CodeCommerce",
     description: "Webová aplikace pro správu jednoduchého e-shopu pomocí administrátorského panelu",

@@ -124,6 +124,10 @@ export default function ContactSection() {
 
         <ToastViewport className="fixed top-0 right-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]" />
       </div>
+
+      <div className="text-sm text-center dark:text-gray-100/50 py-24 ">
+        Portfolio je stále ve vývoji, protože pracuji na projektech, o které ho doplňuji
+      </div>
     </ToastProvider>
   );
 }

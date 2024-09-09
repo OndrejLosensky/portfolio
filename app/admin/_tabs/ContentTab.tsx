@@ -8,7 +8,7 @@ type Texts = {
 };
 
 const sectionNames: Record<
-  "hero" | "about" | "projects" | "preview" | "collaboration" | "contact",
+  "hero" | "about" | "projects" | "preview" | "collaboration" | "contact" | "footer",
   string
 > = {
   hero: "hero",
@@ -17,13 +17,14 @@ const sectionNames: Record<
   preview: "preview",
   collaboration: "collaboration",
   contact: "contact",
+  footer: "footer",
 };
 
 const ContentTab: React.FC = () => {
   const { language, setLanguage } = useLanguage();
   const [texts, setTexts] = useState<Texts>({});
   const [selectedSection, setSelectedSection] = useState<
-    "hero" | "about" | "projects" | "preview" | "collaboration" | "contact"
+    "hero" | "about" | "projects" | "preview" | "collaboration" | "contact" | "footer"
   >("hero");
   const [selectedKey, setSelectedKey] = useState<string>("");
   const [newValue, setNewValue] = useState<string>("");
@@ -60,6 +61,7 @@ const ContentTab: React.FC = () => {
       | "preview"
       | "collaboration"
       | "contact"
+      | "footer"
   ) => {
     setSelectedSection(section);
     setSelectedKey("");
@@ -147,6 +149,7 @@ const ContentTab: React.FC = () => {
                       | "preview"
                       | "collaboration"
                       | "contact"
+                      | "footer"
                   )
                 }
                 className={`${
@@ -164,6 +167,7 @@ const ContentTab: React.FC = () => {
                       | "preview"
                       | "collaboration"
                       | "contact"
+                      | "footer"
                   ]
                 }
               </button>
@@ -194,6 +198,7 @@ const ContentTab: React.FC = () => {
                           | "preview"
                           | "collaboration"
                           | "contact"
+                          | "footer"
                       )
                     }
                     className={`block px-4 py-2 w-full text-left ${
@@ -211,6 +216,7 @@ const ContentTab: React.FC = () => {
                           | "preview"
                           | "collaboration"
                           | "contact"
+                          | "footer"
                       ]
                     }
                   </button>

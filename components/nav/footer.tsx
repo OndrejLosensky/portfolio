@@ -16,19 +16,19 @@ export default function Footer() {
         <Image src="/logo.svg" height={30} width={30} alt="Logo" />
         <span className="text-sm pt-1">
           {" "}
-          © {currentYear} <strong>{texts["name"]} </strong>
+          © {currentYear} <strong>{texts["footer_name"]} </strong>
         </span>
       </Link>
 
       <p className="text-xs md:text-sm hidden md:flex font-thin">
         {" "}
-        {texts["footerAllRightReserved"]}{" "}
+        {texts["footer_all-rights-reserved"]}{" "}
       </p>
 
       <div className="md:hidden flex flex-row w-full justify-between mt-2 md:mt-0 md:pb-0 pb-8">
         <p className="text-xs md:text-sm font-thin text-center mx-auto">
           {" "}
-          {texts["footerAllRightReserved"]}{" "}
+          {texts["footer_all-rights-reserved"]}{" "}
         </p>
         <div className="flex flex-row "></div>
       </div>

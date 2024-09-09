@@ -56,7 +56,7 @@ export function WorkExpirience() {
                   </p>
                 </div>
               </div>
-              <p className="text-sm sm:text-md font-regular text-black/55 dark:text-white/60">
+              <p className="text-sm hidden md:flex sm:text-md font-regular text-black/55 dark:text-white/60">
                 {" "}
                 {work.date}{" "}
               </p>
