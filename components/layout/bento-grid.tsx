@@ -69,6 +69,7 @@ const BentoGrid: React.FC = () => {
                       <span className="inline-block bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
                         {texts['preview_newest-project-title']}                
                       </span>
+                      <Image  className="my-4" src="/mockups/vector_lksystem.svg" width={128} height={128} alt="Project logo" />
                       <h3 className="mt-4 text-white text-2xl w-full lg:text-3xl font-bold leading-tight">
                         {texts['preview_project-title']}
                       </h3>
@@ -80,7 +81,7 @@ const BentoGrid: React.FC = () => {
 
                   <div className="absolute right-0 bottom-0 w-[50%] h-full transform rotate-6 translate-x-20 translate-y-12 lg:translate-y-28 md:translate-x-24 md:translate-y-8">
                     <Image
-                      src="/mockups/kralovska-levandule.png"
+                      src="/mockups/lk.png"
                       width={500}
                       height={400}
                       alt={texts['preview_project_title']}

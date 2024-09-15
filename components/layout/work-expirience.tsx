@@ -41,7 +41,7 @@ export function WorkExpirience() {
                   />
                 </span>
                 <div className="flex flex-col">
-                  <h2 className="text-xl sm:text-2xl font-bold flex items-center">
+                  <h2 className="text-xl sm:text-lg font-bold flex items-center">
                     {work.name}
                     <span
                       className={`ml-2 transition-transform duration-300 opacity-0 group-hover:opacity-100 ${
