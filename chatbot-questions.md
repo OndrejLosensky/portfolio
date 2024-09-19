@@ -1,5 +1,6 @@
 const allOptions = [
     [
+
       { text: "Jak vás mohu kontaktovat?", response: "Můžete mě kontaktovat e-mailem nebo na tel +420 605 367 403!" },
       { text: "Denní připomenutí", response: "Nezapomeňte se podívat na můj Github!" },
       { text: "Na jakých projektech pracujete?", response: "Momentálně pracuji na vlastním CMS na tvorbu jednoduchých webů " },

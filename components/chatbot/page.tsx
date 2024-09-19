@@ -93,7 +93,7 @@ const Chatbot: React.FC = () => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className={`max-w-max p-2 rounded-md shadow-sm text-black dark:text-white ${msg.isUser ? 'bg-gray-100 dark:bg-gray-600 self-end' : 'bg-neutral-200 dark:bg-neutral-700 self-start text-left'}`}
+                className={`max-w-max p-2 rounded-md shadow-sm text-black dark:text-white ${msg.isUser ? 'bg-gray-100 dark:bg-gradient-to-br dark:from-[#57a77c] dark:via-[#49d382] dark:to-[#1ecf82] from- self-end' : 'bg-neutral-200 dark:bg-neutral-700 self-start text-left'}`}
                 ref={index === messages.length - 1 ? lastMessageRef : null}
               >
                 {msg.text}
