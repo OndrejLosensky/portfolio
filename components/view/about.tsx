@@ -5,7 +5,7 @@ import SectionTitle from "../layout/section-title";
 import { useSectionInView } from "../../lib/hooks";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { WorkExpirience } from "../layout/work-expirience";
+import { WorkExperience } from "../layout/work-expirience";
 
 import { useTexts } from "@/context/texts-context";
 import { skills } from "@/lib/data";
@@ -119,7 +119,7 @@ export default function AboutSection() {
         </div>
       </div>
 
-      <WorkExpirience />
+      <WorkExperience />
     </div>
   );
 }

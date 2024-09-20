@@ -59,6 +59,7 @@ interface Texts {
   TechnologiesTitle: string;
   workTitle: string;
   work: WorkEntry[];
+  current_work: WorkEntry[]
   OverviewTitle: string;
   OverviewDescription: string;
   webCreation: string;
@@ -130,6 +131,18 @@ export const Data_cz = {
     AboutDesc: "Jmenuji se Ondřej Losenský, je mi 19 let a jsem z Prahy. Právě jsem dokončil střední průmyslovou školu v oboru IT. Věnuji se programování webových aplikací, správě systémů a dalším technologickým zájmům. Na mém portfoliu najdete mé kontaktní údaje, projekty a životopis ve formátu PDF ve více jazycích. Zároveň se můžeme domluvit na vytvoření webové stránky na míru nebo nějakého projektu. ",    
     TechnologiesTitle: "Technologie",
     workTitle: "Pracovní zkušenosti",
+
+    current_work: [
+      { 
+          name: 'Unicorn', 
+          description: 'Junior Front-end Developer', 
+          date: 'Září 2024 - aktuálně', 
+          icon: '/logos/unicorn1.jpg', 
+          color: 'bg-white',
+          fullDescription: 'Instalace nových telefonů, kontrola zasedacích místností, reinstalace PC, práce v Excelu, kontrola tiskáren (výměna tonerů, waste kontejnerů)'
+      },
+    ],
+
     work: [
       { 
           name: 'Havel&Partners', 

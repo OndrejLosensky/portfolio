@@ -3,7 +3,7 @@ import React from "react";
 
 const Loader = () => (
   <div className="flex flex-col items-center w-screen justify-center min-h-screen bg-main ">
-    <div className="flex flex-row items-center gap-x-4 mb-12">
+    <div className="flex sm:flex-col md:flex-row items-center gap-x-4 mb-12">
       <Image
         src="/logo.svg"
         quality={100}

@@ -7,6 +7,7 @@ import qabot from "@/public/mockups/qabot.png";
 import pal from "@/public/mockups/pal.png";
 import cleannotes from "@/public/mockups/cleannotes.png";
 import lksystem from "@/public/mockups/lk.png";
+import duvan from "@/public/mockups/duvan.png";
 
 export const projectsData = [
   { 
@@ -20,6 +21,17 @@ export const projectsData = [
     otherLink: "https://obchod.kralovskalevandule.cz",  
     disabled: false,
   },
+  {
+    title: "DUVAN CZ",
+    description: "Grafický návrh pro firmu DUVAN CZ včetně nasazení a spuštění WP. ",
+    tags: ["WordPress", "Figma"],
+    imageUrl: duvan,
+    githubLink: undefined,
+    websiteLink: "https://www.duvancz.com",
+    gradient: 'bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 dark:from-green-300 dark:via-teal-500 dark:to-indigo-600', 
+    otherLink: undefined,
+    disabled: false, 
+  },  
   {
     title: "LKSYSTEM.CZ",
     description: "Re-design staré webové stránky, přesun na WordPress ze starého CMS. ",
