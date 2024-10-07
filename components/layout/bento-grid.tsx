@@ -140,7 +140,7 @@ const BentoGrid: React.FC = () => {
                       {texts['preview_currently-working-on']}
                     </h2>
                     <div className='absolute inset-0 bg-gradient-to-b from-transparent to-main/30 dark:from-transparent z-10 dark:to-main/80 opacity-100 rounded-lg'></div>
-                    <Image src="/mockups/codestash.png" width={800} height={600} alt='Code snippet' className='w-full translate-y-8 rounded-xl border h-auto mx-auto'/> 
+                    <Image src="/mockups/qCMS.svg" width={800} height={600} alt='Code snippet' className='w-full translate-y-8 rounded-xl border h-auto mx-auto'/> 
                 </div>
               </div>
             </section>
