@@ -17,14 +17,20 @@ export default function ProjectsSection() {
   const { texts } = useTexts();
 
   return (
-    <section id="projekty" className="scroll-mt-28 w-full mx-auto mt-48 mb-28">
+    <section
+      id="projekty"
+      className={`scroll-mt-28 w-full mx-auto mt-48 mb-28 ${texts["projects_display_condition"]}`}
+    >
       <div>
         <div ref={ref} className="text-center mt-20 mb-16">
           <p className="uppercase text-xs lg:text-md font-medium pb-4">
             {" "}
             {texts["projects_small-title"]}{" "}
           </p>
-          <h2 className="text-2xl lg:text-5xl  font-bold pb-2"> {texts["projects_title"]} </h2>
+          <h2 className="text-2xl lg:text-5xl  font-bold pb-2">
+            {" "}
+            {texts["projects_title"]}{" "}
+          </h2>
           <p className="font-light text-black/70 dark:text-white/50">
             {" "}
             {texts["projects_description"]}{" "}
@@ -106,12 +112,12 @@ export default function ProjectsSection() {
 
       {/*
       <div className="w-full flex items-center">
-        <Link href="/dalsi-projekty" className="mt-12 mx-auto active:scale-90 duration-200" > 
+        <Link href="/dalsi-projekty" className="mt-12 mx-auto active:scale-90 duration-200" >
           <Button size="custom" variant="outline"  className="flex flex-row gap-x-3 items-center" >
-              <FaLaptopCode className="w-5 h-5"/> 
+              <FaLaptopCode className="w-5 h-5"/>
               <span>{texts['moreProjectsBtn']}</span>
-          </Button> 
-        </Link>              
+          </Button>
+        </Link>
       </div>
       */}
     </section>

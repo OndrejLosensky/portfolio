@@ -36,7 +36,7 @@ export default function WorkWithMe() {
   const { texts } = useTexts();
 
   return (
-    <div className="w-full">
+    <div className={`${texts["collaboration_display_condition"]} w-full`}>
       <div className="text-center mt-32">
         <p className="uppercase text-xs lg:text-md font-medium pb-4">
           {texts["collaboration_small-title"]}
